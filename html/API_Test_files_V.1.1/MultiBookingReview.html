@@ -1,0 +1,37 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title> XML Transfer Only MultiBookingReview request test page </title>
+</head>
+
+<body>
+
+<FONT face=arial size=+2 color=#330099>
+<P> XML Transfer Only MultiBookingReview request test page </P>
+</FONT>
+<form method="post" name="form1"  action="http://www.xmlp2p.com/xml/index.asp">
+<textarea cols="80" rows="20" name="XML">
+<?xml version="1.0" encoding="UTF-8"?>
+<TCOML version="NEWFORMAT">
+<TransferOnly>
+<Booking>
+<MultiBookingReview>
+<Username>myusername</Username>
+<Password>mypassword</Password>                                            
+<AgentCode></AgentCode>     
+                <Search>
+                <FromBookingDate>01.01.16</FromBookingDate>
+                <ToBookingDate>04.01.16</ToBookingDate>
+                <FromDepartureDate></FromDepartureDate>
+                <ToDepartureDate></ToDepartureDate>
+                </Search>
+</MultiBookingReview>
+</Booking>
+</TransferOnly>
+</TCOML>
+</textarea>
+<p>
+<input type="submit" value="submit XML document">
+</form>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title> XML Transfer Only availability request test page </title>
+</head>
+
+<body>
+
+<FONT face=arial size=+2 color=#330099>
+<P> XML Transfer Only availability request test page </P>
+</FONT>
+
+<form method="post" name="form1" action="http://www.xmlp2p.com/xml/">
+<textarea cols="80" rows="20" name="XML">
+<?xml version="1.0" encoding="UTF-8"?>
+<TCOML version="NEWFORMAT">
+<TransferOnly>
+<Availability>
+<Request>
+	<Username>myusername</Username>
+	<Password>mypassword</Password>			
+	<Lang>EN</Lang>	
+	<DeparturePointCode>PMI</DeparturePointCode>
+	<ArrivalPointCode>ARE</ArrivalPointCode>
+	<SectorType>RETURN</SectorType>
+	<ArrDate>30/07/15</ArrDate>
+	<ArrTime>10:00</ArrTime>
+	<RetDate>10/08/15</RetDate>
+	<RetTime>10:00</RetTime>
+	<Adults>2</Adults>
+	<Children>0</Children>
+	<Infants>0</Infants>
+	<VehicleType>0</VehicleType>			
+	<Latitude></Latitude>
+	<Longitude></Longitude>	
+	<TTICode></TTICode>	
+    <GIATA_ID></GIATA_ID>	
+	</Request>
+</Availability>
+</TransferOnly>
+</TCOML>
+</textarea>
+<p>
+<input type="submit" value="submit XML document">
+</form>
+</body>
+</html>

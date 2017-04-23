@@ -1,0 +1,50 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title> XML Transfer Only availability request test page </title>
+</head>
+<body>
+<FONT face=arial size=+2 color=#330099>
+<P> XML Transfer Only availability request test page </P>
+</FONT>
+<form method="post" name="form1" action="http://www.xmlp2p.com/xml/">
+<textarea cols="80" rows="20" name="XML">
+<?xml version="1.0" encoding="UTF-8"?>
+<TCOML version="NEWFORMAT" sess="">
+<TransferOnly>
+<Booking>
+<Confirm>
+	<TransacNo>3014477</TransacNo>
+	<Username>myusername</Username>
+	<Password>mypassword</Password>				
+	<AgentBref>AgentResID-123</AgentBref>
+	<PropertyName>TEST APARTMENTS</PropertyName>
+	<AccommodationAddress>PARADISE STREET</AccommodationAddress>
+	<AccommodationAddress2>123455</AccommodationAddress2>
+	<DepPoint>PMI</DepPoint>
+	<RetPoint>ARE</RetPoint>
+	<DepInfo>EZY6533</DepInfo>
+	<RetInfo>EZY6534</RetInfo>
+	<DepExtraInfo>EZY6533</DepExtraInfo>
+	<RetExtraInfo>EZY6534</RetExtraInfo>
+	<Client>
+		<LastName>Testing</LastName>
+		<FirstName>Test</FirstName>
+		<Title>Mr</Title>
+		<Phone>00447825983459</Phone>
+		<Mobile>00447825983459</Mobile>
+		<CountryCode>UK</CountryCode>
+		<Email>customer-email@company.com</Email>
+	</Client>
+	<SendEmailToCustomer>0</SendEmailToCustomer>
+	<Remark>Required babycot</Remark>
+	</Confirm>
+</Booking>
+</TransferOnly>
+</TCOML>
+  </textarea>
+<p>
+<input type="submit" value="submit XML document">
+</form>
+</body>
+</html>

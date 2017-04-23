@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: ticketws
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: juanjo
+Implementation-Vendor-Id: com.epl.ticketws
+Build-Jdk: 1.8.0_60
+Implementation-URL: http://projects.spring.io/spring-boot/ticketws/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
