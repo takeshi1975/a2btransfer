@@ -8,6 +8,8 @@
 
 package com.epl.a2btransfer.model;
 
+import java.lang.reflect.Field;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -17,6 +19,7 @@ import javax.xml.bind.annotation.XmlType;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
+import com.thoughtworks.xstream.io.xml.XmlFriendlyReplacer;
 
 
 /**
@@ -811,17 +814,28 @@ public class AvailRq {
                  */
                 public void setGIATAID(String value) {
                     this.giataid = value;
-                }
-
+                }                                
             }
 
         }
 
     }
 
-    public String toXML(){    	
-    	XStream xstream = new XStream(new DomDriver());
-    	xstream.alias("TCOML", this.getClass());
+    public String toXML(){
+    	XmlFriendlyReplacer xfr = new XmlFriendlyReplacer("$","_");  
+    	XStream xstream = new XStream(new DomDriver("UTF-8",xfr));
+    	xstream.alias("TCOML", this.getClass());    	
+    	xstream.aliasField("TransferOnly",AvailRq.class,"transferOnly");
+    	xstream.aliasField("Availability",TransferOnly.class,"availability");
+    	xstream.aliasField("Request",TransferOnly.Availability.class,"request");    	
+    	xstream.alias("Request", TransferOnly.Availability.Request.class);
+    	for (Field f:TransferOnly.Availability.Request.class.getDeclaredFields()){
+    		String newName = f.getName().substring(0, 1).toUpperCase() + f.getName().substring(1);    		
+    		xstream.aliasField(newName,TransferOnly.Availability.Request.class,f.getName());
+    	}
+    	xstream.useAttributeFor(AvailRq.class, "version");
+    	xstream.aliasField("GIATA_ID", TransferOnly.Availability.Request.class, "giataid");
+    	xstream.aliasField("TTICode", TransferOnly.Availability.Request.class, "ttiCode");
     	return xstream.toXML(this);    	
     }
 }

@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.epl.ticketws</groupId>
-	<artifactId>ticketws</artifactId>
+	<groupId>com.epl.a2btransfer</groupId>
+	<artifactId>a2btransfer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>ticketws</name>
-	<description>Demo project for Spring Boot</description>
+	<name>a2btransfer</name>
+	<description>Integracion con a2btransfers</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -88,7 +88,7 @@
 			<artifactId>cache-api</artifactId>
 		</dependency>
 
-		<dependency>
+		<!--dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 			<exclusions>
@@ -97,7 +97,7 @@
 					<artifactId>logback-classic</artifactId>
 				</exclusion>
 			</exclusions>
-		</dependency>
+		</dependency -->
 
 		<!-- DB Oracle <dependency> <groupId>com.oracle</groupId> <artifactId>ojdbc7</artifactId> 
 			<version>12.0.0</version> </dependency> -->
