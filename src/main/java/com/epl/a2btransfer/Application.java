@@ -64,6 +64,7 @@ public class Application {
     		request.setTTICode("");        	
     		client.locations();
 			client.routes();
+			log.info("Fin de la aplicación");
 		};
 	}
 	
