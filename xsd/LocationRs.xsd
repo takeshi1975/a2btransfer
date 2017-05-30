@@ -1,0 +1,36 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="LocationRs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TransferOnly">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Locations">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Location" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="Code"/>
+                          <xs:element type="xs:string" name="LocationName"/>
+                          <xs:element type="xs:string" name="LocationType"/>
+                          <xs:element type="xs:string" name="CountryCode"/>
+                          <xs:element type="xs:string" name="Country"/>
+                          <xs:element type="xs:float" name="Latitude"/>
+                          <xs:element type="xs:float" name="Longitude"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:float" name="version"/>
+      <xs:attribute type="xs:string" name="company"/>
+      <xs:attribute type="xs:integer" name="sess"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
