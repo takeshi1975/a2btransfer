@@ -1,0 +1,31 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CancelFeeRq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TransferOnly">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Booking">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="CancelFees">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="BookingRef"/>
+                          <xs:element type="xs:string" name="Username"/>
+                          <xs:element type="xs:string" name="Password"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="version"/>
+      <xs:attribute type="xs:string" name="sess"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
