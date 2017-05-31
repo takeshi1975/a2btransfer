@@ -10,6 +10,7 @@ package com.epl.a2btransfer.xto;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -203,7 +204,8 @@ public class BookingRs {
     protected BookingRs.TransferOnly transferOnly;
     @XmlAttribute(name = "version")
     protected Float version;
-
+    @XmlAttribute(name = "CancelFeeRs", required = false)
+    protected CancelFeeRs cancelFeeRs;
     /**
      * Obtiene el valor de la propiedad transferOnly.
      * 
@@ -252,8 +254,18 @@ public class BookingRs {
         this.version = value;
     }
 
+    public CancelFeeRs getCancelFeeRs() {
+		return cancelFeeRs;
+	}
 
-    /**
+	public void setCancelFeeRs(CancelFeeRs cancelFeeRs) {
+		this.cancelFeeRs = cancelFeeRs;
+	}
+
+
+
+
+	/**
      * <p>Clase Java para anonymous complex type.
      * 
      * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.

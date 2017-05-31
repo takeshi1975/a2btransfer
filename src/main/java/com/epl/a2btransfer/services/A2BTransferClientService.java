@@ -75,7 +75,13 @@ public class A2BTransferClientService {
     		CancelFeeRs cancelFees = this.cancelFees(bookingRs.getTransferOnly().getBooking().getConfirm().getVoucherInfo().getBookingRef());
     		// Tener en cuenta los cancelFees.
     		// Podríamos añadir un objeto CancelFee a la respuesta.
-    		return response.getBody();
+    		bookingRs = response.getBody();
+    		CancelFeeRs cancelFeeRs = null;
+    		if (bookingRs.getTransferOnly().getErrors()!=null){ // Si no hay errores. Asignamos el cancelFee.
+    			cancelFeeRs = this.cancelFees(bookingRs.getTransferOnly().getBooking().getConfirm().getVoucherInfo().getBookingRef());
+    		}
+    		bookingRs.setCancelFeeRs(cancelFeeRs);
+    		return bookingRs;
     	}
     	return null;
     }    
