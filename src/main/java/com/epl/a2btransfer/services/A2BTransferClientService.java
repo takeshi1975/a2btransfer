@@ -1,5 +1,7 @@
 package com.epl.a2btransfer.services;
 
+import java.util.ArrayList;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -9,12 +11,14 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import com.epl.a2btransfer.dto.Route;
+import com.epl.a2btransfer.exception.NotApplicableException;
 import com.epl.a2btransfer.xto.AvailRq;
 import com.epl.a2btransfer.xto.AvailRs;
 import com.epl.a2btransfer.xto.BookingRq;
 import com.epl.a2btransfer.xto.BookingRs;
 import com.epl.a2btransfer.xto.CancelFeeRq;
 import com.epl.a2btransfer.xto.CancelFeeRs;
+import com.epl.a2btransfer.xto.Errors;
 import com.epl.a2btransfer.xto.LocationRq;
 import com.epl.a2btransfer.xto.LocationRs;
 import com.epl.a2btransfer.xto.ReserveRq;
@@ -35,7 +39,10 @@ public class A2BTransferClientService {
     private String password;
     
     @Autowired
-    private RestTemplate restTemplate;    
+    private RestTemplate restTemplate;
+    
+    @Autowired
+    private PolicyService policyService;
     
     /**
      * avail Devuelve la disponibilidad.
@@ -72,16 +79,25 @@ public class A2BTransferClientService {
     	ResponseEntity<BookingRs> response = restTemplate.postForEntity(url, bookingRq, BookingRs.class );
     	if (response.getStatusCode().is2xxSuccessful()){
     		BookingRs bookingRs = response.getBody(); 
-    		CancelFeeRs cancelFees = this.cancelFees(bookingRs.getTransferOnly().getBooking().getConfirm().getVoucherInfo().getBookingRef());
+    		CancelFeeRs cancelFeeRs = null;
     		// Tener en cuenta los cancelFees.
     		// Podríamos añadir un objeto CancelFee a la respuesta.
-    		bookingRs = response.getBody();
-    		CancelFeeRs cancelFeeRs = null;
+    		bookingRs = response.getBody();    		
     		if (bookingRs.getTransferOnly().getErrors()!=null){ // Si no hay errores. Asignamos el cancelFee.
     			cancelFeeRs = this.cancelFees(bookingRs.getTransferOnly().getBooking().getConfirm().getVoucherInfo().getBookingRef());
     		}
-    		bookingRs.setCancelFeeRs(cancelFeeRs);
-    		return bookingRs;
+    		bookingRs.setCancelFeeRs(cancelFeeRs); // Asignar el cancelFee...
+    		try{
+    			return this.policyService.calculatePrice(bookingRs);
+    		}catch(NotApplicableException naex){
+    			if (bookingRs.getTransferOnly().getErrors()==null)
+    				bookingRs.getTransferOnly().setErrors(new Errors());
+    			if (bookingRs.getTransferOnly().getErrors().getError()==null)
+    				bookingRs.getTransferOnly().getErrors().setError(new ArrayList<Errors.Error>());
+    			Errors.Error error = new Errors.Error();
+    			error.setText("No se puede aplicar la comisión a esta reserva. Revise la conf. de politicas comerciales a medida");
+    			bookingRs.getTransferOnly().getErrors().getError().add(new Errors.Error());    			
+    		}
     	}
     	return null;
     }    
