@@ -26,7 +26,7 @@ public class PolicyService {
 				throw new NotApplicableException();
 			Comision comision = comisions.get(0);
 			Double pct = comision.getMargen();
-			bookingRs.getTransferOnly().getBooking().getConfirm().getVoucherInfo().setInvoiceValue((float)(precio * pct /100.0f));			
+			bookingRs.getTransferOnly().getBooking().getConfirm().getVoucherInfo().setInvoiceValue((float)(precio+precio * pct /100.0f));			
 		}
 		return bookingRs;
 	}
