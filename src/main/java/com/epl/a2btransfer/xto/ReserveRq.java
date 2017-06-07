@@ -93,8 +93,18 @@ public class ReserveRq {
     protected ReserveRq.TransferOnly transferOnly;
     @XmlAttribute(name = "version")
     protected String version;
+    @XmlAttribute(name = "date")
+    protected String date;    
 
-    /**
+    public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	/**
      * Obtiene el valor de la propiedad transferOnly.
      * 
      * @return

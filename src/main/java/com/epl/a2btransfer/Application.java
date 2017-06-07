@@ -1,20 +1,8 @@
 package com.epl.a2btransfer;
 
-import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-
-import com.epl.a2btransfer.xto.AvailRq;
-import com.epl.a2btransfer.xto.AvailRs;
-import com.epl.a2btransfer.xto.Errors;
-import com.epl.a2btransfer.xto.AvailRq.TransferOnly;
-import com.epl.a2btransfer.xto.AvailRq.TransferOnly.Availability;
-import com.epl.a2btransfer.xto.AvailRq.TransferOnly.Availability.Request;
 
 @SpringBootApplication
 @ComponentScan({"com.epl.a2btransfer.controller",
@@ -23,15 +11,16 @@ import com.epl.a2btransfer.xto.AvailRq.TransferOnly.Availability.Request;
 				"com.epl.a2btransfer.components"})
 public class Application {
 
-	private final static Logger log = Logger.getLogger(Application.class);
+//	private final static Logger log = Logger.getLogger(Application.class);
 	
-	@Autowired
-	private com.epl.a2btransfer.controller.A2BController client;	
+//	@Autowired
+//	private com.epl.a2btransfer.controller.A2BController client;	
 	
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}
-		
+	
+	/*
 	@Bean
 	public CommandLineRunner fullBooking(ApplicationContext ctx){
 		return args -> {			
@@ -112,4 +101,5 @@ public class Application {
         	log.info("Fin de la aplicación");
         };
 	}
+	*/
 }

@@ -40,7 +40,8 @@ public class AppConfig {
 				new BufferingClientHttpRequestFactory(new SimpleClientHttpRequestFactory()));
 		List<ClientHttpRequestInterceptor> interceptors = new ArrayList<ClientHttpRequestInterceptor>();
 		interceptors.add(new LoggingRequestInterceptor());
-//		restTemplate.setInterceptors(interceptors);
+		restTemplate.setInterceptors(interceptors);
+		restTemplate.getMessageConverters().clear();
 		restTemplate.getMessageConverters().add(0, routeHttpMessageConverter); // Añado un conversor propio para leer múltiples datos.
 		restTemplate.getMessageConverters().add(1, locHttpMessageConverter);
 		restTemplate.getMessageConverters().add(2, new Jaxb2RootElementHttpMessageConverter());		

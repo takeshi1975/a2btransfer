@@ -1,6 +1,9 @@
 package com.epl.a2btransfer.controller;
 
 import java.lang.reflect.Field;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -115,6 +118,9 @@ public class A2BController {
 		reserveRq.getTransferOnly().getBooking().getReserve().setTransferCode(transferCode);
 		reserveRq.getTransferOnly().getBooking().getReserve().setTTICode(request.getTTICode());
 		reserveRq.getTransferOnly().getBooking().getReserve().setUsername(request.getUsername());
+		DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+		Date date = null;
+		try{ date = df.parse(request.getArrDate());} catch(Exception ex){};
 		ReserveRs reserveRs = client.block(reserveRq);
 		// Reserva
 		if (reserveRs.getTransferOnly().getErrors() != null)

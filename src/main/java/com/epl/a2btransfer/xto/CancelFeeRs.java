@@ -58,10 +58,10 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
+@XmlType( propOrder = {
     "transferOnly"
 })
-@XmlRootElement(name = "CancelFeeRs")
+@XmlRootElement(name = "TCOML")
 public class CancelFeeRs {
 
     @XmlElement(name = "TransferOnly", required = true)

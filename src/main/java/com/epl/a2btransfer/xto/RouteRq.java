@@ -72,10 +72,10 @@ import javax.xml.bind.annotation.XmlType;
     "transferOnly"
 })
 @XmlRootElement(name = "TCOML")
-public class Route {
+public class RouteRq {
 
     @XmlElement(name = "TransferOnly", required = true)
-    protected Route.TransferOnly transferOnly;
+    protected RouteRq.TransferOnly transferOnly;
     @XmlAttribute(name = "version")
     protected String version;
 
@@ -84,10 +84,10 @@ public class Route {
      * 
      * @return
      *     possible object is
-     *     {@link Route.TransferOnly }
+     *     {@link RouteRq.TransferOnly }
      *     
      */
-    public Route.TransferOnly getTransferOnly() {
+    public RouteRq.TransferOnly getTransferOnly() {
         return transferOnly;
     }
 
@@ -96,10 +96,10 @@ public class Route {
      * 
      * @param value
      *     allowed object is
-     *     {@link Route.TransferOnly }
+     *     {@link RouteRq.TransferOnly }
      *     
      */
-    public void setTransferOnly(Route.TransferOnly value) {
+    public void setTransferOnly(RouteRq.TransferOnly value) {
         this.transferOnly = value;
     }
 
@@ -175,17 +175,17 @@ public class Route {
     public static class TransferOnly {
 
         @XmlElement(name = "CacheRoutes", required = true)
-        protected Route.TransferOnly.CacheRoutes cacheRoutes;
+        protected RouteRq.TransferOnly.CacheRoutes cacheRoutes;
 
         /**
          * Obtiene el valor de la propiedad cacheRoutes.
          * 
          * @return
          *     possible object is
-         *     {@link Route.TransferOnly.CacheRoutes }
+         *     {@link RouteRq.TransferOnly.CacheRoutes }
          *     
          */
-        public Route.TransferOnly.CacheRoutes getCacheRoutes() {
+        public RouteRq.TransferOnly.CacheRoutes getCacheRoutes() {
             return cacheRoutes;
         }
 
@@ -194,10 +194,10 @@ public class Route {
          * 
          * @param value
          *     allowed object is
-         *     {@link Route.TransferOnly.CacheRoutes }
+         *     {@link RouteRq.TransferOnly.CacheRoutes }
          *     
          */
-        public void setCacheRoutes(Route.TransferOnly.CacheRoutes value) {
+        public void setCacheRoutes(RouteRq.TransferOnly.CacheRoutes value) {
             this.cacheRoutes = value;
         }
 
@@ -239,17 +239,17 @@ public class Route {
         public static class CacheRoutes {
 
             @XmlElement(name = "Request", required = true)
-            protected Route.TransferOnly.CacheRoutes.Request request;
+            protected RouteRq.TransferOnly.CacheRoutes.Request request;
 
             /**
              * Obtiene el valor de la propiedad request.
              * 
              * @return
              *     possible object is
-             *     {@link Route.TransferOnly.CacheRoutes.Request }
+             *     {@link RouteRq.TransferOnly.CacheRoutes.Request }
              *     
              */
-            public Route.TransferOnly.CacheRoutes.Request getRequest() {
+            public RouteRq.TransferOnly.CacheRoutes.Request getRequest() {
                 return request;
             }
 
@@ -258,10 +258,10 @@ public class Route {
              * 
              * @param value
              *     allowed object is
-             *     {@link Route.TransferOnly.CacheRoutes.Request }
+             *     {@link RouteRq.TransferOnly.CacheRoutes.Request }
              *     
              */
-            public void setRequest(Route.TransferOnly.CacheRoutes.Request value) {
+            public void setRequest(RouteRq.TransferOnly.CacheRoutes.Request value) {
                 this.request = value;
             }
 

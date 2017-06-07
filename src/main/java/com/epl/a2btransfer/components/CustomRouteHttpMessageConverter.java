@@ -38,7 +38,7 @@ public class CustomRouteHttpMessageConverter implements GenericHttpMessageConver
 	public boolean canRead(Class<?> clazz, MediaType mediaType) {
 		boolean accepted = true;
 		accepted = mediaType == null || (mediaType.getType().equals("text") && mediaType.getSubtype().equals("xml"));
-		accepted = accepted && clazz.equals(com.epl.a2btransfer.dto.Route.class);
+		accepted = accepted && clazz.equals(Route.class);
 		return accepted;
 	}
 
@@ -68,7 +68,7 @@ public class CustomRouteHttpMessageConverter implements GenericHttpMessageConver
 		}
 	};
 	
-	private void performPersistence(Route route){
+	private void performPersistence(com.epl.a2btransfer.dto.Route route){
 		try{
 			routesRepository.save(route);
 		}catch(Exception ex){
@@ -83,7 +83,7 @@ public class CustomRouteHttpMessageConverter implements GenericHttpMessageConver
 		final String TAG_ROUTE = "Route";
 		final String ATTR_FROM = "CodeFrom";
 		final String ATTR_TO = "CodeTo";
-		Route route = null;
+		com.epl.a2btransfer.dto.Route route = null;
 		routesRepository.deleteAll(); // Borramos todos los datos.
 		try {
 			XMLStreamReader xmlStreamReader = inputFactory.createXMLStreamReader(inputMessage.getBody());
@@ -93,7 +93,7 @@ public class CustomRouteHttpMessageConverter implements GenericHttpMessageConver
 				case XMLEvent.START_ELEMENT:
 					String tag = xmlStreamReader.getLocalName();
 					if (tag.equals(TAG_ROUTE)) {
-						route = new Route();
+						route = new com.epl.a2btransfer.dto.Route();
 						String from = xmlStreamReader.getAttributeValue(null, ATTR_FROM);
 						String to = xmlStreamReader.getAttributeValue(null, ATTR_TO);
 						route.setId(++id);
@@ -111,7 +111,7 @@ public class CustomRouteHttpMessageConverter implements GenericHttpMessageConver
 			log.error("Error en la lectura del XML", e);
 		}
 		log.info("Fin del proceso de lectura del xml");
-		return route;
+		return route; // devuelve el último elemento escrito en la base de datos.
 	}
 
 	@Override
@@ -123,7 +123,9 @@ public class CustomRouteHttpMessageConverter implements GenericHttpMessageConver
 
 	@Override
 	public boolean canRead(Type type, Class<?> contextClass, MediaType mediaType) {
-		return (type.getClass() == com.epl.a2btransfer.dto.Route.class);
+		log.info(" --> "+type.getTypeName());
+		log.info(" --> "+Route.class.getName());
+		return (type.getTypeName().equals(Route.class.getName()));
 	}
 
 	@Override

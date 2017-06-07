@@ -24,10 +24,10 @@ import org.springframework.util.StreamUtils;
 
 import com.epl.a2btransfer.dto.Location;
 import com.epl.a2btransfer.repositories.LocationsRepository;
-import com.epl.a2btransfer.xto.LocationRq;
+import com.epl.a2btransfer.xto.LocationRs;
 
 @Component
-public class CustomLocHttpMessageConverter implements GenericHttpMessageConverter<Location> {
+public class CustomLocHttpMessageConverter implements GenericHttpMessageConverter<LocationRs> {
 	
 	private final static Logger log = Logger.getLogger(CustomLocHttpMessageConverter.class);
 	
@@ -38,7 +38,7 @@ public class CustomLocHttpMessageConverter implements GenericHttpMessageConverte
 	public boolean canRead(Class<?> clazz, MediaType mediaType) {
 		boolean accepted = true;
 		accepted = mediaType==null || (mediaType.getType().equals("text") && mediaType.getSubtype().equals("xml"));
-		accepted = accepted && clazz.equals(LocationRq.class);				
+		accepted = accepted && clazz.equals(LocationRs.class);				
 		return accepted;					
 	}
 
@@ -80,7 +80,7 @@ public class CustomLocHttpMessageConverter implements GenericHttpMessageConverte
 	private final XMLInputFactory inputFactory = createXmlInputFactory();
 	
 	@Override
-	public Location read(Class<? extends Location> clazz, HttpInputMessage inputMessage)
+	public LocationRs read(Class<? extends LocationRs> clazz, HttpInputMessage inputMessage)
 			throws IOException, HttpMessageNotReadableException {
 		log.info("Se inicia el metodo de lectura de locations");
 		final String TAG_LOCATION = "Location";
@@ -140,11 +140,11 @@ public class CustomLocHttpMessageConverter implements GenericHttpMessageConverte
 			log.error("Error en la lectura del XML", e );
 		}
 		log.info("Fin del proceso de lectura del xml de locations");
-		return location;
+		return null;
 	}
 
 	@Override
-	public void write(Location t, MediaType contentType, HttpOutputMessage outputMessage)
+	public void write(LocationRs t, MediaType contentType, HttpOutputMessage outputMessage)
 			throws IOException, HttpMessageNotWritableException {
 		// TODO Auto-generated method stub
 		
@@ -152,11 +152,11 @@ public class CustomLocHttpMessageConverter implements GenericHttpMessageConverte
 
 	@Override
 	public boolean canRead(Type type, Class<?> contextClass, MediaType mediaType) {
-		return (type.getClass()==com.epl.a2btransfer.dto.Route.class);							
+		return (type.getTypeName().equals(LocationRs.class.getName()));							
 	}
 
 	@Override
-	public Location read(Type type, Class<?> contextClass, HttpInputMessage inputMessage)
+	public LocationRs read(Type type, Class<?> contextClass, HttpInputMessage inputMessage)
 			throws IOException, HttpMessageNotReadableException {
 		return this.read(null, inputMessage);
 	}
@@ -167,7 +167,7 @@ public class CustomLocHttpMessageConverter implements GenericHttpMessageConverte
 	}
 
 	@Override
-	public void write(Location t, Type type, MediaType contentType, HttpOutputMessage outputMessage)
+	public void write(LocationRs t, Type type, MediaType contentType, HttpOutputMessage outputMessage)
 			throws IOException, HttpMessageNotWritableException {			
 		// Nada
 	}

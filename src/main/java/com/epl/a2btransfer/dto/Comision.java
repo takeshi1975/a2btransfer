@@ -5,8 +5,10 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="A2B_TRANSFER_COMISSION")
 public class Comision {
 	
 	//	SELECT T2.ID, T2.CODIGO, MARGEN, COMI FROM POLITICA_COMERCIAL_MEDIDA T1
@@ -25,6 +27,28 @@ public class Comision {
 	@Column(name="fecha_fin")
 	private Date fecha2;
 	
+	private Comision(){
+		// inherited
+	}
+	
+	private Comision(long id,  Double margen, String comision, Date fecha1, Date fecha2){
+		this.setId(id);
+		this.setMargen(margen);
+		this.setComision(comision);
+		this.setFecha1(fecha1);
+		this.setFecha2(fecha2);
+	}
+			
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+
+
 	public Double getMargen() {
 		return margen;
 	}
