@@ -1,8 +1,5 @@
 package com.epl.a2btransfer.inteceptor;
 
-/**
- * Created by gcortes on 10/03/2017.
- */
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

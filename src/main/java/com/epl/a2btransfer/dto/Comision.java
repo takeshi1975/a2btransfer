@@ -5,81 +5,101 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="A2B_TRANSFER_COMISSION")
+@Table(name = "ETOUR.COMISION")
 public class Comision {
-	
-	//	SELECT T2.ID, T2.CODIGO, MARGEN, COMI FROM POLITICA_COMERCIAL_MEDIDA T1
-	//	  LEFT JOIN TIPO_SERVICIO T2 ON (T1.TIPO_SERVICIO_ID=T2.ID)
-	//	  LEFT JOIN INTEGRACION T3 ON (T1.INTEGRACION_ID=T3.ID)
-	//	  WHERE  (T3.CODIGO='A2B' AND T2.CODIGO='TRAS');
+
 	@Id
-	@Column
-	private long id;
-	@Column(name="margen")
-	private Double margen;
-	@Column(name="comi")
-	private String comision;
-	@Column(name="fecha_inicio")
-	private Date fecha1;
-	@Column(name="fecha_fin")
-	private Date fecha2;
+	private int id;
+
+	@Column(name = "COM")
+	private float pct;
+
+	@Column(name = "FECHA_INI_APL")
+	private Date fechaIniApl;
+
+	@Column(name = "FECHA_FIN_APL")
+	private Date fechaFinApl;
+
+	@Column(name = "FECHA_INI_RES")
+	private Date fechaIniRes;
+
+	@Column(name = "FECHA_FIN_RES")
+	private Date fechaFinRes;
 	
-	private Comision(){
-		// inherited
-	}
-	
-	private Comision(long id,  Double margen, String comision, Date fecha1, Date fecha2){
-		this.setId(id);
-		this.setMargen(margen);
-		this.setComision(comision);
-		this.setFecha1(fecha1);
-		this.setFecha2(fecha2);
-	}
-			
-	public long getId() {
+	@Column(name = "SISTEMA_ID")
+	private String sistema;
+
+	@OneToOne
+	@JoinColumn(name = "CLIENTE_ID", nullable = false)
+	private Agency agency;	
+
+	public int getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
+	public float getPct() {
+		return pct;
+	}
 
+	public void setPct(float pct) {
+		this.pct = pct;
+	}
 
-	public Double getMargen() {
-		return margen;
+	public Agency getAgency() {
+		return agency;
 	}
-	
-	public void setMargen(Double margen) {
-		this.margen = margen;
+
+	public void setAgency(Agency agency) {
+		this.agency = agency;
 	}
-	
-	public String getComision() {
-		return comision;
+
+	public Date getFechaIniApl() {
+		return fechaIniApl;
 	}
-	
-	public void setComision(String comision) {
-		this.comision = comision;
+
+	public void setFechaIniApl(Date fechaIniApl) {
+		this.fechaIniApl = fechaIniApl;
 	}
-	
-	public Date getFecha1() {
-		return fecha1;
+
+	public Date getFechaFinApl() {
+		return fechaFinApl;
 	}
-	
-	public void setFecha1(Date fecha1) {
-		this.fecha1 = fecha1;
+
+	public void setFechaFinApl(Date fechaFinApl) {
+		this.fechaFinApl = fechaFinApl;
 	}
-	
-	public Date getFecha2() {
-		return fecha2;
+
+	public Date getFechaIniRes() {
+		return fechaIniRes;
 	}
-	
-	public void setFecha2(Date fecha2) {
-		this.fecha2 = fecha2;
-	}	
-	
+
+	public void setFechaIniRes(Date fechaIniRes) {
+		this.fechaIniRes = fechaIniRes;
+	}
+
+	public Date getFechaFinRes() {
+		return fechaFinRes;
+	}
+
+	public void setFechaFinRes(Date fechaFinRes) {
+		this.fechaFinRes = fechaFinRes;
+	}
+
+	public String getSistema() {
+		return sistema;
+	}
+
+	public void setSistema(String sistema) {
+		this.sistema = sistema;
+	}
 	
 }

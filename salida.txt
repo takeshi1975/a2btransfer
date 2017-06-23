@@ -1,0 +1,889 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building a2btransfer 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[WARNING] The artifact xstream:xstream:jar:1.2.2 has been relocated to com.thoughtworks.xstream:xstream:jar:1.2.2
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ a2btransfer ---
+[INFO] Deleting C:\Users\desar\workspace\a2btransfer\target
+[INFO] 
+[INFO] --- jaxb2-maven-plugin:2.3.1:xjc (xjc) @ a2btransfer ---
+[INFO] Adding 'extension' flag to XJC arguments, since the 'generateEpisode' argument is given. (XJCs 'episode' argument requires that the 'extension' argument is provided).
+[INFO] Ignored given or default xjbSources [C:\Users\desar\workspace\a2btransfer\src\main\xjb], since it is not an existent file or directory.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ a2btransfer ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ a2btransfer ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 39 source files to C:\Users\desar\workspace\a2btransfer\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ a2btransfer ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ a2btransfer ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to C:\Users\desar\workspace\a2btransfer\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ a2btransfer ---
+[INFO] Surefire report directory: C:\Users\desar\workspace\a2btransfer\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+12:28:56.849 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.testepl.a2btransfer.AvailTest]
+12:28:56.857 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+12:28:56.871 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+12:28:56.893 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.testepl.a2btransfer.AvailTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+12:28:56.913 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.testepl.a2btransfer.AvailTest], using SpringBootContextLoader
+12:28:56.919 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.testepl.a2btransfer.AvailTest]: class path resource [com/testepl/a2btransfer/AvailTest-context.xml] does not exist
+12:28:56.919 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.testepl.a2btransfer.AvailTest]: class path resource [com/testepl/a2btransfer/AvailTestContext.groovy] does not exist
+12:28:56.919 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.testepl.a2btransfer.AvailTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+12:28:56.969 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.testepl.a2btransfer.AvailTest]
+12:28:57.011 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.testepl.a2btransfer.AvailTest]: using defaults.
+12:28:57.019 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+12:28:57.063 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@376b4233, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2fd66ad3, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5d11346a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7a36aefa, org.springframework.test.context.transaction.TransactionalTestExecutionListener@17211155, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@b3d7190, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5fdba6f9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@10d59286, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@fe18270, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6fb0d3ed, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6dde5c8c, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5123a213]
+12:28:57.067 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.testepl.a2btransfer.AvailTest]
+12:28:57.067 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.testepl.a2btransfer.AvailTest]
+Running com.testepl.a2btransfer.AvailTest
+12:28:57.070 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.testepl.a2btransfer.AvailTest]
+12:28:57.070 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+12:28:57.071 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+12:28:57.071 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.testepl.a2btransfer.AvailTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+12:28:57.072 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.testepl.a2btransfer.AvailTest], using SpringBootContextLoader
+12:28:57.073 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.testepl.a2btransfer.AvailTest]: class path resource [com/testepl/a2btransfer/AvailTest-context.xml] does not exist
+12:28:57.073 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.testepl.a2btransfer.AvailTest]: class path resource [com/testepl/a2btransfer/AvailTestContext.groovy] does not exist
+12:28:57.073 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.testepl.a2btransfer.AvailTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+12:28:57.080 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.testepl.a2btransfer.AvailTest]
+12:28:57.084 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.testepl.a2btransfer.AvailTest]: using defaults.
+12:28:57.088 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+12:28:57.094 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1efee8e7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1ee807c6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@76a4d6c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@517cd4b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6cc7b4de, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@32cf48b7, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@679b62af, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5cdd8682, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@d6da883, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@45afc369, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@799d4f69, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@49c43f4e]
+12:28:57.095 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.testepl.a2btransfer.AvailTest]
+12:28:57.095 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.testepl.a2btransfer.AvailTest]
+12:28:57.096 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.testepl.a2btransfer.AvailTest]
+12:28:57.097 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.testepl.a2btransfer.AvailTest]
+12:28:57.102 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@b59d31 testClass = AvailTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@62fdb4a6 testClass = AvailTest, locations = '{}', classes = '{class com.epl.a2btransfer.Application, class com.epl.a2btransfer.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.SpringBootTestContextCustomizer@6ebc05a6, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3cef309d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@d44fc21], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null].
+12:28:57.103 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.testepl.a2btransfer.AvailTest]
+12:28:57.103 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.testepl.a2btransfer.AvailTest]
+12:28:57.108 [main] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@b59d31 testClass = AvailTest, testInstance = com.testepl.a2btransfer.AvailTest@16267862, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@62fdb4a6 testClass = AvailTest, locations = '{}', classes = '{class com.epl.a2btransfer.Application, class com.epl.a2btransfer.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.SpringBootTestContextCustomizer@6ebc05a6, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3cef309d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@d44fc21], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]]].
+12:28:57.221 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+12:28:57.222 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+12:28:57.222 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+12:28:57.224 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+12:28:57.224 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [Inlined Test Properties] PropertySource with highest search precedence
+
+  ___   _____ ______ _____                    __              
+ / _ \ / __  \| ___ \_   _|                  / _|             
+/ /_\ \`' / /'| |_/ / | |_ __ __ _ _ __  ___| |_ ___ _ __ ___ 
+|  _  |  / /  | ___ \ | | '__/ _` | '_ \/ __|  _/ _ \ '__/ __|
+| | | |./ /___| |_/ / | | | | (_| | | | \__ \ ||  __/ |  \__ \
+\_| |_/\_____/\____/  \_/_|  \__,_|_| |_|___/_| \___|_|  |___/
+                                                              
+                                                              
+@JAC::Transfers
+2017-06-19 12:28:57.743  INFO 12112 --- [           main] com.testepl.a2btransfer.AvailTest        : Starting AvailTest on NUC3 with PID 12112 (started by Juanjo in C:\Users\desar\workspace\a2btransfer)
+2017-06-19 12:28:57.746  INFO 12112 --- [           main] com.testepl.a2btransfer.AvailTest        : No active profile set, falling back to default profiles: default
+2017-06-19 12:28:57.792  INFO 12112 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2177849e: startup date [Mon Jun 19 12:28:57 CEST 2017]; root of context hierarchy
+2017-06-19 12:29:00.038  INFO 12112 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-06-19 12:29:00.200  INFO 12112 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-06-19 12:29:00.264  INFO 12112 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8cb5c2bc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-06-19 12:29:00.933  INFO 12112 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-06-19 12:29:00.957  INFO 12112 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-06-19 12:29:00.960  INFO 12112 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-06-19 12:29:01.176  INFO 12112 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-06-19 12:29:01.177  INFO 12112 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3389 ms
+2017-06-19 12:29:01.490  INFO 12112 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-06-19 12:29:01.499  INFO 12112 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-06-19 12:29:01.499  INFO 12112 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-06-19 12:29:01.501  INFO 12112 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-06-19 12:29:01.502  INFO 12112 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-06-19 12:29:07.835  INFO 12112 --- [           main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-06-19 12:29:07.872  INFO 12112 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-06-19 12:29:08.133  INFO 12112 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.11.Final}
+2017-06-19 12:29:08.135  INFO 12112 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-06-19 12:29:08.137  INFO 12112 --- [           main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-06-19 12:29:08.194  INFO 12112 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-06-19 12:29:08.407  INFO 12112 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2017-06-19 12:29:09.807  INFO 12112 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-06-19 12:29:10.510  INFO 12112 --- [           main] com.epl.a2btransfer.services.AppConfig   : Configuración de la plantilla para WS-RESTful
+2017-06-19 12:29:10.613  INFO 12112 --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-06-19 12:29:11.121  INFO 12112 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2177849e: startup date [Mon Jun 19 12:28:57 CEST 2017]; root of context hierarchy
+2017-06-19 12:29:11.277  INFO 12112 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a2btransfer/block],methods=[POST],consumes=[application/xml],produces=[application/xml]}" onto public com.epl.a2btransfer.xto.ReserveRs com.epl.a2btransfer.controller.A2BController.block(com.epl.a2btransfer.xto.ReserveRq)
+2017-06-19 12:29:11.279  INFO 12112 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a2btransfer/loadLocations],methods=[GET],consumes=[application/xml],produces=[application/xml]}" onto public java.lang.String com.epl.a2btransfer.controller.A2BController.locations()
+2017-06-19 12:29:11.281  INFO 12112 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a2btransfer/loadRoutes],methods=[GET],consumes=[application/xml],produces=[application/xml]}" onto public java.lang.String com.epl.a2btransfer.controller.A2BController.routes()
+2017-06-19 12:29:11.282  INFO 12112 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a2btransfer/bookCheapest],methods=[POST],consumes=[application/xml],produces=[application/xml]}" onto public com.epl.a2btransfer.xto.BookingRs com.epl.a2btransfer.controller.A2BController.bookCheapest(com.epl.a2btransfer.xto.AvailRq)
+2017-06-19 12:29:11.283  INFO 12112 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a2btransfer/book],methods=[POST],consumes=[application/xml],produces=[application/xml]}" onto public com.epl.a2btransfer.xto.BookingRs com.epl.a2btransfer.controller.A2BController.book(com.epl.a2btransfer.xto.BookingRq)
+2017-06-19 12:29:11.283  INFO 12112 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a2btransfer/cancelFees],methods=[POST],consumes=[application/xml],produces=[application/xml]}" onto public com.epl.a2btransfer.xto.CancelFeeRs com.epl.a2btransfer.controller.A2BController.cancelFees(com.epl.a2btransfer.xto.CancelFeeRq)
+2017-06-19 12:29:11.284  INFO 12112 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a2btransfer/avail],methods=[POST],consumes=[application/xml],produces=[application/xml]}" onto public com.epl.a2btransfer.xto.AvailRs com.epl.a2btransfer.controller.A2BController.avail(com.epl.a2btransfer.xto.AvailRq)
+2017-06-19 12:29:11.290  INFO 12112 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-06-19 12:29:11.291  INFO 12112 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-06-19 12:29:11.528  INFO 12112 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-19 12:29:11.529  INFO 12112 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-19 12:29:11.600  INFO 12112 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-19 12:29:12.015  INFO 12112 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-06-19 12:29:12.027  INFO 12112 --- [           main] com.testepl.a2btransfer.AvailTest        : Started AvailTest in 14.799 seconds (JVM running for 15.724)
+2017-06-19 12:29:12.106  INFO 12112 --- [           main] com.testepl.a2btransfer.AvailTest        : Se pide disponibilidad por fechas
+2017-06-19 12:29:12.108  INFO 12112 --- [           main] com.testepl.a2btransfer.AvailTest        : App Name-->A2bTransfer
+2017-06-19 12:29:12.252  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-06-19 12:29:12.252  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : URI         : http://localhost:8080/a2btransfer/avail
+2017-06-19 12:29:12.253  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-06-19 12:29:12.253  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[629]}
+2017-06-19 12:29:12.253  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Request body:  <?xml version="1.0" encoding="UTF-8" standalone="yes"?><TCOML version="NEWFORMAT"><TransferOnly><Availability><Request><Username>Juacho</Username><Password>Juancho123</Password><Lang>ES</Lang><DeparturePointCode>PMI</DeparturePointCode><ArrivalPointCode>ARE</ArrivalPointCode><SectorType>RETURN</SectorType><ArrDate>30/07/17</ArrDate><ArrTime>10:00</ArrTime><RetDate>10/08/17</RetDate><RetTime>10:00</RetTime><Adults>2</Adults><Children>1</Children><Infants>1</Infants><Vehicletype>0</Vehicletype><Latitude></Latitude><Longitude></Longitude><TTICode></TTICode><GIATA_ID></GIATA_ID></Request></Availability></TransferOnly></TCOML>
+2017-06-19 12:29:12.254  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-06-19 12:29:12.364  INFO 12112 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-06-19 12:29:12.364  INFO 12112 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-06-19 12:29:12.408  INFO 12112 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 43 ms
+2017-06-19 12:29:12.472  INFO 12112 --- [nio-8080-exec-1] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.AvailRq
+2017-06-19 12:29:12.472  INFO 12112 --- [nio-8080-exec-1] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-06-19 12:29:12.502  INFO 12112 --- [nio-8080-exec-1] c.e.a.controller.A2BController           : ====================== Avail Controller ======================
+2017-06-19 12:29:12.503  INFO 12112 --- [nio-8080-exec-1] c.e.a.services.A2BTransferClientService  : Se va a llamar al metodo de disponibilidad
+2017-06-19 12:29:12.506  INFO 12112 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-06-19 12:29:12.506  INFO 12112 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : URI         : http://test.xmlp2p.com/xml/
+2017-06-19 12:29:12.506  INFO 12112 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-06-19 12:29:12.506  INFO 12112 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[629]}
+2017-06-19 12:29:12.506  INFO 12112 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : Request body:  <?xml version="1.0" encoding="UTF-8" standalone="yes"?><TCOML version="NEWFORMAT"><TransferOnly><Availability><Request><Username>Juacho</Username><Password>Juancho123</Password><Lang>ES</Lang><DeparturePointCode>PMI</DeparturePointCode><ArrivalPointCode>ARE</ArrivalPointCode><SectorType>RETURN</SectorType><ArrDate>30/07/17</ArrDate><ArrTime>10:00</ArrTime><RetDate>10/08/17</RetDate><RetTime>10:00</RetTime><Adults>2</Adults><Children>1</Children><Infants>1</Infants><Vehicletype>0</Vehicletype><Latitude></Latitude><Longitude></Longitude><TTICode></TTICode><GIATA_ID></GIATA_ID></Request></Availability></TransferOnly></TCOML>
+2017-06-19 12:29:12.507  INFO 12112 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-06-19 12:29:13.452  INFO 12112 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-06-19 12:29:13.455  INFO 12112 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-06-19 12:29:13.456  INFO 12112 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : Status text  : OK
+2017-06-19 12:29:13.457  INFO 12112 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Cache-Control=[private], Content-Length=[7063], Content-Type=[text/XML; Charset=UTF-8], Server=[Microsoft-IIS/8.0], Set-Cookie=[ASPSESSIONIDCQQRRRCC=LCPFJGBDEELJJGHDLMOMPLFB; path=/], X-Powered-By=[ASP.NET], Date=[Mon, 19 Jun 2017 10:29:05 GMT]}
+2017-06-19 12:29:13.457  INFO 12112 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : Response body: <TCOML version="3.0" company="SSH" sess="201706191129059243656754">
+<TransferOnly>
+<Availability>
+<A2BDeepLink>http://www.a2btransfers.com/</A2BDeepLink>
+<RHDeepLink>http://www.hoppa.com/</RHDeepLink>
+<Avline count="1">
+<PRID>6679064</PRID>
+<TransferCode>TPMIARE*6679064*SHUT1-1</TransferCode>
+<TransferDescription>Traslado (Ida-Vuelta)</TransferDescription>
+<TransferPrice>9.28</TransferPrice>
+<DeparturePointType>AP</DeparturePointType>
+<ArrivalPointType>RT</ArrivalPointType>
+<VehicleDetails>
+<VehicleID>9</VehicleID>
+<Vehicle>Traslado compartido en Autobus</Vehicle>
+<VehicleCode>SHUT1-1</VehicleCode>
+<VehicleType>1</VehicleType>
+<MinCapacity>1</MinCapacity>
+<MaxCapacity>1</MaxCapacity>
+<MinStops>0</MinStops>
+<MaxStops>0</MaxStops>
+<NumberOfBags>1</NumberOfBags>
+<NumberOfVehicles>1</NumberOfVehicles>
+</VehicleDetails>
+<CurrencyCode>EUR</CurrencyCode>
+<DistanceKM>14</DistanceKM>
+<OutboundTransferDetails>
+ <OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin>
+ <OutboundDestination>El Arenal</OutboundDestination>
+ <OutboundJourneyTime>45 minutos</OutboundJourneyTime>
+ <OutboundArrivalDate>30/07/2017</OutboundArrivalDate>
+ <OutboundArrivalTime>1000</OutboundArrivalTime>
+<OutboundPickupDate></OutboundPickupDate>
+<OutboundPickupTime></OutboundPickupTime>
+</OutboundTransferDetails>
+<ReturnTransferDetails>
+	<ReturnOrigin>El Arenal</ReturnOrigin>
+	<ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination>
+	<ReturnJourneyTime>45 minutos</ReturnJourneyTime>
+	<ReturnDepartureDate>10/08/2017</ReturnDepartureDate>
+	<ReturnDepartureTime>1000</ReturnDepartureTime>
+<ReturnPickupDate></ReturnPickupDate>
+<ReturnPickupTime></ReturnPickupTime>
+</ReturnTransferDetails>
+<TransferTotalPrice>37.1</TransferTotalPrice>
+<Pricing>PP</Pricing>
+<Discount>0</Discount>
+<DiscountPercent>0</DiscountPercent>
+<Disclaimer>0</Disclaimer>
+</Avline>
+<Avline count="2">
+<PRID>6679305</PRID>
+<TransferCode>TPMIARE*6679305*PRI4</TransferCode>
+<TransferDescription>Traslado (Ida-Vuelta)</TransferDescription>
+<TransferPrice>12.2</TransferPrice>
+<DeparturePointType>AP</DeparturePointType>
+<ArrivalPointType>RT</ArrivalPointType>
+<VehicleDetails>
+<VehicleID>152</VehicleID>
+<Vehicle>Traslado Privado (1 -4 personas)</Vehicle>
+<VehicleCode>PRI4</VehicleCode>
+<VehicleType>2</VehicleType>
+<MinCapacity>1</MinCapacity>
+<MaxCapacity>4</MaxCapacity>
+<MinStops>0</MinStops>
+<MaxStops>0</MaxStops>
+<NumberOfBags>1</NumberOfBags>
+<NumberOfVehicles>1</NumberOfVehicles>
+</VehicleDetails>
+<CurrencyCode>EUR</CurrencyCode>
+<DistanceKM>14</DistanceKM>
+<OutboundTransferDetails>
+ <OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin>
+ <OutboundDestination>El Arenal</OutboundDestination>
+ <OutboundJourneyTime>15 minutos</OutboundJourneyTime>
+ <OutboundArrivalDate>30/07/2017</OutboundArrivalDate>
+ <OutboundArrivalTime>1000</OutboundArrivalTime>
+<OutboundPickupDate></OutboundPickupDate>
+<OutboundPickupTime></OutboundPickupTime>
+</OutboundTransferDetails>
+<ReturnTransferDetails>
+	<ReturnOrigin>El Arenal</ReturnOrigin>
+	<ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination>
+	<ReturnJourneyTime>15 minutos</ReturnJourneyTime>
+	<ReturnDepartureDate>10/08/2017</ReturnDepartureDate>
+	<ReturnDepartureTime>1000</ReturnDepartureTime>
+<ReturnPickupDate>10/08/2017</ReturnPickupDate>
+<ReturnPickupTime>0745</ReturnPickupTime>
+</ReturnTransferDetails>
+<TransferTotalPrice>48.8</TransferTotalPrice>
+<Pricing>PV</Pricing>
+<Discount>0</Discount>
+<DiscountPercent>0</DiscountPercent>
+<Disclaimer>0</Disclaimer>
+</Avline>
+<Avline count="3">
+<PRID>6691062</PRID>
+<TransferCode>TPMIARE*6691062*SPEEDYSH1-1</TransferCode>
+<TransferDescription>Traslado (Ida-Vuelta)</TransferDescription>
+<TransferPrice>18.55</TransferPrice>
+<DeparturePointType>AP</DeparturePointType>
+<ArrivalPointType>RT</ArrivalPointType>
+<VehicleDetails>
+<VehicleID>431</VehicleID>
+<Vehicle>Traslado Compartido Express Max 4 paradas</Vehicle>
+<VehicleCode>SPEEDYSH1-1</VehicleCode>
+<VehicleType>1</VehicleType>
+<MinCapacity>1</MinCapacity>
+<MaxCapacity>1</MaxCapacity>
+<MinStops>0</MinStops>
+<MaxStops>0</MaxStops>
+<NumberOfBags>1</NumberOfBags>
+<NumberOfVehicles>1</NumberOfVehicles>
+</VehicleDetails>
+<CurrencyCode>EUR</CurrencyCode>
+<DistanceKM>14</DistanceKM>
+<OutboundTransferDetails>
+ <OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin>
+ <OutboundDestination>El Arenal</OutboundDestination>
+ <OutboundJourneyTime>35 minutos</OutboundJourneyTime>
+ <OutboundArrivalDate>30/07/2017</OutboundArrivalDate>
+ <OutboundArrivalTime>1000</OutboundArrivalTime>
+<OutboundPickupDate></OutboundPickupDate>
+<OutboundPickupTime></OutboundPickupTime>
+</OutboundTransferDetails>
+<ReturnTransferDetails>
+	<ReturnOrigin>El Arenal</ReturnOrigin>
+	<ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination>
+	<ReturnJourneyTime>35 minutos</ReturnJourneyTime>
+	<ReturnDepartureDate>10/08/2017</ReturnDepartureDate>
+	<ReturnDepartureTime>1000</ReturnDepartureTime>
+<ReturnPickupDate></ReturnPickupDate>
+<ReturnPickupTime></ReturnPickupTime>
+</ReturnTransferDetails>
+<TransferTotalPrice>74.18</TransferTotalPrice>
+<Pricing>PP</Pricing>
+<Discount>0</Discount>
+<DiscountPercent>0</DiscountPercent>
+<Disclaimer>0</Disclaimer>
+</Avline>
+<Avline count="4">
+<PRID>6679075</PRID>
+<TransferCode>TPMIARE*6679075*MB4-8</TransferCode>
+<TransferDescription>Traslado (Ida-Vuelta)</TransferDescription>
+<TransferPrice>23.72</TransferPrice>
+<DeparturePointType>AP</DeparturePointType>
+<ArrivalPointType>RT</ArrivalPointType>
+<VehicleDetails>
+<VehicleID>32</VehicleID>
+<Vehicle>Traslado en Minibus Privado (4 -8 pers)</Vehicle>
+<VehicleCode>MB4-8</VehicleCode>
+<VehicleType>2</VehicleType>
+<MinCapacity>4</MinCapacity>
+<MaxCapacity>8</MaxCapacity>
+<MinStops>0</MinStops>
+<MaxStops>0</MaxStops>
+<NumberOfBags>1</NumberOfBags>
+<NumberOfVehicles>1</NumberOfVehicles>
+</VehicleDetails>
+<CurrencyCode>EUR</CurrencyCode>
+<DistanceKM>14</DistanceKM>
+<OutboundTransferDetails>
+ <OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin>
+ <OutboundDestination>El Arenal</OutboundDestination>
+ <OutboundJourneyTime>15 minutos</OutboundJourneyTime>
+ <OutboundArrivalDate>30/07/2017</OutboundArrivalDate>
+ <OutboundArrivalTime>1000</OutboundArrivalTime>
+<OutboundPickupDate></OutboundPickupDate>
+<OutboundPickupTime></OutboundPickupTime>
+</OutboundTransferDetails>
+<ReturnTransferDetails>
+	<ReturnOrigin>El Arenal</ReturnOrigin>
+	<ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination>
+	<ReturnJourneyTime>15 minutos</ReturnJourneyTime>
+	<ReturnDepartureDate>10/08/2017</ReturnDepartureDate>
+	<ReturnDepartureTime>1000</ReturnDepartureTime>
+<ReturnPickupDate>10/08/2017</ReturnPickupDate>
+<ReturnPickupTime>0745</ReturnPickupTime>
+</ReturnTransferDetails>
+<TransferTotalPrice>94.89</TransferTotalPrice>
+<Pricing>PV</Pricing>
+<Discount>0</Discount>
+<DiscountPercent>0</DiscountPercent>
+<Disclaimer>0</Disclaimer>
+</Avline>
+</Availability>
+</TransferOnly>
+</TCOML>
+
+2017-06-19 12:29:13.460  INFO 12112 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-06-19 12:29:13.462  INFO 12112 --- [nio-8080-exec-1] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.AvailRs
+2017-06-19 12:29:13.463  INFO 12112 --- [nio-8080-exec-1] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-06-19 12:29:13.842  INFO 12112 --- [nio-8080-exec-1] c.e.a2btransfer.services.PolicyService   : Precio anterior =9.28Precio final =11.13599967956543
+2017-06-19 12:29:13.897  INFO 12112 --- [nio-8080-exec-1] c.e.a2btransfer.services.PolicyService   : Precio anterior =9.28Precio final =11.13599967956543
+2017-06-19 12:29:13.955  INFO 12112 --- [nio-8080-exec-1] c.e.a2btransfer.services.PolicyService   : Precio anterior =12.2Precio final =14.639999771118164
+2017-06-19 12:29:14.010  INFO 12112 --- [nio-8080-exec-1] c.e.a2btransfer.services.PolicyService   : Precio anterior =12.2Precio final =14.639999771118164
+2017-06-19 12:29:14.065  INFO 12112 --- [nio-8080-exec-1] c.e.a2btransfer.services.PolicyService   : Precio anterior =18.55Precio final =22.259999084472657
+2017-06-19 12:29:14.119  INFO 12112 --- [nio-8080-exec-1] c.e.a2btransfer.services.PolicyService   : Precio anterior =18.55Precio final =22.259999084472657
+2017-06-19 12:29:14.173  INFO 12112 --- [nio-8080-exec-1] c.e.a2btransfer.services.PolicyService   : Precio anterior =23.72Precio final =28.46399917602539
+2017-06-19 12:29:14.228  INFO 12112 --- [nio-8080-exec-1] c.e.a2btransfer.services.PolicyService   : Precio anterior =23.72Precio final =28.46399917602539
+2017-06-19 12:29:14.307  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-06-19 12:29:14.307  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-06-19 12:29:14.307  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status text  : null
+2017-06-19 12:29:14.307  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Content-Type=[application/xml], Transfer-Encoding=[chunked], Date=[Mon, 19 Jun 2017 10:29:14 GMT]}
+2017-06-19 12:29:14.307  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Response body: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><TCOML version="3.0" company="SSH" sess="201706191129059243656754"><TransferOnly><Availability><A2BDeepLink>http://www.a2btransfers.com/</A2BDeepLink><RHDeepLink>http://www.hoppa.com/</RHDeepLink><Avline count="1"><PRID>6679064</PRID><TransferCode>TPMIARE*6679064*SHUT1-1</TransferCode><TransferDescription>Traslado (Ida-Vuelta)</TransferDescription><TransferPrice>9.28</TransferPrice><DeparturePointType>AP</DeparturePointType><ArrivalPointType>RT</ArrivalPointType><VehicleDetails><VehicleID>9</VehicleID><Vehicle>Traslado compartido en Autobus</Vehicle><VehicleCode>SHUT1-1</VehicleCode><VehicleType>1</VehicleType><MinCapacity>1</MinCapacity><MaxCapacity>1</MaxCapacity><MinStops>0</MinStops><MaxStops>0</MaxStops><NumberOfBags>1</NumberOfBags><NumberOfVehicles>1</NumberOfVehicles></VehicleDetails><CurrencyCode>EUR</CurrencyCode><DistanceKM>14</DistanceKM><OutboundTransferDetails><OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin><OutboundDestination>El Arenal</OutboundDestination><OutboundJourneyTime>45 minutos</OutboundJourneyTime><OutboundArrivalDate>30/07/2017</OutboundArrivalDate><OutboundArrivalTime>1000</OutboundArrivalTime><OutboundPickupDate></OutboundPickupDate><OutboundPickupTime></OutboundPickupTime></OutboundTransferDetails><ReturnTransferDetails><ReturnOrigin>El Arenal</ReturnOrigin><ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination><ReturnJourneyTime>45 minutos</ReturnJourneyTime><ReturnDepartureDate>10/08/2017</ReturnDepartureDate><ReturnDepartureTime>1000</ReturnDepartureTime><ReturnPickupDate></ReturnPickupDate><ReturnPickupTime></ReturnPickupTime></ReturnTransferDetails><TransferTotalPrice>11.136</TransferTotalPrice><Pricing>PP</Pricing><Discount>0.0</Discount><DiscountPercent>0.0</DiscountPercent><Disclaimer>0</Disclaimer></Avline><Avline count="2"><PRID>6679305</PRID><TransferCode>TPMIARE*6679305*PRI4</TransferCode><TransferDescription>Traslado (Ida-Vuelta)</TransferDescription><TransferPrice>12.2</TransferPrice><DeparturePointType>AP</DeparturePointType><ArrivalPointType>RT</ArrivalPointType><VehicleDetails><VehicleID>152</VehicleID><Vehicle>Traslado Privado (1 -4 personas)</Vehicle><VehicleCode>PRI4</VehicleCode><VehicleType>2</VehicleType><MinCapacity>1</MinCapacity><MaxCapacity>4</MaxCapacity><MinStops>0</MinStops><MaxStops>0</MaxStops><NumberOfBags>1</NumberOfBags><NumberOfVehicles>1</NumberOfVehicles></VehicleDetails><CurrencyCode>EUR</CurrencyCode><DistanceKM>14</DistanceKM><OutboundTransferDetails><OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin><OutboundDestination>El Arenal</OutboundDestination><OutboundJourneyTime>15 minutos</OutboundJourneyTime><OutboundArrivalDate>30/07/2017</OutboundArrivalDate><OutboundArrivalTime>1000</OutboundArrivalTime><OutboundPickupDate></OutboundPickupDate><OutboundPickupTime></OutboundPickupTime></OutboundTransferDetails><ReturnTransferDetails><ReturnOrigin>El Arenal</ReturnOrigin><ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination><ReturnJourneyTime>15 minutos</ReturnJourneyTime><ReturnDepartureDate>10/08/2017</ReturnDepartureDate><ReturnDepartureTime>1000</ReturnDepartureTime><ReturnPickupDate>10/08/2017</ReturnPickupDate><ReturnPickupTime>0745</ReturnPickupTime></ReturnTransferDetails><TransferTotalPrice>14.639999</TransferTotalPrice><Pricing>PV</Pricing><Discount>0.0</Discount><DiscountPercent>0.0</DiscountPercent><Disclaimer>0</Disclaimer></Avline><Avline count="3"><PRID>6691062</PRID><TransferCode>TPMIARE*6691062*SPEEDYSH1-1</TransferCode><TransferDescription>Traslado (Ida-Vuelta)</TransferDescription><TransferPrice>18.55</TransferPrice><DeparturePointType>AP</DeparturePointType><ArrivalPointType>RT</ArrivalPointType><VehicleDetails><VehicleID>431</VehicleID><Vehicle>Traslado Compartido Express Max 4 paradas</Vehicle><VehicleCode>SPEEDYSH1-1</VehicleCode><VehicleType>1</VehicleType><MinCapacity>1</MinCapacity><MaxCapacity>1</MaxCapacity><MinStops>0</MinStops><MaxStops>0</MaxStops><NumberOfBags>1</NumberOfBags><NumberOfVehicles>1</NumberOfVehicles></VehicleDetails><CurrencyCode>EUR</CurrencyCode><DistanceKM>14</DistanceKM><OutboundTransferDetails><OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin><OutboundDestination>El Arenal</OutboundDestination><OutboundJourneyTime>35 minutos</OutboundJourneyTime><OutboundArrivalDate>30/07/2017</OutboundArrivalDate><OutboundArrivalTime>1000</OutboundArrivalTime><OutboundPickupDate></OutboundPickupDate><OutboundPickupTime></OutboundPickupTime></OutboundTransferDetails><ReturnTransferDetails><ReturnOrigin>El Arenal</ReturnOrigin><ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination><ReturnJourneyTime>35 minutos</ReturnJourneyTime><ReturnDepartureDate>10/08/2017</ReturnDepartureDate><ReturnDepartureTime>1000</ReturnDepartureTime><ReturnPickupDate></ReturnPickupDate><ReturnPickupTime></ReturnPickupTime></ReturnTransferDetails><TransferTotalPrice>22.259998</TransferTotalPrice><Pricing>PP</Pricing><Discount>0.0</Discount><DiscountPercent>0.0</DiscountPercent><Disclaimer>0</Disclaimer></Avline><Avline count="4"><PRID>6679075</PRID><TransferCode>TPMIARE*6679075*MB4-8</TransferCode><TransferDescription>Traslado (Ida-Vuelta)</TransferDescription><TransferPrice>23.72</TransferPrice><DeparturePointType>AP</DeparturePointType><ArrivalPointType>RT</ArrivalPointType><VehicleDetails><VehicleID>32</VehicleID><Vehicle>Traslado en Minibus Privado (4 -8 pers)</Vehicle><VehicleCode>MB4-8</VehicleCode><VehicleType>2</VehicleType><MinCapacity>4</MinCapacity><MaxCapacity>8</MaxCapacity><MinStops>0</MinStops><MaxStops>0</MaxStops><NumberOfBags>1</NumberOfBags><NumberOfVehicles>1</NumberOfVehicles></VehicleDetails><CurrencyCode>EUR</CurrencyCode><DistanceKM>14</DistanceKM><OutboundTransferDetails><OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin><OutboundDestination>El Arenal</OutboundDestination><OutboundJourneyTime>15 minutos</OutboundJourneyTime><OutboundArrivalDate>30/07/2017</OutboundArrivalDate><OutboundArrivalTime>1000</OutboundArrivalTime><OutboundPickupDate></OutboundPickupDate><OutboundPickupTime></OutboundPickupTime></OutboundTransferDetails><ReturnTransferDetails><ReturnOrigin>El Arenal</ReturnOrigin><ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination><ReturnJourneyTime>15 minutos</ReturnJourneyTime><ReturnDepartureDate>10/08/2017</ReturnDepartureDate><ReturnDepartureTime>1000</ReturnDepartureTime><ReturnPickupDate>10/08/2017</ReturnPickupDate><ReturnPickupTime>0745</ReturnPickupTime></ReturnTransferDetails><TransferTotalPrice>28.463999</TransferTotalPrice><Pricing>PV</Pricing><Discount>0.0</Discount><DiscountPercent>0.0</DiscountPercent><Disclaimer>0</Disclaimer></Avline><Avline count="1"><PRID>6679064</PRID><TransferCode>TPMIARE*6679064*SHUT1-1</TransferCode><TransferDescription>Traslado (Ida-Vuelta)</TransferDescription><TransferPrice>9.28</TransferPrice><DeparturePointType>AP</DeparturePointType><ArrivalPointType>RT</ArrivalPointType><VehicleDetails><VehicleID>9</VehicleID><Vehicle>Traslado compartido en Autobus</Vehicle><VehicleCode>SHUT1-1</VehicleCode><VehicleType>1</VehicleType><MinCapacity>1</MinCapacity><MaxCapacity>1</MaxCapacity><MinStops>0</MinStops><MaxStops>0</MaxStops><NumberOfBags>1</NumberOfBags><NumberOfVehicles>1</NumberOfVehicles></VehicleDetails><CurrencyCode>EUR</CurrencyCode><DistanceKM>14</DistanceKM><OutboundTransferDetails><OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin><OutboundDestination>El Arenal</OutboundDestination><OutboundJourneyTime>45 minutos</OutboundJourneyTime><OutboundArrivalDate>30/07/2017</OutboundArrivalDate><OutboundArrivalTime>1000</OutboundArrivalTime><OutboundPickupDate></OutboundPickupDate><OutboundPickupTime></OutboundPickupTime></OutboundTransferDetails><ReturnTransferDetails><ReturnOrigin>El Arenal</ReturnOrigin><ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination><ReturnJourneyTime>45 minutos</ReturnJourneyTime><ReturnDepartureDate>10/08/2017</ReturnDepartureDate><ReturnDepartureTime>1000</ReturnDepartureTime><ReturnPickupDate></ReturnPickupDate><ReturnPickupTime></ReturnPickupTime></ReturnTransferDetails><TransferTotalPrice>11.136</TransferTotalPrice><Pricing>PP</Pricing><Discount>0.0</Discount><DiscountPercent>0.0</DiscountPercent><Disclaimer>0</Disclaimer></Avline><Avline count="2"><PRID>6679305</PRID><TransferCode>TPMIARE*6679305*PRI4</TransferCode><TransferDescription>Traslado (Ida-Vuelta)</TransferDescription><TransferPrice>12.2</TransferPrice><DeparturePointType>AP</DeparturePointType><ArrivalPointType>RT</ArrivalPointType><VehicleDetails><VehicleID>152</VehicleID><Vehicle>Traslado Privado (1 -4 personas)</Vehicle><VehicleCode>PRI4</VehicleCode><VehicleType>2</VehicleType><MinCapacity>1</MinCapacity><MaxCapacity>4</MaxCapacity><MinStops>0</MinStops><MaxStops>0</MaxStops><NumberOfBags>1</NumberOfBags><NumberOfVehicles>1</NumberOfVehicles></VehicleDetails><CurrencyCode>EUR</CurrencyCode><DistanceKM>14</DistanceKM><OutboundTransferDetails><OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin><OutboundDestination>El Arenal</OutboundDestination><OutboundJourneyTime>15 minutos</OutboundJourneyTime><OutboundArrivalDate>30/07/2017</OutboundArrivalDate><OutboundArrivalTime>1000</OutboundArrivalTime><OutboundPickupDate></OutboundPickupDate><OutboundPickupTime></OutboundPickupTime></OutboundTransferDetails><ReturnTransferDetails><ReturnOrigin>El Arenal</ReturnOrigin><ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination><ReturnJourneyTime>15 minutos</ReturnJourneyTime><ReturnDepartureDate>10/08/2017</ReturnDepartureDate><ReturnDepartureTime>1000</ReturnDepartureTime><ReturnPickupDate>10/08/2017</ReturnPickupDate><ReturnPickupTime>0745</ReturnPickupTime></ReturnTransferDetails><TransferTotalPrice>14.639999</TransferTotalPrice><Pricing>PV</Pricing><Discount>0.0</Discount><DiscountPercent>0.0</DiscountPercent><Disclaimer>0</Disclaimer></Avline><Avline count="3"><PRID>6691062</PRID><TransferCode>TPMIARE*6691062*SPEEDYSH1-1</TransferCode><TransferDescription>Traslado (Ida-Vuelta)</TransferDescription><TransferPrice>18.55</TransferPrice><DeparturePointType>AP</DeparturePointType><ArrivalPointType>RT</ArrivalPointType><VehicleDetails><VehicleID>431</VehicleID><Vehicle>Traslado Compartido Express Max 4 paradas</Vehicle><VehicleCode>SPEEDYSH1-1</VehicleCode><VehicleType>1</VehicleType><MinCapacity>1</MinCapacity><MaxCapacity>1</MaxCapacity><MinStops>0</MinStops><MaxStops>0</MaxStops><NumberOfBags>1</NumberOfBags><NumberOfVehicles>1</NumberOfVehicles></VehicleDetails><CurrencyCode>EUR</CurrencyCode><DistanceKM>14</DistanceKM><OutboundTransferDetails><OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin><OutboundDestination>El Arenal</OutboundDestination><OutboundJourneyTime>35 minutos</OutboundJourneyTime><OutboundArrivalDate>30/07/2017</OutboundArrivalDate><OutboundArrivalTime>1000</OutboundArrivalTime><OutboundPickupDate></OutboundPickupDate><OutboundPickupTime></OutboundPickupTime></OutboundTransferDetails><ReturnTransferDetails><ReturnOrigin>El Arenal</ReturnOrigin><ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination><ReturnJourneyTime>35 minutos</ReturnJourneyTime><ReturnDepartureDate>10/08/2017</ReturnDepartureDate><ReturnDepartureTime>1000</ReturnDepartureTime><ReturnPickupDate></ReturnPickupDate><ReturnPickupTime></ReturnPickupTime></ReturnTransferDetails><TransferTotalPrice>22.259998</TransferTotalPrice><Pricing>PP</Pricing><Discount>0.0</Discount><DiscountPercent>0.0</DiscountPercent><Disclaimer>0</Disclaimer></Avline><Avline count="4"><PRID>6679075</PRID><TransferCode>TPMIARE*6679075*MB4-8</TransferCode><TransferDescription>Traslado (Ida-Vuelta)</TransferDescription><TransferPrice>23.72</TransferPrice><DeparturePointType>AP</DeparturePointType><ArrivalPointType>RT</ArrivalPointType><VehicleDetails><VehicleID>32</VehicleID><Vehicle>Traslado en Minibus Privado (4 -8 pers)</Vehicle><VehicleCode>MB4-8</VehicleCode><VehicleType>2</VehicleType><MinCapacity>4</MinCapacity><MaxCapacity>8</MaxCapacity><MinStops>0</MinStops><MaxStops>0</MaxStops><NumberOfBags>1</NumberOfBags><NumberOfVehicles>1</NumberOfVehicles></VehicleDetails><CurrencyCode>EUR</CurrencyCode><DistanceKM>14</DistanceKM><OutboundTransferDetails><OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin><OutboundDestination>El Arenal</OutboundDestination><OutboundJourneyTime>15 minutos</OutboundJourneyTime><OutboundArrivalDate>30/07/2017</OutboundArrivalDate><OutboundArrivalTime>1000</OutboundArrivalTime><OutboundPickupDate></OutboundPickupDate><OutboundPickupTime></OutboundPickupTime></OutboundTransferDetails><ReturnTransferDetails><ReturnOrigin>El Arenal</ReturnOrigin><ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination><ReturnJourneyTime>15 minutos</ReturnJourneyTime><ReturnDepartureDate>10/08/2017</ReturnDepartureDate><ReturnDepartureTime>1000</ReturnDepartureTime><ReturnPickupDate>10/08/2017</ReturnPickupDate><ReturnPickupTime>0745</ReturnPickupTime></ReturnTransferDetails><TransferTotalPrice>28.463999</TransferTotalPrice><Pricing>PV</Pricing><Discount>0.0</Discount><DiscountPercent>0.0</DiscountPercent><Disclaimer>0</Disclaimer></Avline></Availability></TransferOnly></TCOML>
+
+2017-06-19 12:29:14.308  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-06-19 12:29:14.308  INFO 12112 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.AvailRs
+2017-06-19 12:29:14.308  INFO 12112 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-06-19 12:29:14.319  INFO 12112 --- [           main] com.testepl.a2btransfer.AvailTest        : OK No hay errores en la disponibilidad
+2017-06-19 12:29:14.319  INFO 12112 --- [           main] com.testepl.a2btransfer.AvailTest        : Se escoge index -->7
+2017-06-19 12:29:14.362  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-06-19 12:29:14.362  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : URI         : http://localhost:8080/a2btransfer/block
+2017-06-19 12:29:14.362  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-06-19 12:29:14.362  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[617]}
+2017-06-19 12:29:14.363  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Request body:  <?xml version="1.0" encoding="UTF-8" standalone="yes"?><TCOML version="NEWFORMAT" date="30/07/17"><TransferOnly><Booking><Reserve><Username>Juacho</Username><Password>Juancho123</Password><Lang>ES</Lang><DeparturePointCode>PMI</DeparturePointCode><ArrivalPointCode>ARE</ArrivalPointCode><SectorType>RETURN</SectorType><ArrDate>30/07/17</ArrDate><ArrTime>10:00</ArrTime><RetDate>10/08/17</RetDate><RetTime>10:00</RetTime><Adults>2</Adults><Children>1</Children><Infants>1</Infants><TransferCode>TPMIARE*6679075*MB4-8</TransferCode><Latitude></Latitude><Longitude></Longitude></Reserve></Booking></TransferOnly></TCOML>
+2017-06-19 12:29:14.363  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-06-19 12:29:14.369  INFO 12112 --- [nio-8080-exec-2] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.ReserveRq
+2017-06-19 12:29:14.369  INFO 12112 --- [nio-8080-exec-2] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-06-19 12:29:14.409  INFO 12112 --- [nio-8080-exec-2] c.e.a.controller.A2BController           : ====================== Avail Controller ======================
+2017-06-19 12:29:14.409  INFO 12112 --- [nio-8080-exec-2] c.e.a.services.A2BTransferClientService  : Se va a llamar al metodo de bloqueo
+2017-06-19 12:29:14.411  INFO 12112 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-06-19 12:29:14.411  INFO 12112 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : URI         : http://test.xmlp2p.com/xml/
+2017-06-19 12:29:14.411  INFO 12112 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-06-19 12:29:14.411  INFO 12112 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[617]}
+2017-06-19 12:29:14.412  INFO 12112 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : Request body:  <?xml version="1.0" encoding="UTF-8" standalone="yes"?><TCOML version="NEWFORMAT" date="30/07/17"><TransferOnly><Booking><Reserve><Username>Juacho</Username><Password>Juancho123</Password><Lang>ES</Lang><DeparturePointCode>PMI</DeparturePointCode><ArrivalPointCode>ARE</ArrivalPointCode><SectorType>RETURN</SectorType><ArrDate>30/07/17</ArrDate><ArrTime>10:00</ArrTime><RetDate>10/08/17</RetDate><RetTime>10:00</RetTime><Adults>2</Adults><Children>1</Children><Infants>1</Infants><TransferCode>TPMIARE*6679075*MB4-8</TransferCode><Latitude></Latitude><Longitude></Longitude></Reserve></Booking></TransferOnly></TCOML>
+2017-06-19 12:29:14.412  INFO 12112 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-06-19 12:29:14.613  INFO 12112 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-06-19 12:29:14.613  INFO 12112 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-06-19 12:29:14.613  INFO 12112 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : Status text  : OK
+2017-06-19 12:29:14.614  INFO 12112 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Cache-Control=[private], Content-Length=[261], Content-Type=[text/XML; Charset=UTF-8], Server=[Microsoft-IIS/8.0], Set-Cookie=[ASPSESSIONIDCQDQBBAC=EKMIIFGDOLBHIJJBFAHPDAEL; path=/], X-Powered-By=[ASP.NET], Date=[Mon, 19 Jun 2017 10:29:10 GMT]}
+2017-06-19 12:29:14.614  INFO 12112 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : Response body: <TCOML version="3.0" company="SSH" sess="201706191129117309827506">
+<TransferOnly>
+<Booking>
+<Reserve>
+<TransacNo>11656233</TransacNo>
+<HolidayValue>94.89</HolidayValue>
+<CurrencyCode>EUR</CurrencyCode>
+</Reserve>
+</Booking>
+</TransferOnly>
+</TCOML>
+
+2017-06-19 12:29:14.614  INFO 12112 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-06-19 12:29:14.614  INFO 12112 --- [nio-8080-exec-2] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.ReserveRs
+2017-06-19 12:29:14.614  INFO 12112 --- [nio-8080-exec-2] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-06-19 12:29:14.660  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-06-19 12:29:14.661  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-06-19 12:29:14.661  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status text  : null
+2017-06-19 12:29:14.661  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Content-Type=[application/xml], Transfer-Encoding=[chunked], Date=[Mon, 19 Jun 2017 10:29:14 GMT]}
+2017-06-19 12:29:14.661  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Response body: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><TCOML version="3.0" company="SSH" sess="201706191129117309827506"><TransferOnly><Booking><Reserve><TransacNo>11656233</TransacNo><HolidayValue>94.89</HolidayValue><CurrencyCode>EUR</CurrencyCode></Reserve></Booking></TransferOnly></TCOML>
+
+2017-06-19 12:29:14.661  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-06-19 12:29:14.661  INFO 12112 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.ReserveRs
+2017-06-19 12:29:14.661  INFO 12112 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-06-19 12:29:14.666  INFO 12112 --- [           main] com.testepl.a2btransfer.AvailTest        : Se pide disponibilidad por fechas
+2017-06-19 12:29:14.666  INFO 12112 --- [           main] com.testepl.a2btransfer.AvailTest        : App Name-->A2bTransfer
+2017-06-19 12:29:14.667  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-06-19 12:29:14.667  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : URI         : http://localhost:8080/a2btransfer/avail
+2017-06-19 12:29:14.667  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-06-19 12:29:14.667  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[629]}
+2017-06-19 12:29:14.667  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Request body:  <?xml version="1.0" encoding="UTF-8" standalone="yes"?><TCOML version="NEWFORMAT"><TransferOnly><Availability><Request><Username>Juacho</Username><Password>Juancho123</Password><Lang>ES</Lang><DeparturePointCode>PMI</DeparturePointCode><ArrivalPointCode>ARE</ArrivalPointCode><SectorType>RETURN</SectorType><ArrDate>30/07/17</ArrDate><ArrTime>10:00</ArrTime><RetDate>10/08/17</RetDate><RetTime>10:00</RetTime><Adults>2</Adults><Children>1</Children><Infants>1</Infants><Vehicletype>0</Vehicletype><Latitude></Latitude><Longitude></Longitude><TTICode></TTICode><GIATA_ID></GIATA_ID></Request></Availability></TransferOnly></TCOML>
+2017-06-19 12:29:14.667  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-06-19 12:29:14.672  INFO 12112 --- [nio-8080-exec-3] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.AvailRq
+2017-06-19 12:29:14.672  INFO 12112 --- [nio-8080-exec-3] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-06-19 12:29:14.675  INFO 12112 --- [nio-8080-exec-3] c.e.a.controller.A2BController           : ====================== Avail Controller ======================
+2017-06-19 12:29:14.675  INFO 12112 --- [nio-8080-exec-3] c.e.a.services.A2BTransferClientService  : Se va a llamar al metodo de disponibilidad
+2017-06-19 12:29:14.676  INFO 12112 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-06-19 12:29:14.677  INFO 12112 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : URI         : http://test.xmlp2p.com/xml/
+2017-06-19 12:29:14.677  INFO 12112 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-06-19 12:29:14.677  INFO 12112 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[629]}
+2017-06-19 12:29:14.677  INFO 12112 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Request body:  <?xml version="1.0" encoding="UTF-8" standalone="yes"?><TCOML version="NEWFORMAT"><TransferOnly><Availability><Request><Username>Juacho</Username><Password>Juancho123</Password><Lang>ES</Lang><DeparturePointCode>PMI</DeparturePointCode><ArrivalPointCode>ARE</ArrivalPointCode><SectorType>RETURN</SectorType><ArrDate>30/07/17</ArrDate><ArrTime>10:00</ArrTime><RetDate>10/08/17</RetDate><RetTime>10:00</RetTime><Adults>2</Adults><Children>1</Children><Infants>1</Infants><Vehicletype>0</Vehicletype><Latitude></Latitude><Longitude></Longitude><TTICode></TTICode><GIATA_ID></GIATA_ID></Request></Availability></TransferOnly></TCOML>
+2017-06-19 12:29:14.677  INFO 12112 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-06-19 12:29:15.571  INFO 12112 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-06-19 12:29:15.571  INFO 12112 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-06-19 12:29:15.571  INFO 12112 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Status text  : OK
+2017-06-19 12:29:15.571  INFO 12112 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Cache-Control=[private], Content-Length=[7063], Content-Type=[text/XML; Charset=UTF-8], Server=[Microsoft-IIS/8.0], Set-Cookie=[ASPSESSIONIDASDTCACC=OCBBKPEDHIAMMAJNHCFCBBMF; path=/], X-Powered-By=[ASP.NET], Date=[Mon, 19 Jun 2017 10:29:09 GMT]}
+2017-06-19 12:29:15.572  INFO 12112 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Response body: <TCOML version="3.0" company="SSH" sess="201706191129094471058487">
+<TransferOnly>
+<Availability>
+<A2BDeepLink>http://www.a2btransfers.com/</A2BDeepLink>
+<RHDeepLink>http://www.hoppa.com/</RHDeepLink>
+<Avline count="1">
+<PRID>6679064</PRID>
+<TransferCode>TPMIARE*6679064*SHUT1-1</TransferCode>
+<TransferDescription>Traslado (Ida-Vuelta)</TransferDescription>
+<TransferPrice>9.28</TransferPrice>
+<DeparturePointType>AP</DeparturePointType>
+<ArrivalPointType>RT</ArrivalPointType>
+<VehicleDetails>
+<VehicleID>9</VehicleID>
+<Vehicle>Traslado compartido en Autobus</Vehicle>
+<VehicleCode>SHUT1-1</VehicleCode>
+<VehicleType>1</VehicleType>
+<MinCapacity>1</MinCapacity>
+<MaxCapacity>1</MaxCapacity>
+<MinStops>0</MinStops>
+<MaxStops>0</MaxStops>
+<NumberOfBags>1</NumberOfBags>
+<NumberOfVehicles>1</NumberOfVehicles>
+</VehicleDetails>
+<CurrencyCode>EUR</CurrencyCode>
+<DistanceKM>14</DistanceKM>
+<OutboundTransferDetails>
+ <OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin>
+ <OutboundDestination>El Arenal</OutboundDestination>
+ <OutboundJourneyTime>45 minutos</OutboundJourneyTime>
+ <OutboundArrivalDate>30/07/2017</OutboundArrivalDate>
+ <OutboundArrivalTime>1000</OutboundArrivalTime>
+<OutboundPickupDate></OutboundPickupDate>
+<OutboundPickupTime></OutboundPickupTime>
+</OutboundTransferDetails>
+<ReturnTransferDetails>
+	<ReturnOrigin>El Arenal</ReturnOrigin>
+	<ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination>
+	<ReturnJourneyTime>45 minutos</ReturnJourneyTime>
+	<ReturnDepartureDate>10/08/2017</ReturnDepartureDate>
+	<ReturnDepartureTime>1000</ReturnDepartureTime>
+<ReturnPickupDate></ReturnPickupDate>
+<ReturnPickupTime></ReturnPickupTime>
+</ReturnTransferDetails>
+<TransferTotalPrice>37.1</TransferTotalPrice>
+<Pricing>PP</Pricing>
+<Discount>0</Discount>
+<DiscountPercent>0</DiscountPercent>
+<Disclaimer>0</Disclaimer>
+</Avline>
+<Avline count="2">
+<PRID>6679305</PRID>
+<TransferCode>TPMIARE*6679305*PRI4</TransferCode>
+<TransferDescription>Traslado (Ida-Vuelta)</TransferDescription>
+<TransferPrice>12.2</TransferPrice>
+<DeparturePointType>AP</DeparturePointType>
+<ArrivalPointType>RT</ArrivalPointType>
+<VehicleDetails>
+<VehicleID>152</VehicleID>
+<Vehicle>Traslado Privado (1 -4 personas)</Vehicle>
+<VehicleCode>PRI4</VehicleCode>
+<VehicleType>2</VehicleType>
+<MinCapacity>1</MinCapacity>
+<MaxCapacity>4</MaxCapacity>
+<MinStops>0</MinStops>
+<MaxStops>0</MaxStops>
+<NumberOfBags>1</NumberOfBags>
+<NumberOfVehicles>1</NumberOfVehicles>
+</VehicleDetails>
+<CurrencyCode>EUR</CurrencyCode>
+<DistanceKM>14</DistanceKM>
+<OutboundTransferDetails>
+ <OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin>
+ <OutboundDestination>El Arenal</OutboundDestination>
+ <OutboundJourneyTime>15 minutos</OutboundJourneyTime>
+ <OutboundArrivalDate>30/07/2017</OutboundArrivalDate>
+ <OutboundArrivalTime>1000</OutboundArrivalTime>
+<OutboundPickupDate></OutboundPickupDate>
+<OutboundPickupTime></OutboundPickupTime>
+</OutboundTransferDetails>
+<ReturnTransferDetails>
+	<ReturnOrigin>El Arenal</ReturnOrigin>
+	<ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination>
+	<ReturnJourneyTime>15 minutos</ReturnJourneyTime>
+	<ReturnDepartureDate>10/08/2017</ReturnDepartureDate>
+	<ReturnDepartureTime>1000</ReturnDepartureTime>
+<ReturnPickupDate>10/08/2017</ReturnPickupDate>
+<ReturnPickupTime>0745</ReturnPickupTime>
+</ReturnTransferDetails>
+<TransferTotalPrice>48.8</TransferTotalPrice>
+<Pricing>PV</Pricing>
+<Discount>0</Discount>
+<DiscountPercent>0</DiscountPercent>
+<Disclaimer>0</Disclaimer>
+</Avline>
+<Avline count="3">
+<PRID>6691062</PRID>
+<TransferCode>TPMIARE*6691062*SPEEDYSH1-1</TransferCode>
+<TransferDescription>Traslado (Ida-Vuelta)</TransferDescription>
+<TransferPrice>18.55</TransferPrice>
+<DeparturePointType>AP</DeparturePointType>
+<ArrivalPointType>RT</ArrivalPointType>
+<VehicleDetails>
+<VehicleID>431</VehicleID>
+<Vehicle>Traslado Compartido Express Max 4 paradas</Vehicle>
+<VehicleCode>SPEEDYSH1-1</VehicleCode>
+<VehicleType>1</VehicleType>
+<MinCapacity>1</MinCapacity>
+<MaxCapacity>1</MaxCapacity>
+<MinStops>0</MinStops>
+<MaxStops>0</MaxStops>
+<NumberOfBags>1</NumberOfBags>
+<NumberOfVehicles>1</NumberOfVehicles>
+</VehicleDetails>
+<CurrencyCode>EUR</CurrencyCode>
+<DistanceKM>14</DistanceKM>
+<OutboundTransferDetails>
+ <OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin>
+ <OutboundDestination>El Arenal</OutboundDestination>
+ <OutboundJourneyTime>35 minutos</OutboundJourneyTime>
+ <OutboundArrivalDate>30/07/2017</OutboundArrivalDate>
+ <OutboundArrivalTime>1000</OutboundArrivalTime>
+<OutboundPickupDate></OutboundPickupDate>
+<OutboundPickupTime></OutboundPickupTime>
+</OutboundTransferDetails>
+<ReturnTransferDetails>
+	<ReturnOrigin>El Arenal</ReturnOrigin>
+	<ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination>
+	<ReturnJourneyTime>35 minutos</ReturnJourneyTime>
+	<ReturnDepartureDate>10/08/2017</ReturnDepartureDate>
+	<ReturnDepartureTime>1000</ReturnDepartureTime>
+<ReturnPickupDate></ReturnPickupDate>
+<ReturnPickupTime></ReturnPickupTime>
+</ReturnTransferDetails>
+<TransferTotalPrice>74.18</TransferTotalPrice>
+<Pricing>PP</Pricing>
+<Discount>0</Discount>
+<DiscountPercent>0</DiscountPercent>
+<Disclaimer>0</Disclaimer>
+</Avline>
+<Avline count="4">
+<PRID>6679075</PRID>
+<TransferCode>TPMIARE*6679075*MB4-8</TransferCode>
+<TransferDescription>Traslado (Ida-Vuelta)</TransferDescription>
+<TransferPrice>23.72</TransferPrice>
+<DeparturePointType>AP</DeparturePointType>
+<ArrivalPointType>RT</ArrivalPointType>
+<VehicleDetails>
+<VehicleID>32</VehicleID>
+<Vehicle>Traslado en Minibus Privado (4 -8 pers)</Vehicle>
+<VehicleCode>MB4-8</VehicleCode>
+<VehicleType>2</VehicleType>
+<MinCapacity>4</MinCapacity>
+<MaxCapacity>8</MaxCapacity>
+<MinStops>0</MinStops>
+<MaxStops>0</MaxStops>
+<NumberOfBags>1</NumberOfBags>
+<NumberOfVehicles>1</NumberOfVehicles>
+</VehicleDetails>
+<CurrencyCode>EUR</CurrencyCode>
+<DistanceKM>14</DistanceKM>
+<OutboundTransferDetails>
+ <OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin>
+ <OutboundDestination>El Arenal</OutboundDestination>
+ <OutboundJourneyTime>15 minutos</OutboundJourneyTime>
+ <OutboundArrivalDate>30/07/2017</OutboundArrivalDate>
+ <OutboundArrivalTime>1000</OutboundArrivalTime>
+<OutboundPickupDate></OutboundPickupDate>
+<OutboundPickupTime></OutboundPickupTime>
+</OutboundTransferDetails>
+<ReturnTransferDetails>
+	<ReturnOrigin>El Arenal</ReturnOrigin>
+	<ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination>
+	<ReturnJourneyTime>15 minutos</ReturnJourneyTime>
+	<ReturnDepartureDate>10/08/2017</ReturnDepartureDate>
+	<ReturnDepartureTime>1000</ReturnDepartureTime>
+<ReturnPickupDate>10/08/2017</ReturnPickupDate>
+<ReturnPickupTime>0745</ReturnPickupTime>
+</ReturnTransferDetails>
+<TransferTotalPrice>94.89</TransferTotalPrice>
+<Pricing>PV</Pricing>
+<Discount>0</Discount>
+<DiscountPercent>0</DiscountPercent>
+<Disclaimer>0</Disclaimer>
+</Avline>
+</Availability>
+</TransferOnly>
+</TCOML>
+
+2017-06-19 12:29:15.574  INFO 12112 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-06-19 12:29:15.574  INFO 12112 --- [nio-8080-exec-3] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.AvailRs
+2017-06-19 12:29:15.576  INFO 12112 --- [nio-8080-exec-3] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-06-19 12:29:15.649  INFO 12112 --- [nio-8080-exec-3] c.e.a2btransfer.services.PolicyService   : Precio anterior =9.28Precio final =11.13599967956543
+2017-06-19 12:29:15.704  INFO 12112 --- [nio-8080-exec-3] c.e.a2btransfer.services.PolicyService   : Precio anterior =9.28Precio final =11.13599967956543
+2017-06-19 12:29:15.760  INFO 12112 --- [nio-8080-exec-3] c.e.a2btransfer.services.PolicyService   : Precio anterior =12.2Precio final =14.639999771118164
+2017-06-19 12:29:15.817  INFO 12112 --- [nio-8080-exec-3] c.e.a2btransfer.services.PolicyService   : Precio anterior =12.2Precio final =14.639999771118164
+2017-06-19 12:29:15.872  INFO 12112 --- [nio-8080-exec-3] c.e.a2btransfer.services.PolicyService   : Precio anterior =18.55Precio final =22.259999084472657
+2017-06-19 12:29:15.929  INFO 12112 --- [nio-8080-exec-3] c.e.a2btransfer.services.PolicyService   : Precio anterior =18.55Precio final =22.259999084472657
+2017-06-19 12:29:15.984  INFO 12112 --- [nio-8080-exec-3] c.e.a2btransfer.services.PolicyService   : Precio anterior =23.72Precio final =28.46399917602539
+2017-06-19 12:29:16.041  INFO 12112 --- [nio-8080-exec-3] c.e.a2btransfer.services.PolicyService   : Precio anterior =23.72Precio final =28.46399917602539
+2017-06-19 12:29:16.054  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-06-19 12:29:16.054  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-06-19 12:29:16.054  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status text  : null
+2017-06-19 12:29:16.054  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Content-Type=[application/xml], Transfer-Encoding=[chunked], Date=[Mon, 19 Jun 2017 10:29:16 GMT]}
+2017-06-19 12:29:16.055  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Response body: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><TCOML version="3.0" company="SSH" sess="201706191129094471058487"><TransferOnly><Availability><A2BDeepLink>http://www.a2btransfers.com/</A2BDeepLink><RHDeepLink>http://www.hoppa.com/</RHDeepLink><Avline count="1"><PRID>6679064</PRID><TransferCode>TPMIARE*6679064*SHUT1-1</TransferCode><TransferDescription>Traslado (Ida-Vuelta)</TransferDescription><TransferPrice>9.28</TransferPrice><DeparturePointType>AP</DeparturePointType><ArrivalPointType>RT</ArrivalPointType><VehicleDetails><VehicleID>9</VehicleID><Vehicle>Traslado compartido en Autobus</Vehicle><VehicleCode>SHUT1-1</VehicleCode><VehicleType>1</VehicleType><MinCapacity>1</MinCapacity><MaxCapacity>1</MaxCapacity><MinStops>0</MinStops><MaxStops>0</MaxStops><NumberOfBags>1</NumberOfBags><NumberOfVehicles>1</NumberOfVehicles></VehicleDetails><CurrencyCode>EUR</CurrencyCode><DistanceKM>14</DistanceKM><OutboundTransferDetails><OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin><OutboundDestination>El Arenal</OutboundDestination><OutboundJourneyTime>45 minutos</OutboundJourneyTime><OutboundArrivalDate>30/07/2017</OutboundArrivalDate><OutboundArrivalTime>1000</OutboundArrivalTime><OutboundPickupDate></OutboundPickupDate><OutboundPickupTime></OutboundPickupTime></OutboundTransferDetails><ReturnTransferDetails><ReturnOrigin>El Arenal</ReturnOrigin><ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination><ReturnJourneyTime>45 minutos</ReturnJourneyTime><ReturnDepartureDate>10/08/2017</ReturnDepartureDate><ReturnDepartureTime>1000</ReturnDepartureTime><ReturnPickupDate></ReturnPickupDate><ReturnPickupTime></ReturnPickupTime></ReturnTransferDetails><TransferTotalPrice>11.136</TransferTotalPrice><Pricing>PP</Pricing><Discount>0.0</Discount><DiscountPercent>0.0</DiscountPercent><Disclaimer>0</Disclaimer></Avline><Avline count="2"><PRID>6679305</PRID><TransferCode>TPMIARE*6679305*PRI4</TransferCode><TransferDescription>Traslado (Ida-Vuelta)</TransferDescription><TransferPrice>12.2</TransferPrice><DeparturePointType>AP</DeparturePointType><ArrivalPointType>RT</ArrivalPointType><VehicleDetails><VehicleID>152</VehicleID><Vehicle>Traslado Privado (1 -4 personas)</Vehicle><VehicleCode>PRI4</VehicleCode><VehicleType>2</VehicleType><MinCapacity>1</MinCapacity><MaxCapacity>4</MaxCapacity><MinStops>0</MinStops><MaxStops>0</MaxStops><NumberOfBags>1</NumberOfBags><NumberOfVehicles>1</NumberOfVehicles></VehicleDetails><CurrencyCode>EUR</CurrencyCode><DistanceKM>14</DistanceKM><OutboundTransferDetails><OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin><OutboundDestination>El Arenal</OutboundDestination><OutboundJourneyTime>15 minutos</OutboundJourneyTime><OutboundArrivalDate>30/07/2017</OutboundArrivalDate><OutboundArrivalTime>1000</OutboundArrivalTime><OutboundPickupDate></OutboundPickupDate><OutboundPickupTime></OutboundPickupTime></OutboundTransferDetails><ReturnTransferDetails><ReturnOrigin>El Arenal</ReturnOrigin><ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination><ReturnJourneyTime>15 minutos</ReturnJourneyTime><ReturnDepartureDate>10/08/2017</ReturnDepartureDate><ReturnDepartureTime>1000</ReturnDepartureTime><ReturnPickupDate>10/08/2017</ReturnPickupDate><ReturnPickupTime>0745</ReturnPickupTime></ReturnTransferDetails><TransferTotalPrice>14.639999</TransferTotalPrice><Pricing>PV</Pricing><Discount>0.0</Discount><DiscountPercent>0.0</DiscountPercent><Disclaimer>0</Disclaimer></Avline><Avline count="3"><PRID>6691062</PRID><TransferCode>TPMIARE*6691062*SPEEDYSH1-1</TransferCode><TransferDescription>Traslado (Ida-Vuelta)</TransferDescription><TransferPrice>18.55</TransferPrice><DeparturePointType>AP</DeparturePointType><ArrivalPointType>RT</ArrivalPointType><VehicleDetails><VehicleID>431</VehicleID><Vehicle>Traslado Compartido Express Max 4 paradas</Vehicle><VehicleCode>SPEEDYSH1-1</VehicleCode><VehicleType>1</VehicleType><MinCapacity>1</MinCapacity><MaxCapacity>1</MaxCapacity><MinStops>0</MinStops><MaxStops>0</MaxStops><NumberOfBags>1</NumberOfBags><NumberOfVehicles>1</NumberOfVehicles></VehicleDetails><CurrencyCode>EUR</CurrencyCode><DistanceKM>14</DistanceKM><OutboundTransferDetails><OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin><OutboundDestination>El Arenal</OutboundDestination><OutboundJourneyTime>35 minutos</OutboundJourneyTime><OutboundArrivalDate>30/07/2017</OutboundArrivalDate><OutboundArrivalTime>1000</OutboundArrivalTime><OutboundPickupDate></OutboundPickupDate><OutboundPickupTime></OutboundPickupTime></OutboundTransferDetails><ReturnTransferDetails><ReturnOrigin>El Arenal</ReturnOrigin><ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination><ReturnJourneyTime>35 minutos</ReturnJourneyTime><ReturnDepartureDate>10/08/2017</ReturnDepartureDate><ReturnDepartureTime>1000</ReturnDepartureTime><ReturnPickupDate></ReturnPickupDate><ReturnPickupTime></ReturnPickupTime></ReturnTransferDetails><TransferTotalPrice>22.259998</TransferTotalPrice><Pricing>PP</Pricing><Discount>0.0</Discount><DiscountPercent>0.0</DiscountPercent><Disclaimer>0</Disclaimer></Avline><Avline count="4"><PRID>6679075</PRID><TransferCode>TPMIARE*6679075*MB4-8</TransferCode><TransferDescription>Traslado (Ida-Vuelta)</TransferDescription><TransferPrice>23.72</TransferPrice><DeparturePointType>AP</DeparturePointType><ArrivalPointType>RT</ArrivalPointType><VehicleDetails><VehicleID>32</VehicleID><Vehicle>Traslado en Minibus Privado (4 -8 pers)</Vehicle><VehicleCode>MB4-8</VehicleCode><VehicleType>2</VehicleType><MinCapacity>4</MinCapacity><MaxCapacity>8</MaxCapacity><MinStops>0</MinStops><MaxStops>0</MaxStops><NumberOfBags>1</NumberOfBags><NumberOfVehicles>1</NumberOfVehicles></VehicleDetails><CurrencyCode>EUR</CurrencyCode><DistanceKM>14</DistanceKM><OutboundTransferDetails><OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin><OutboundDestination>El Arenal</OutboundDestination><OutboundJourneyTime>15 minutos</OutboundJourneyTime><OutboundArrivalDate>30/07/2017</OutboundArrivalDate><OutboundArrivalTime>1000</OutboundArrivalTime><OutboundPickupDate></OutboundPickupDate><OutboundPickupTime></OutboundPickupTime></OutboundTransferDetails><ReturnTransferDetails><ReturnOrigin>El Arenal</ReturnOrigin><ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination><ReturnJourneyTime>15 minutos</ReturnJourneyTime><ReturnDepartureDate>10/08/2017</ReturnDepartureDate><ReturnDepartureTime>1000</ReturnDepartureTime><ReturnPickupDate>10/08/2017</ReturnPickupDate><ReturnPickupTime>0745</ReturnPickupTime></ReturnTransferDetails><TransferTotalPrice>28.463999</TransferTotalPrice><Pricing>PV</Pricing><Discount>0.0</Discount><DiscountPercent>0.0</DiscountPercent><Disclaimer>0</Disclaimer></Avline><Avline count="1"><PRID>6679064</PRID><TransferCode>TPMIARE*6679064*SHUT1-1</TransferCode><TransferDescription>Traslado (Ida-Vuelta)</TransferDescription><TransferPrice>9.28</TransferPrice><DeparturePointType>AP</DeparturePointType><ArrivalPointType>RT</ArrivalPointType><VehicleDetails><VehicleID>9</VehicleID><Vehicle>Traslado compartido en Autobus</Vehicle><VehicleCode>SHUT1-1</VehicleCode><VehicleType>1</VehicleType><MinCapacity>1</MinCapacity><MaxCapacity>1</MaxCapacity><MinStops>0</MinStops><MaxStops>0</MaxStops><NumberOfBags>1</NumberOfBags><NumberOfVehicles>1</NumberOfVehicles></VehicleDetails><CurrencyCode>EUR</CurrencyCode><DistanceKM>14</DistanceKM><OutboundTransferDetails><OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin><OutboundDestination>El Arenal</OutboundDestination><OutboundJourneyTime>45 minutos</OutboundJourneyTime><OutboundArrivalDate>30/07/2017</OutboundArrivalDate><OutboundArrivalTime>1000</OutboundArrivalTime><OutboundPickupDate></OutboundPickupDate><OutboundPickupTime></OutboundPickupTime></OutboundTransferDetails><ReturnTransferDetails><ReturnOrigin>El Arenal</ReturnOrigin><ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination><ReturnJourneyTime>45 minutos</ReturnJourneyTime><ReturnDepartureDate>10/08/2017</ReturnDepartureDate><ReturnDepartureTime>1000</ReturnDepartureTime><ReturnPickupDate></ReturnPickupDate><ReturnPickupTime></ReturnPickupTime></ReturnTransferDetails><TransferTotalPrice>11.136</TransferTotalPrice><Pricing>PP</Pricing><Discount>0.0</Discount><DiscountPercent>0.0</DiscountPercent><Disclaimer>0</Disclaimer></Avline><Avline count="2"><PRID>6679305</PRID><TransferCode>TPMIARE*6679305*PRI4</TransferCode><TransferDescription>Traslado (Ida-Vuelta)</TransferDescription><TransferPrice>12.2</TransferPrice><DeparturePointType>AP</DeparturePointType><ArrivalPointType>RT</ArrivalPointType><VehicleDetails><VehicleID>152</VehicleID><Vehicle>Traslado Privado (1 -4 personas)</Vehicle><VehicleCode>PRI4</VehicleCode><VehicleType>2</VehicleType><MinCapacity>1</MinCapacity><MaxCapacity>4</MaxCapacity><MinStops>0</MinStops><MaxStops>0</MaxStops><NumberOfBags>1</NumberOfBags><NumberOfVehicles>1</NumberOfVehicles></VehicleDetails><CurrencyCode>EUR</CurrencyCode><DistanceKM>14</DistanceKM><OutboundTransferDetails><OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin><OutboundDestination>El Arenal</OutboundDestination><OutboundJourneyTime>15 minutos</OutboundJourneyTime><OutboundArrivalDate>30/07/2017</OutboundArrivalDate><OutboundArrivalTime>1000</OutboundArrivalTime><OutboundPickupDate></OutboundPickupDate><OutboundPickupTime></OutboundPickupTime></OutboundTransferDetails><ReturnTransferDetails><ReturnOrigin>El Arenal</ReturnOrigin><ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination><ReturnJourneyTime>15 minutos</ReturnJourneyTime><ReturnDepartureDate>10/08/2017</ReturnDepartureDate><ReturnDepartureTime>1000</ReturnDepartureTime><ReturnPickupDate>10/08/2017</ReturnPickupDate><ReturnPickupTime>0745</ReturnPickupTime></ReturnTransferDetails><TransferTotalPrice>14.639999</TransferTotalPrice><Pricing>PV</Pricing><Discount>0.0</Discount><DiscountPercent>0.0</DiscountPercent><Disclaimer>0</Disclaimer></Avline><Avline count="3"><PRID>6691062</PRID><TransferCode>TPMIARE*6691062*SPEEDYSH1-1</TransferCode><TransferDescription>Traslado (Ida-Vuelta)</TransferDescription><TransferPrice>18.55</TransferPrice><DeparturePointType>AP</DeparturePointType><ArrivalPointType>RT</ArrivalPointType><VehicleDetails><VehicleID>431</VehicleID><Vehicle>Traslado Compartido Express Max 4 paradas</Vehicle><VehicleCode>SPEEDYSH1-1</VehicleCode><VehicleType>1</VehicleType><MinCapacity>1</MinCapacity><MaxCapacity>1</MaxCapacity><MinStops>0</MinStops><MaxStops>0</MaxStops><NumberOfBags>1</NumberOfBags><NumberOfVehicles>1</NumberOfVehicles></VehicleDetails><CurrencyCode>EUR</CurrencyCode><DistanceKM>14</DistanceKM><OutboundTransferDetails><OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin><OutboundDestination>El Arenal</OutboundDestination><OutboundJourneyTime>35 minutos</OutboundJourneyTime><OutboundArrivalDate>30/07/2017</OutboundArrivalDate><OutboundArrivalTime>1000</OutboundArrivalTime><OutboundPickupDate></OutboundPickupDate><OutboundPickupTime></OutboundPickupTime></OutboundTransferDetails><ReturnTransferDetails><ReturnOrigin>El Arenal</ReturnOrigin><ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination><ReturnJourneyTime>35 minutos</ReturnJourneyTime><ReturnDepartureDate>10/08/2017</ReturnDepartureDate><ReturnDepartureTime>1000</ReturnDepartureTime><ReturnPickupDate></ReturnPickupDate><ReturnPickupTime></ReturnPickupTime></ReturnTransferDetails><TransferTotalPrice>22.259998</TransferTotalPrice><Pricing>PP</Pricing><Discount>0.0</Discount><DiscountPercent>0.0</DiscountPercent><Disclaimer>0</Disclaimer></Avline><Avline count="4"><PRID>6679075</PRID><TransferCode>TPMIARE*6679075*MB4-8</TransferCode><TransferDescription>Traslado (Ida-Vuelta)</TransferDescription><TransferPrice>23.72</TransferPrice><DeparturePointType>AP</DeparturePointType><ArrivalPointType>RT</ArrivalPointType><VehicleDetails><VehicleID>32</VehicleID><Vehicle>Traslado en Minibus Privado (4 -8 pers)</Vehicle><VehicleCode>MB4-8</VehicleCode><VehicleType>2</VehicleType><MinCapacity>4</MinCapacity><MaxCapacity>8</MaxCapacity><MinStops>0</MinStops><MaxStops>0</MaxStops><NumberOfBags>1</NumberOfBags><NumberOfVehicles>1</NumberOfVehicles></VehicleDetails><CurrencyCode>EUR</CurrencyCode><DistanceKM>14</DistanceKM><OutboundTransferDetails><OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin><OutboundDestination>El Arenal</OutboundDestination><OutboundJourneyTime>15 minutos</OutboundJourneyTime><OutboundArrivalDate>30/07/2017</OutboundArrivalDate><OutboundArrivalTime>1000</OutboundArrivalTime><OutboundPickupDate></OutboundPickupDate><OutboundPickupTime></OutboundPickupTime></OutboundTransferDetails><ReturnTransferDetails><ReturnOrigin>El Arenal</ReturnOrigin><ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination><ReturnJourneyTime>15 minutos</ReturnJourneyTime><ReturnDepartureDate>10/08/2017</ReturnDepartureDate><ReturnDepartureTime>1000</ReturnDepartureTime><ReturnPickupDate>10/08/2017</ReturnPickupDate><ReturnPickupTime>0745</ReturnPickupTime></ReturnTransferDetails><TransferTotalPrice>28.463999</TransferTotalPrice><Pricing>PV</Pricing><Discount>0.0</Discount><DiscountPercent>0.0</DiscountPercent><Disclaimer>0</Disclaimer></Avline></Availability></TransferOnly></TCOML>
+
+2017-06-19 12:29:16.057  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-06-19 12:29:16.057  INFO 12112 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.AvailRs
+2017-06-19 12:29:16.057  INFO 12112 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-06-19 12:29:16.087  INFO 12112 --- [           main] com.testepl.a2btransfer.AvailTest        : OK No hay errores en la disponibilidad
+2017-06-19 12:29:16.087  INFO 12112 --- [           main] com.testepl.a2btransfer.AvailTest        : Se escoge index -->2
+2017-06-19 12:29:16.088  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-06-19 12:29:16.088  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : URI         : http://localhost:8080/a2btransfer/block
+2017-06-19 12:29:16.088  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-06-19 12:29:16.088  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[623]}
+2017-06-19 12:29:16.088  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Request body:  <?xml version="1.0" encoding="UTF-8" standalone="yes"?><TCOML version="NEWFORMAT" date="30/07/17"><TransferOnly><Booking><Reserve><Username>Juacho</Username><Password>Juancho123</Password><Lang>ES</Lang><DeparturePointCode>PMI</DeparturePointCode><ArrivalPointCode>ARE</ArrivalPointCode><SectorType>RETURN</SectorType><ArrDate>30/07/17</ArrDate><ArrTime>10:00</ArrTime><RetDate>10/08/17</RetDate><RetTime>10:00</RetTime><Adults>2</Adults><Children>1</Children><Infants>1</Infants><TransferCode>TPMIARE*6691062*SPEEDYSH1-1</TransferCode><Latitude></Latitude><Longitude></Longitude></Reserve></Booking></TransferOnly></TCOML>
+2017-06-19 12:29:16.088  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-06-19 12:29:16.099  INFO 12112 --- [nio-8080-exec-4] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.ReserveRq
+2017-06-19 12:29:16.099  INFO 12112 --- [nio-8080-exec-4] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-06-19 12:29:16.102  INFO 12112 --- [nio-8080-exec-4] c.e.a.controller.A2BController           : ====================== Avail Controller ======================
+2017-06-19 12:29:16.102  INFO 12112 --- [nio-8080-exec-4] c.e.a.services.A2BTransferClientService  : Se va a llamar al metodo de bloqueo
+2017-06-19 12:29:16.102  INFO 12112 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-06-19 12:29:16.102  INFO 12112 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : URI         : http://test.xmlp2p.com/xml/
+2017-06-19 12:29:16.102  INFO 12112 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-06-19 12:29:16.102  INFO 12112 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[623]}
+2017-06-19 12:29:16.103  INFO 12112 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : Request body:  <?xml version="1.0" encoding="UTF-8" standalone="yes"?><TCOML version="NEWFORMAT" date="30/07/17"><TransferOnly><Booking><Reserve><Username>Juacho</Username><Password>Juancho123</Password><Lang>ES</Lang><DeparturePointCode>PMI</DeparturePointCode><ArrivalPointCode>ARE</ArrivalPointCode><SectorType>RETURN</SectorType><ArrDate>30/07/17</ArrDate><ArrTime>10:00</ArrTime><RetDate>10/08/17</RetDate><RetTime>10:00</RetTime><Adults>2</Adults><Children>1</Children><Infants>1</Infants><TransferCode>TPMIARE*6691062*SPEEDYSH1-1</TransferCode><Latitude></Latitude><Longitude></Longitude></Reserve></Booking></TransferOnly></TCOML>
+2017-06-19 12:29:16.103  INFO 12112 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-06-19 12:29:16.304  INFO 12112 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-06-19 12:29:16.304  INFO 12112 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-06-19 12:29:16.304  INFO 12112 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : Status text  : OK
+2017-06-19 12:29:16.305  INFO 12112 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Cache-Control=[private], Content-Length=[261], Content-Type=[text/XML; Charset=UTF-8], Server=[Microsoft-IIS/8.0], Set-Cookie=[ASPSESSIONIDCACTQDCT=PIIDLKFDHABMICEKHALGGLCL; path=/], X-Powered-By=[ASP.NET], Date=[Mon, 19 Jun 2017 10:30:09 GMT]}
+2017-06-19 12:29:16.305  INFO 12112 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : Response body: <TCOML version="3.0" company="SSH" sess="201706191130094227475821">
+<TransferOnly>
+<Booking>
+<Reserve>
+<TransacNo>11656234</TransacNo>
+<HolidayValue>74.18</HolidayValue>
+<CurrencyCode>EUR</CurrencyCode>
+</Reserve>
+</Booking>
+</TransferOnly>
+</TCOML>
+
+2017-06-19 12:29:16.305  INFO 12112 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-06-19 12:29:16.305  INFO 12112 --- [nio-8080-exec-4] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.ReserveRs
+2017-06-19 12:29:16.305  INFO 12112 --- [nio-8080-exec-4] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-06-19 12:29:16.312  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-06-19 12:29:16.312  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-06-19 12:29:16.312  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status text  : null
+2017-06-19 12:29:16.312  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Content-Type=[application/xml], Transfer-Encoding=[chunked], Date=[Mon, 19 Jun 2017 10:29:16 GMT]}
+2017-06-19 12:29:16.313  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Response body: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><TCOML version="3.0" company="SSH" sess="201706191130094227475821"><TransferOnly><Booking><Reserve><TransacNo>11656234</TransacNo><HolidayValue>74.18</HolidayValue><CurrencyCode>EUR</CurrencyCode></Reserve></Booking></TransferOnly></TCOML>
+
+2017-06-19 12:29:16.313  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-06-19 12:29:16.313  INFO 12112 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.ReserveRs
+2017-06-19 12:29:16.313  INFO 12112 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-06-19 12:29:16.383  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-06-19 12:29:16.383  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : URI         : http://localhost:8080/a2btransfer/book
+2017-06-19 12:29:16.383  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-06-19 12:29:16.383  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[960]}
+2017-06-19 12:29:16.383  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Request body:  <?xml version="1.0" encoding="UTF-8" standalone="yes"?><TCOML version="NEWFORMAT"><TransferOnly><Booking><Confirm><TransacNo>11656234</TransacNo><Username>Juacho</Username><Password>Juancho123</Password><AgentBref>EPL</AgentBref><PropertyName>property name</PropertyName><AccommodationAddress>Accomodation Address 1</AccommodationAddress><AccommodationAddress2>Acoomodation Address 2</AccommodationAddress2><DepPoint>Casa del cliente</DepPoint><RetPoint>Return point</RetPoint><DepInfo>Information about departure</DepInfo><RetInfo>Return info</RetInfo><DepExtraInfo>No extra info</DepExtraInfo><RetExtraInfo>Ret extra info</RetExtraInfo><Client><LastName>de Alejandro</LastName><FirstName>Juanjo</FirstName><Title>Sr</Title><Phone>972652489</Phone><Mobile>628629988</Mobile><CountryCode>ES</CountryCode><Email>juanjo.alejandro@gmail</Email></Client><SendEmailToCustomer>0</SendEmailToCustomer><Remark>remark</Remark></Confirm></Booking></TransferOnly></TCOML>
+2017-06-19 12:29:16.383  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-06-19 12:29:16.387  INFO 12112 --- [nio-8080-exec-5] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.BookingRq
+2017-06-19 12:29:16.387  INFO 12112 --- [nio-8080-exec-5] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-06-19 12:29:16.421  INFO 12112 --- [nio-8080-exec-5] c.e.a.controller.A2BController           : ====================== Avail Controller ======================
+2017-06-19 12:29:16.422  INFO 12112 --- [nio-8080-exec-5] c.e.a.services.A2BTransferClientService  : Se va a llamar al metodo de reserva
+2017-06-19 12:29:16.423  INFO 12112 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-06-19 12:29:16.423  INFO 12112 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : URI         : http://test.xmlp2p.com/xml/
+2017-06-19 12:29:16.423  INFO 12112 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-06-19 12:29:16.423  INFO 12112 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[960]}
+2017-06-19 12:29:16.423  INFO 12112 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : Request body:  <?xml version="1.0" encoding="UTF-8" standalone="yes"?><TCOML version="NEWFORMAT"><TransferOnly><Booking><Confirm><TransacNo>11656234</TransacNo><Username>Juacho</Username><Password>Juancho123</Password><AgentBref>EPL</AgentBref><PropertyName>property name</PropertyName><AccommodationAddress>Accomodation Address 1</AccommodationAddress><AccommodationAddress2>Acoomodation Address 2</AccommodationAddress2><DepPoint>Casa del cliente</DepPoint><RetPoint>Return point</RetPoint><DepInfo>Information about departure</DepInfo><RetInfo>Return info</RetInfo><DepExtraInfo>No extra info</DepExtraInfo><RetExtraInfo>Ret extra info</RetExtraInfo><Client><LastName>de Alejandro</LastName><FirstName>Juanjo</FirstName><Title>Sr</Title><Phone>972652489</Phone><Mobile>628629988</Mobile><CountryCode>ES</CountryCode><Email>juanjo.alejandro@gmail</Email></Client><SendEmailToCustomer>0</SendEmailToCustomer><Remark>remark</Remark></Confirm></Booking></TransferOnly></TCOML>
+2017-06-19 12:29:16.424  INFO 12112 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-06-19 12:29:16.598  INFO 12112 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-06-19 12:29:16.598  INFO 12112 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-06-19 12:29:16.599  INFO 12112 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : Status text  : OK
+2017-06-19 12:29:16.599  INFO 12112 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Cache-Control=[private], Content-Length=[5206], Content-Type=[text/XML; Charset=UTF-8], Server=[Microsoft-IIS/8.0], Set-Cookie=[ASPSESSIONIDCACTQDCT=AJIDLKFDIGOELADNJNMLOMBO; path=/], X-Powered-By=[ASP.NET], Date=[Mon, 19 Jun 2017 10:30:09 GMT]}
+2017-06-19 12:29:16.599  INFO 12112 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : Response body: <TCOML version="3.0">
+<TransferOnly>
+<Booking>
+<Confirm>
+<BookingType>TEST BOOKING</BookingType>
+<VoucherInfo>
+<BookingRef>G1010338</BookingRef>
+<BookingDate>19/06/2017</BookingDate>
+<BookingStatus>Confirmed</BookingStatus>
+<DeparturePointCode>PMI</DeparturePointCode>
+<ArrivalPointCode>ARE</ArrivalPointCode>
+<SectorType>RETURN</SectorType>
+<Client>
+	<LastName>de Alejandro</LastName>
+	<FirstName>Juanjo</FirstName>
+	<Title>Sr</Title>
+	<Phone>972652489</Phone>
+	<Mobile>628629988</Mobile>
+	<CountryCode>ES</CountryCode>
+	<Email>juanjo.alejandro@gmail</Email>
+</Client>
+<UserReference>EPL</UserReference>
+<Adults>2</Adults>
+<Children>1</Children>
+<Infants>1</Infants>
+<TransferDescription>Traslado (Ida-Vuelta)</TransferDescription>
+<HolidayValue>74.18</HolidayValue>
+<CommissionValue>0</CommissionValue>
+<VATValue SelfBill="N">0</VATValue>
+<InvoiceValue>74.18</InvoiceValue>
+<CurrencyCode>EUR</CurrencyCode>
+<PriceBreakdown>
+<PriceLine>
+<Description>1 x Traslado (Ida-Vuelta)</Description>
+<Amount>74.18</Amount>
+</PriceLine>
+</PriceBreakdown>
+<PropertyName>property name</PropertyName>
+<AccommodationAddress>Accomodation Address 1</AccommodationAddress>
+<AccommodationAddress2>Acoomodation Address 2</AccommodationAddress2>
+<SpecialRequest>remark</SpecialRequest>
+<SupplierName>Jumbo Tours Espana S.L</SupplierName>
+<OutboundTransferDetails>
+<OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin>
+<OutboundDestination>El Arenal</OutboundDestination>
+<DepInfo>Information about departure</DepInfo>
+<ArrDate>30/07/2017</ArrDate>
+<ArrTime>1000</ArrTime>
+<OutboundPickupDate></OutboundPickupDate>
+<OutboundPickupTime></OutboundPickupTime>
+<NumUnits>1</NumUnits>
+<Vehicle>Traslado Compartido Express Max 4 paradas</Vehicle>
+</OutboundTransferDetails>
+<ReturnTransferDetails>
+<ReturnOrigin>El Arenal</ReturnOrigin>
+<ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination>
+<RetInfo>Return info</RetInfo>
+<RetDate>10/08/2017</RetDate>
+<RetTime>1000</RetTime>
+<ReturnPickupDate></ReturnPickupDate>
+<ReturnPickupTime></ReturnPickupTime>
+<NumUnits>1</NumUnits>
+<Vehicle>Traslado Compartido Express Max 4 paradas</Vehicle>
+</ReturnTransferDetails>
+<JoiningIns>
+<JoinLine>Comprueba los datos de tu reserva
+Si necesitas modificar o cancelar tu reserva dir&#237;gete a www.a2btransfers.com/es/amendment.asp
+Si tu reserva fue realizada a trav&#233;s de una agencia de viajes, por favor ponte en contacto con ellos para realizar cualquier cambio.
+
+
+
+Qu&#233; hacer cuando llegues a Majorca (Palma de Mallorca Airport) (PMI).
+A tu llegada por favor recoge tu maletas y sigues las instrucciones:
+
+Despu&#233;s de recoger su equipaje, por favor, vaya a la parte izquierda de la terminal de llegadas a la oficina de Transunion.
+
+
+Una vez hayas localizado al representante de tu traslado, simplemente pres&#233;ntale el siguiente e-ticket y te acompa&#241;ar&#225; hasta tu veh&#237;culo.
+
+
+El autob&#250;s compartido saldr&#225; no m&#225;s de 45 minutos despu&#233;s que hayas localizado al representante de tu traslado. 
+
+
+&#191;Qu&#233; hacer si tu hora de llegada al aeropuerto se ha retrasado, o no consigues localizar al conductor?
+
+
+En caso que se produzca un retraso en tu vuelo de llegada, o si no consigues localizar al representante, por favor contacta con el proveedor del traslado durante la primera hora desde que tu vuelo aterriza en el siguiente n&#250;mero de tel&#233;fono 0034 910 609 323
+
+Qu&#233; hacer cuando dejes El Arenal
+Recuperar tu hora de recogida
+
+
+La hora de recogida desde tu alojamiento estar&#225; disponible 24 horas antes de tu vuelo de salida. 
+
+
+Alternativamente, puedes obtenerla de las siguientes formas:
+
+
+Online
+
+
+Podr&#225;s comprobar tu hora de recogida en nuestra p&#225;gina web yendo a la pesta&#241;a &#8220;Mi hoppa&#8221;, en la parte superior derecha de la pantalla. Una vez ah&#237;, simplemente haz clic en &#8220;Comprobar mi hora de recogida&#8221; e introduce tu n&#250;mero de referencia donde se indica. Clica aqu&#237; para ir a nuestra p&#225;gina web. 
+
+
+Por tel&#233;fono
+
+
+
+Recomendamos que uses uno de los m&#233;todos anteriores para obtener tu hora de recogida. Sin embargo, si no tienes la posibilidad de acceder a ellos, puedes contactar directamente con el proveedor del traslado por tel&#233;fono en el 0034 910 609 323. Por favor contacta con ellos s&#243;lo 24 horas antes de tu vuelo de regreso, ya que la hora de recogida no estar&#225; disponible antes de esa fecha. 
+
+
+El d&#237;a de salida
+Una vez conozcas tu hora de recogida, por favor espera en el punto de reencuentro, al menos, 10 minutos antes de la hora a la que el veh&#237;culo pasar&#225; a recogerte. 
+
+
+Los servicios de vuelta puede que, alguna vez, se retrasen debido a condiciones de tr&#225;fico o la demora de otros pasajeros. Tu veh&#237;culo no deber&#237;a llegar m&#225;s de 15 minutos tarde. De no ser as&#237;, llama al n&#250;mero de emergencia de traslado en 0034 910 609 323 donde te aconsejar&#225;n como encontrar un medio alternativo de traslado.  
+
+</JoinLine>
+</JoiningIns>
+</VoucherInfo>
+</Confirm>
+</Booking>
+</TransferOnly>
+</TCOML>
+
+2017-06-19 12:29:16.600  INFO 12112 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-06-19 12:29:16.600  INFO 12112 --- [nio-8080-exec-5] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.BookingRs
+2017-06-19 12:29:16.600  INFO 12112 --- [nio-8080-exec-5] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-06-19 12:29:16.697  INFO 12112 --- [nio-8080-exec-5] c.e.a.services.A2BTransferClientService  : Se va a llamar para obtener los gastos de cancelación
+2017-06-19 12:29:21.726  INFO 12112 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-06-19 12:29:21.726  INFO 12112 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : URI         : http://test.xmlp2p.com/xml/
+2017-06-19 12:29:21.726  INFO 12112 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-06-19 12:29:21.726  INFO 12112 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[262]}
+2017-06-19 12:29:21.726  INFO 12112 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : Request body:  <?xml version="1.0" encoding="UTF-8" standalone="yes"?><TCOML version="NEWFORMAT" sess=""><TransferOnly><Booking><CancelFees><BookingRef>G1010338</BookingRef><Username>Juacho</Username><Password>Juancho123</Password></CancelFees></Booking></TransferOnly></TCOML>
+2017-06-19 12:29:21.726  INFO 12112 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-06-19 12:29:21.839  INFO 12112 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-06-19 12:29:21.839  INFO 12112 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-06-19 12:29:21.839  INFO 12112 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : Status text  : OK
+2017-06-19 12:29:21.839  INFO 12112 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Cache-Control=[private], Content-Length=[155], Content-Type=[text/XML; Charset=UTF-8], Server=[Microsoft-IIS/8.0], Set-Cookie=[ASPSESSIONIDCQQRRRCC=AEPFJGBDHDAOMCAFEFAKOIMA; path=/], X-Powered-By=[ASP.NET], Date=[Mon, 19 Jun 2017 10:29:14 GMT]}
+2017-06-19 12:29:21.839  INFO 12112 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : Response body: <TCOML version="3.0">
+<TransferOnly>
+<Booking>
+<BookingRef>G1010338</BookingRef>
+<CancelFees>0.00</CancelFees>
+</Booking>
+</TransferOnly>
+</TCOML>
+
+2017-06-19 12:29:21.839  INFO 12112 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-06-19 12:29:21.840  INFO 12112 --- [nio-8080-exec-5] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.CancelFeeRs
+2017-06-19 12:29:21.840  INFO 12112 --- [nio-8080-exec-5] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-06-19 12:29:21.869  INFO 12112 --- [nio-8080-exec-5] c.e.a.services.A2BTransferClientService  : Se ha finalizado con el proceso de consulta de Fees
+2017-06-19 12:29:21.979  INFO 12112 --- [nio-8080-exec-5] c.e.a2btransfer.services.PolicyService   : Precio anterior =74.18Precio final =89.01600036621093
+2017-06-19 12:29:22.037  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-06-19 12:29:22.037  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-06-19 12:29:22.037  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status text  : null
+2017-06-19 12:29:22.038  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Content-Type=[application/xml], Transfer-Encoding=[chunked], Date=[Mon, 19 Jun 2017 10:29:22 GMT]}
+2017-06-19 12:29:22.038  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Response body: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><TCOML version="3.0" cancelFee="0.0"><TransferOnly><Booking><Confirm><BookingType>TEST BOOKING</BookingType><VoucherInfo><BookingRef>G1010338</BookingRef><BookingDate>19/06/2017</BookingDate><BookingStatus>Confirmed</BookingStatus><DeparturePointCode>PMI</DeparturePointCode><ArrivalPointCode>ARE</ArrivalPointCode><SectorType>RETURN</SectorType><Client><LastName>de Alejandro</LastName><FirstName>Juanjo</FirstName><Title>Sr</Title><Phone>972652489</Phone><Mobile>628629988</Mobile><CountryCode>ES</CountryCode><Email>juanjo.alejandro@gmail</Email></Client><UserReference>EPL</UserReference><Adults>2</Adults><Children>1</Children><Infants>1</Infants><TransferDescription>Traslado (Ida-Vuelta)</TransferDescription><HolidayValue>74.18</HolidayValue><CommissionValue>0</CommissionValue><VATValue SelfBill="N">0</VATValue><InvoiceValue>89.016</InvoiceValue><CurrencyCode>EUR</CurrencyCode><PriceBreakdown><PriceLine><Description>1 x Traslado (Ida-Vuelta)</Description><Amount>74.18</Amount></PriceLine></PriceBreakdown><PropertyName>property name</PropertyName><AccommodationAddress>Accomodation Address 1</AccommodationAddress><AccommodationAddress2>Acoomodation Address 2</AccommodationAddress2><SpecialRequest>remark</SpecialRequest><SupplierName>Jumbo Tours Espana S.L</SupplierName><OutboundTransferDetails><OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin><OutboundDestination>El Arenal</OutboundDestination><DepInfo>Information about departure</DepInfo><ArrDate>30/07/2017</ArrDate><ArrTime>1000</ArrTime><NumUnits>1</NumUnits><Vehicle>Traslado Compartido Express Max 4 paradas</Vehicle></OutboundTransferDetails><ReturnTransferDetails><ReturnOrigin>El Arenal</ReturnOrigin><ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination><RetInfo>Return info</RetInfo><RetDate>10/08/2017</RetDate><RetTime>1000</RetTime><NumUnits>1</NumUnits><Vehicle>Traslado Compartido Express Max 4 paradas</Vehicle></ReturnTransferDetails><JoiningIns/></VoucherInfo></Confirm></Booking></TransferOnly></TCOML>
+
+2017-06-19 12:29:22.038  INFO 12112 --- [           main] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-06-19 12:29:22.038  INFO 12112 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.BookingRs
+2017-06-19 12:29:22.038  INFO 12112 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.978 sec - in com.testepl.a2btransfer.AvailTest
+2017-06-19 12:29:22.049  INFO 12112 --- [       Thread-4] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2177849e: startup date [Mon Jun 19 12:28:57 CEST 2017]; root of context hierarchy
+2017-06-19 12:29:22.055  INFO 12112 --- [       Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ a2btransfer ---
+[INFO] Building jar: C:\Users\desar\workspace\a2btransfer\target\a2btransfer-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:1.5.1.RELEASE:repackage (default) @ a2btransfer ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 35.564 s
+[INFO] Finished at: 2017-06-19T12:29:24+02:00
+[INFO] Final Memory: 37M/267M
+[INFO] ------------------------------------------------------------------------

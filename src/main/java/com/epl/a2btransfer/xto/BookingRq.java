@@ -101,6 +101,8 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
+	"agency",
+	"system",
     "transferOnly"
 })
 @XmlRootElement(name = "TCOML")
@@ -112,8 +114,28 @@ public class BookingRq {
     protected String version;
     @XmlAttribute(name = "sess")
     protected String sess;
+    @XmlElement(name="agency")
+    protected long agency;
+    @XmlElement(name="system")
+    protected long system;
+    
+    public long getAgency() {
+		return agency;
+	}
 
-    /**
+	public void setAgency(long agency) {
+		this.agency = agency;
+	}	
+	
+    public long getSystem() {
+		return system;
+	}
+
+	public void setSystem(long system) {
+		this.system = system;
+	}
+
+	/**
      * Obtiene el valor de la propiedad transferOnly.
      * 
      * @return

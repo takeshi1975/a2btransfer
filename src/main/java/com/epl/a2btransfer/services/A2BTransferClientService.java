@@ -3,6 +3,7 @@ package com.epl.a2btransfer.services;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -50,9 +51,10 @@ public class A2BTransferClientService {
 
 	private Errors handleError(String description) {
 		Errors errors = new Errors();
-		Errors.Error error = new Errors.Error();
-		errors.getError().add(error);
+		Errors.Error error = new Errors.Error();		
+		errors.setError(new ArrayList<Errors.Error>());
 		error.setText(description);
+		errors.getError().add(error);
 		return errors;
 	}
 
@@ -73,7 +75,9 @@ public class A2BTransferClientService {
 							.getAvline();					
 					DateFormat df = new SimpleDateFormat("dd/MM/yy");
 					Date date = df.parse(availRq.getTransferOnly().getAvailability().getRequest().getArrDate());
-					lines = policyService.calculatePrice(lines, date);
+					long cliente = availRq.getAgency();
+					long sistema = availRq.getSystem();
+					lines = policyService.calculatePrice(lines,cliente, sistema, date);
 					availRs.getTransferOnly().getAvailability().getAvline().addAll(lines);
 				} catch (Exception ex) {
 					log.error("Error en el parseo de fechas...", ex);
@@ -98,7 +102,9 @@ public class A2BTransferClientService {
 				try{
 					DateFormat df = new SimpleDateFormat("dd/MM/yy");
 					Date date = df.parse(reserveRq.getDate());
-					reserveRs = policyService.calculatePrice(reserveRs,date);
+					long cliente = reserveRq.getAgency();
+					long sistema = reserveRq.getSystem();
+					reserveRs = policyService.calculatePrice(reserveRs,cliente, sistema, date);
 				}catch(Exception ex){
 					log.error("Error en el parseo de fechas...", ex);
 					reserveRs.getTransferOnly().setBooking(null);
@@ -129,14 +135,22 @@ public class A2BTransferClientService {
 				cancelFeeRs = this.cancelFees(
 						bookingRs.getTransferOnly().getBooking().getConfirm().getVoucherInfo().getBookingRef());
 
-				bookingRs.setCancelFee(cancelFeeRs.getTransferOnly().getBooking().getCancelFees()); // Asignar el
-														// cancelFee...
+				bookingRs.setCancelFee(cancelFeeRs.getTransferOnly().getBooking().getCancelFees()); // Asignar el cancelFee...														
 				try {
 					String strDate = bookingRs.getTransferOnly().getBooking().getConfirm().getVoucherInfo()
 							.getOutboundTransferDetails().getArrDate();
 					DateFormat df = new SimpleDateFormat("dd/MM/yy");
-					Date date = df.parse(strDate);
-					return this.policyService.calculatePrice(bookingRs, date);
+					Date date = df.parse(strDate);					
+					long agencia = bookingRq.getAgency();
+					long sistema = bookingRq.getSystem();
+					BookingRs respuesta = policyService.calculatePrice(bookingRs,agencia, sistema, date);
+					float coste = respuesta.getTransferOnly().getBooking().getConfirm().getVoucherInfo().getInvoiceValue();
+					
+					respuesta.setBreakdown(policyService.breakdown(coste, agencia, sistema, date));
+				} catch (NumberFormatException nfex){
+					log.error("No se ha podido obtener informacion de la agencia");
+					bookingRs.getTransferOnly().setBooking(null);
+					bookingRs.getTransferOnly().setErrors(handleError("No se ha podido obtener la agencia "+nfex.toString()));
 				} catch (NotApplicableException naex) {			
 					bookingRs.getTransferOnly().setBooking(null);
 					bookingRs.getTransferOnly().setErrors(this.handleError(naex.toString()));

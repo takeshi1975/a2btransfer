@@ -24,14 +24,14 @@ import com.epl.a2btransfer.xto.ReserveRq;
 import com.epl.a2btransfer.xto.ReserveRs;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = Application.class, webEnvironment = WebEnvironment.RANDOM_PORT)
+@SpringBootTest(classes = Application.class, webEnvironment = WebEnvironment.DEFINED_PORT)
 public class AvailTest {
 
 	@Value("${app.name}")
 	private String appname;
 	
 	@Value("${local.server.port}")
-	private String port;
+	private String port="8080";
 	
 	private final static String NEWFORMAT = "NEWFORMAT"; 
 	
@@ -39,27 +39,21 @@ public class AvailTest {
 	private RestTemplate restTemplate;
 	
 	private static final Logger log = Logger.getLogger(AvailTest.class);
-
-//	private HttpEntity<String> getHttpEntity(String body) {
-//		HttpHeaders headers = new HttpHeaders();
-//		headers.setContentType(MediaType.APPLICATION_XML);
-//		HttpEntity<String> request = new HttpEntity<String>(body, headers);
-//		return request;
-//	}
 	
 	private AvailRs availWithDates() {
 		log.info("Se pide disponibilidad por fechas");
 		log.info("App Name-->"+appname);
 		String url = "http://localhost:"+port+"/a2btransfer/avail";
-		// url = "http://test.xmlp2p.com/xml/";
 		AvailRq availRq = new AvailRq();
 		availRq.setVersion("NEWFORMAT");
+		availRq.setAgency(32965L);
+		availRq.setSystem(23L);
 		TransferOnly transferOnly = new TransferOnly();
 		availRq.setTransferOnly(transferOnly);
 		Availability availability = new Availability();
 		transferOnly.setAvailability(availability);
 		Request request = new Request();
-		availability.setRequest(request);		
+		availability.setRequest(request);				
 		request.setAdults((byte) 2);
 		request.setChildren((byte) 1);
 		request.setInfants((byte) 1);
@@ -78,8 +72,7 @@ public class AvailTest {
 		request.setLongitude("");		
 		
 		request.setGIATAID("");
-		request.setTTICode("");
-		//String xml = availRq.toString();		
+		request.setTTICode("");		
 		AvailRs availRs = restTemplate.postForObject(url, availRq, AvailRs.class);
 		Assert.notNull(availRs);	
 		if (availRs.getTransferOnly().getErrors()!=null)
@@ -108,7 +101,7 @@ public class AvailTest {
 		reserveRq.setVersion(NEWFORMAT);
 		reserveRq.setTransferOnly(new ReserveRq.TransferOnly());
 		reserveRq.getTransferOnly().setBooking(new ReserveRq.TransferOnly.Booking());
-		ReserveRq.TransferOnly.Booking.Reserve reserve = new ReserveRq.TransferOnly.Booking.Reserve();
+		ReserveRq.TransferOnly.Booking.Reserve reserve = new ReserveRq.TransferOnly.Booking.Reserve();	
 		reserve.setLang("ES");
 		reserve.setUsername("Juacho");
 		reserve.setPassword("Juancho123");		
@@ -133,11 +126,12 @@ public class AvailTest {
 		return reserveRs;
 	}
 	
-	// @Test
 	public BookingRs booking(){
 		ReserveRs reserveRs = this.bloqueo();
 		BookingRq bookingRq = new BookingRq();
 		String url ="http://localhost:"+port+"/a2btransfer/book";
+		bookingRq.setAgency(164L);
+		bookingRq.setSystem(81L);
 		bookingRq.setTransferOnly(new BookingRq.TransferOnly());
 		bookingRq.getTransferOnly().setBooking(new BookingRq.TransferOnly.Booking());
 		BookingRq.TransferOnly.Booking.Confirm confirm = new BookingRq.TransferOnly.Booking.Confirm();

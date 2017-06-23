@@ -119,8 +119,12 @@ public class A2BController {
 		reserveRq.getTransferOnly().getBooking().getReserve().setTTICode(request.getTTICode());
 		reserveRq.getTransferOnly().getBooking().getReserve().setUsername(request.getUsername());
 		DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-		Date date = null;
-		try{ date = df.parse(request.getArrDate());} catch(Exception ex){};
+		Date date;
+		try {
+			date = df.parse(request.getArrDate());
+		} catch (Exception ex) {
+			// Nothing to do...
+		}
 		ReserveRs reserveRs = client.block(reserveRq);
 		// Reserva
 		if (reserveRs.getTransferOnly().getErrors() != null)
@@ -159,23 +163,23 @@ public class A2BController {
 		return bookingRs;
 	}
 
-	@RequestMapping(value = "/loadRoutes", method = RequestMethod.GET,produces = MediaType.APPLICATION_XML_VALUE, consumes = MediaType.APPLICATION_XML_VALUE)
+	@RequestMapping(value = "/loadRoutes", method = RequestMethod.GET, produces = MediaType.APPLICATION_XML_VALUE, consumes = MediaType.APPLICATION_XML_VALUE)
 	@ResponseBody
-	public String routes(){
+	public String routes() {
 		return client.loadRoutes();
 	}
 
-	@RequestMapping(value = "/loadLocations", method = RequestMethod.GET,produces = MediaType.APPLICATION_XML_VALUE, consumes = MediaType.APPLICATION_XML_VALUE)
+	@RequestMapping(value = "/loadLocations", method = RequestMethod.GET, produces = MediaType.APPLICATION_XML_VALUE, consumes = MediaType.APPLICATION_XML_VALUE)
 	@ResponseBody
-	public String locations(){
+	public String locations() {
 		return client.loadLocations();
 	}
-	
-	@RequestMapping(value="/cancelFees", method = RequestMethod.POST, produces = MediaType.APPLICATION_XML_VALUE, consumes = MediaType.APPLICATION_XML_VALUE)
+
+	@RequestMapping(value = "/cancelFees", method = RequestMethod.POST, produces = MediaType.APPLICATION_XML_VALUE, consumes = MediaType.APPLICATION_XML_VALUE)
 	@ResponseBody
-	public CancelFeeRs cancelFees(@RequestBody CancelFeeRq cancelFeeRq){
+	public CancelFeeRs cancelFees(@RequestBody CancelFeeRq cancelFeeRq) {
 		String bookingRef = cancelFeeRq.getTransferOnly().getBooking().getCancelFees().getBookingRef();
-		return client.cancelFees(bookingRef); 		
+		return client.cancelFees(bookingRef);
 	}
 
 }

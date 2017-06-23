@@ -49,6 +49,7 @@ import com.thoughtworks.xstream.io.xml.XmlFriendlyReplacer;
  *                                     &lt;sequence&gt;
  *                                       &lt;element name="Username" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *                                       &lt;element name="Password" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                                       &lt;element name="Agency" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *                                       &lt;element name="Lang" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *                                       &lt;element name="DeparturePointCode" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *                                       &lt;element name="ArrivalPointCode" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
@@ -91,17 +92,39 @@ import com.thoughtworks.xstream.io.xml.XmlFriendlyReplacer;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
+	"agency",
+	"system",
     "transferOnly"
 })
 @XmlRootElement(name = "TCOML")
 public class AvailRq {
-
+	
+	@XmlElement(name="Agency", required=true)
+    protected long agency;
+    @XmlElement(name="System", required=true)
+    protected long system;    
     @XmlElement(name = "TransferOnly", required = true)
     protected AvailRq.TransferOnly transferOnly;
     @XmlAttribute(name = "version")
     protected String version;
+    
+    public long getAgency() {
+		return agency;
+	}
 
-    /**
+	public void setAgency(long agency) {
+		this.agency = agency;
+	}	
+
+	public long getSystem() {
+		return system;
+	}
+
+	public void setSystem(long system) {
+		this.system = system;
+	}
+
+	/**
      * Obtiene el valor de la propiedad transferOnly.
      * 
      * @return
@@ -238,7 +261,6 @@ public class AvailRq {
         public void setAvailability(AvailRq.TransferOnly.Availability value) {
             this.availability = value;
         }
-
 
         /**
          * <p>Clase Java para anonymous complex type.

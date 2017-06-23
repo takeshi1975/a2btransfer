@@ -82,7 +82,16 @@ public class CancelFeeRq {
     protected String version;
     @XmlAttribute(name = "sess")
     protected String sess;
+    @XmlAttribute(name="agency")
+    protected String agency;    
+    
+    public String getAgency() {
+		return agency;
+	}
 
+	public void setAgency(String agency) {
+		this.agency = agency;
+	}
     /**
      * Obtiene el valor de la propiedad transferOnly.
      * 

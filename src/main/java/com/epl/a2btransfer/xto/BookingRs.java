@@ -205,6 +205,16 @@ public class BookingRs {
 	protected Float version;
 	@XmlAttribute(name = "cancelFee", required = false)
 	protected Float cancelFee;
+	@XmlAttribute(name="breakdown", required=false)
+	protected List<String> breakdown;
+		
+	public List<String> getBreakdown() {
+		return breakdown;
+	}
+
+	public void setBreakdown(List<String> breakdown) {
+		this.breakdown = breakdown;
+	}
 
 	/**
 	 * Obtiene el valor de la propiedad transferOnly.

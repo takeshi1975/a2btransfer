@@ -84,6 +84,8 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
+	"agency",
+	"system",
     "transferOnly"
 })
 @XmlRootElement(name = "TCOML")
@@ -95,7 +97,26 @@ public class ReserveRq {
     protected String version;
     @XmlAttribute(name = "date")
     protected String date;    
+    @XmlAttribute(name="agency")
+    protected long agency;
+    @XmlAttribute(name="system")
+    protected long system;
+    
+    public Long getSystem(){
+    	return system;
+    }
+    public void System(long system){
+    	this.system = system;
+    }
+    
+    public Long getAgency() {
+		return agency;
+	}
 
+	public void setAgency(Long agency) {
+		this.agency = agency;
+	}
+	
     public String getDate() {
 		return date;
 	}
