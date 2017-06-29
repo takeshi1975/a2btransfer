@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import com.epl.a2btransfer.dto.Agency;
 import com.epl.a2btransfer.dto.ComisionEPL;
+import com.epl.a2btransfer.dto.ComisionEPLId;
 import com.epl.a2btransfer.dto.Sistema;
 import com.epl.a2btransfer.dto.Tax;
 import com.epl.a2btransfer.exception.NotApplicableException;
@@ -41,7 +42,8 @@ public class PolicyService {
 		comisionEPLRepository.findComission(cliente, sistema, date);
 		long id = comisionEPLRepository.getId();		
 		log.info("Se recoge "+id+" Neto = "+(comisionEPLRepository.isNeto()?"S":"N")) ;
-		ComisionEPL comisionEPL = comisionEPLRepository.findOne(id);
+		String neto = comisionEPLRepository.isNeto()?"S":"N";
+		ComisionEPL comisionEPL = comisionEPLRepository.findOne(new ComisionEPLId(id,neto));
 		if (comisionEPL==null)		
 			throw new NotApplicableException();		
 		float pct = comisionEPL.getMargen();		

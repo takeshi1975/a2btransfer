@@ -3,8 +3,8 @@ package com.epl.a2btransfer.dto;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.Table;
 /**
  * Mapeo de la comisión de EPL
@@ -15,9 +15,9 @@ import javax.persistence.Table;
 @Table(name="A2B_TRANSFER_COMISSION")
 public class ComisionEPL {
 	
-	@Id
-	@Column
-	private Long id;
+	@EmbeddedId
+	private ComisionEPLId comisionEPLId;
+	
 	private float margen;
 	@Column(name="comi")
 	private String comision; // S/N  
@@ -31,14 +31,14 @@ public class ComisionEPL {
 	private Long sistemaId; // id del sistema...
 	@Column(name="mercado_id")
 	private Long mercadoId; // id del mercado...
-	private String neto;
+	
 	
 	private ComisionEPL(){
 		// inherited
 	}
 	
-	private ComisionEPL(Long id,  float margen, String comision, Date fecha1, Date fecha2){
-		this.setId(id);
+	private ComisionEPL(Long id,  float margen, String comision, Date fecha1, Date fecha2, String neto){
+		this.setComisionEPLId(new ComisionEPLId(id,neto));
 		this.setMargen(margen);
 		this.setComision(comision);
 		this.setFecha1(fecha1);
@@ -46,14 +46,14 @@ public class ComisionEPL {
 		this.setClienteId(clienteId);
 		this.setSistemaId(sistemaId);
 		this.setMercadoId(mercadoId);
-	}
-			
-	public Long getId() {
-		return id;
+	}				
+	
+	public ComisionEPLId getComisionEPLId() {
+		return comisionEPLId;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setComisionEPLId(ComisionEPLId comisionEPLId) {
+		this.comisionEPLId = comisionEPLId;
 	}
 
 	public float getMargen() {
@@ -115,7 +115,7 @@ public class ComisionEPL {
 	public void setMercadoId(Long mercadoId) {
 		this.mercadoId = mercadoId;
 	}
-
+	
 	@Override	
 	public boolean equals(Object obj) {
 	    ComisionEPL other = (ComisionEPL) obj;
@@ -123,6 +123,9 @@ public class ComisionEPL {
 			   (this.getMercadoId() == other.getMercadoId()) &&	
 			   (this.getSistemaId() == other.getSistemaId());
 	}
+
+
+	
 	
 }
 
