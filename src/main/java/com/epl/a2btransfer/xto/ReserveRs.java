@@ -8,6 +8,8 @@
 package com.epl.a2btransfer.xto;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -74,7 +76,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = { "transferOnly" })
+@XmlType(name = "", propOrder = { "transferOnly", "breakdown"})
 @XmlRootElement(name = "TCOML")
 public class ReserveRs {
 
@@ -86,6 +88,22 @@ public class ReserveRs {
 	protected String company;
 	@XmlAttribute(name = "sess")
 	protected BigInteger sess;
+
+	@XmlElement(name="breakdown", required=false)
+	protected List<String> breakdown=null;
+		
+	public List<String> getBreakdown() {
+		if (breakdown==null){
+			breakdown = new ArrayList<String>();
+			return breakdown;
+		}
+		return breakdown;
+	}
+
+	public void setBreakdown(List<String> breakdown) {
+		this.breakdown = breakdown;
+	}
+
 
 	/**
 	 * Obtiene el valor de la propiedad transferOnly.
@@ -222,7 +240,7 @@ public class ReserveRs {
 		@XmlElement(name = "Booking", required = false)
 		protected ReserveRs.TransferOnly.Booking booking;
 
-		@XmlElement(name = "Errors", required = false)
+		@XmlElement(name = "errors", required = false)
 		protected Errors errors;		
 		
 		public Errors getErrors() {

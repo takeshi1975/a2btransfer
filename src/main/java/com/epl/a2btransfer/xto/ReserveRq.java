@@ -105,7 +105,7 @@ public class ReserveRq {
     public Long getSystem(){
     	return system;
     }
-    public void System(long system){
+    public void setSystem(long system){
     	this.system = system;
     }
     

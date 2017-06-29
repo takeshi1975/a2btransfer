@@ -33,20 +33,10 @@ public class A2BController {
 	@Autowired
 	private com.epl.a2btransfer.services.A2BTransferClientService client;
 
-	// <Username>myusername</Username> <Password>mypassword</Password>
-	// <Lang>EN</Lang> <DeparturePointCode>PMI</DeparturePointCode>
-	// <ArrivalPointCode>ARE</ArrivalPointCode> <SectorType>RETURN</SectorType>
-	// <ArrDate>30/07/15</ArrDate> <ArrTime>10:00</ArrTime>
-	// <RetDate>10/08/15</RetDate> <RetTime>10:00</RetTime> <Adults>2</Adults>
-	// <Children>0</Children> <Infants>0</Infants> <Vehicletype>0</Vehicletype>
-	// <Latitude></Latitude> <Longitude></Longitude> <TTICode></TTICode>
-	// <GIATA_ID></GIATA_ID>
-
 	@RequestMapping(value = "/avail", method = RequestMethod.POST, produces = MediaType.APPLICATION_XML_VALUE, consumes = MediaType.APPLICATION_XML_VALUE)
 	@ResponseBody
 	public AvailRs avail(@RequestBody AvailRq availRq) {
 		log.info("====================== Avail Controller ======================");
-		// AvailRq availRq = getDefaultAvailRq();
 		return client.avail(availRq);
 	}
 
@@ -54,7 +44,6 @@ public class A2BController {
 	@ResponseBody
 	public ReserveRs block(@RequestBody ReserveRq reserveRq) {
 		log.info("====================== Avail Controller ======================");
-		// AvailRq availRq = getDefaultAvailRq();
 		return client.block(reserveRq);
 	}
 
@@ -62,7 +51,6 @@ public class A2BController {
 	@ResponseBody
 	public BookingRs book(@RequestBody BookingRq bookingRq) {
 		log.info("====================== Avail Controller ======================");
-		// AvailRq availRq = getDefaultAvailRq();
 		return client.booking(bookingRq);
 	}
 

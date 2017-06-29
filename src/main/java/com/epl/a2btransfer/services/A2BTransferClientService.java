@@ -60,7 +60,6 @@ public class A2BTransferClientService {
 
 	/**
 	 * avail Devuelve la disponibilidad.
-	 * 
 	 * @param availRq
 	 * @return
 	 */
@@ -101,12 +100,15 @@ public class A2BTransferClientService {
 			if (reserveRs.getTransferOnly().getErrors()==null){
 				try{
 					DateFormat df = new SimpleDateFormat("dd/MM/yy");
-					Date date = df.parse(reserveRq.getDate());
-					long cliente = reserveRq.getAgency();
-					long sistema = reserveRq.getSystem();
-					reserveRs = policyService.calculatePrice(reserveRs,cliente, sistema, date);
+					Date bookingDate = df.parse(reserveRq.getDate());
+					long agency = reserveRq.getAgency();
+					long system = reserveRq.getSystem();										
+					
+					reserveRs = policyService.calculatePrice(reserveRs, agency, system, bookingDate);
+					float priceEPL = reserveRs.getTransferOnly().getBooking().getReserve().getHolidayValue();
+					reserveRs.setBreakdown(this.policyService.breakdown(priceEPL, agency, system, bookingDate));
 				}catch(Exception ex){
-					log.error("Error en el parseo de fechas...", ex);
+					log.error("Error en el parseo del bloqueo (rs)...", ex);
 					reserveRs.getTransferOnly().setBooking(null);
 					reserveRs.getTransferOnly().setErrors(this.handleError(ex.toString()));
 				}
@@ -143,10 +145,13 @@ public class A2BTransferClientService {
 					Date date = df.parse(strDate);					
 					long agencia = bookingRq.getAgency();
 					long sistema = bookingRq.getSystem();
-					BookingRs respuesta = policyService.calculatePrice(bookingRs,agencia, sistema, date);
-					float coste = respuesta.getTransferOnly().getBooking().getConfirm().getVoucherInfo().getInvoiceValue();
+					// Comision de EPL
 					
-					respuesta.setBreakdown(policyService.breakdown(coste, agencia, sistema, date));
+					bookingRs = policyService.calculatePrice(bookingRs,agencia, sistema, date);
+					float priceEPL = bookingRs.getTransferOnly().getBooking().getConfirm().getVoucherInfo().getInvoiceValue();					
+					bookingRs.setBreakdown(policyService.breakdown(priceEPL, agencia, sistema, date));
+					
+					return bookingRs;
 				} catch (NumberFormatException nfex){
 					log.error("No se ha podido obtener informacion de la agencia");
 					bookingRs.getTransferOnly().setBooking(null);

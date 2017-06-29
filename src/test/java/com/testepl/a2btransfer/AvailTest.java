@@ -1,3 +1,4 @@
+
 package com.testepl.a2btransfer;
 
 import org.apache.log4j.Logger;
@@ -57,9 +58,9 @@ public class AvailTest {
 		request.setAdults((byte) 2);
 		request.setChildren((byte) 1);
 		request.setInfants((byte) 1);
-		request.setArrDate("30/07/17");
+		request.setArrDate("01/09/17");
 		request.setArrTime("10:00");
-		request.setRetDate("10/08/17");
+		request.setRetDate("10/09/17");
 		request.setRetTime("10:00");
 		request.setDeparturePointCode("PMI");
 		request.setArrivalPointCode("ARE");
@@ -82,14 +83,14 @@ public class AvailTest {
 		else log.info("OK No hay errores en la disponibilidad");
 		return availRs;
 	}
-		
-	@Test
-	public void testBooking(){
-		booking();
-	}	
+			
 	
 	public ReserveRs bloqueo(){
 		AvailRs rs = availWithDates();
+		if (rs.getTransferOnly().getErrors()!=null){
+			rs.getTransferOnly().getErrors().getError().forEach(message->log.error(message));
+			return null;
+		}
 		String url ="http://localhost:"+port+"/a2btransfer/block";
 		int size = rs.getTransferOnly().getAvailability().getAvline().size();	
 		if (size==0)
@@ -97,6 +98,8 @@ public class AvailTest {
 		int index = (int) (Math.random()*10) % size;
 		log.info("Se escoge index -->" +index);
 		ReserveRq reserveRq = new ReserveRq();
+		reserveRq.setAgency(164L);
+		reserveRq.setSystem(81L);		
 		reserveRq.setDate("30/07/17");
 		reserveRq.setVersion(NEWFORMAT);
 		reserveRq.setTransferOnly(new ReserveRq.TransferOnly());
@@ -128,10 +131,16 @@ public class AvailTest {
 	
 	public BookingRs booking(){
 		ReserveRs reserveRs = this.bloqueo();
+		if (reserveRs.getTransferOnly().getErrors()!=null){
+			log.info("Se ha obtenido un error en el bloqueo ");
+			reserveRs.getTransferOnly().getErrors().getError().forEach(message->log.error(message));
+			return null;
+		}
 		BookingRq bookingRq = new BookingRq();
 		String url ="http://localhost:"+port+"/a2btransfer/book";
 		bookingRq.setAgency(164L);
 		bookingRq.setSystem(81L);
+		
 		bookingRq.setTransferOnly(new BookingRq.TransferOnly());
 		bookingRq.getTransferOnly().setBooking(new BookingRq.TransferOnly.Booking());
 		BookingRq.TransferOnly.Booking.Confirm confirm = new BookingRq.TransferOnly.Booking.Confirm();
@@ -170,5 +179,11 @@ public class AvailTest {
 		BookingRs bookingRs = restTemplate.postForObject(url,bookingRq, BookingRs.class);
 		Assert.notNull(bookingRs);
 		return bookingRs;
+	}
+	
+	@Test
+	public void testBooking(){
+		booking();
+		log.info("Fin del proceso!!!");
 	}
 }

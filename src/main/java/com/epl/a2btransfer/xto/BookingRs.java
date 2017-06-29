@@ -195,7 +195,7 @@ import javax.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = { "transferOnly" })
+@XmlType(name = "", propOrder = { "transferOnly", "breakdown" })
 @XmlRootElement(name = "TCOML")
 public class BookingRs {
 
@@ -205,10 +205,12 @@ public class BookingRs {
 	protected Float version;
 	@XmlAttribute(name = "cancelFee", required = false)
 	protected Float cancelFee;
-	@XmlAttribute(name="breakdown", required=false)
-	protected List<String> breakdown;
+	@XmlElement(name="breakdown", required=false)
+	protected static List<String> breakdown;
 		
 	public List<String> getBreakdown() {
+		if (breakdown==null)
+			breakdown=new ArrayList<String>();
 		return breakdown;
 	}
 
@@ -438,7 +440,7 @@ public class BookingRs {
 		@XmlElement(name = "Booking", required = false)
 		protected BookingRs.TransferOnly.Booking booking;
 
-		@XmlElement(name = "Booking", required = false)
+		@XmlElement(name = "errors", required = false)
 		protected Errors errors;
 
 		public Errors getErrors() {

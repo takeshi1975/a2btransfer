@@ -15,7 +15,7 @@ public class AgencyRepositoryImpl implements NativeAgencyComisionDao {
 	private final static Logger log = Logger.getLogger(AgencyRepositoryImpl.class);
 	
 	final String sqlString = "SELECT valoracion_pcm.valoracion_com(:cliente, :sistema, :fecha) FROM DUAL";
-	final String sqlComissionValue = "SELECT com FROM COMISION WHERE ID=:comisionId";
+	final String sqlComissionValue = "SELECT com, FROM COMISION WHERE ID=:comisionId";
 	
 	@PersistenceContext
 	private EntityManager em;
