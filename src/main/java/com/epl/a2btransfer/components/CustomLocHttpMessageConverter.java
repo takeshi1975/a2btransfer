@@ -70,6 +70,7 @@ public class CustomLocHttpMessageConverter implements GenericHttpMessageConverte
 	};
 
 	private void performPersistence(Location location){
+		log.info("Se ha guardado un dato");
 		try{
 			locationsRepository.save(location);
 		}catch(Exception sqlex){

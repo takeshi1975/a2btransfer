@@ -177,6 +177,7 @@ public class A2BTransferClientService {
 	public String loadRoutes() {
 		log.info("Se va a llamar al método de lectura de rutas");
 		com.epl.a2btransfer.xto.RouteRq route = new com.epl.a2btransfer.xto.RouteRq();
+		route.setVersion("NEWFORMAT");
 		route.setTransferOnly(new com.epl.a2btransfer.xto.RouteRq.TransferOnly());
 		route.getTransferOnly().setCacheRoutes(new com.epl.a2btransfer.xto.RouteRq.TransferOnly.CacheRoutes());
 		route.getTransferOnly().getCacheRoutes()
@@ -197,6 +198,7 @@ public class A2BTransferClientService {
 	public String loadLocations() {
 		log.info("Se va a llamar al método de lectura de localizaciones");
 		com.epl.a2btransfer.xto.LocationRq locationRq = new com.epl.a2btransfer.xto.LocationRq();
+		locationRq.setVersion("NEWFORMAT");
 		locationRq.setTransferOnly(new com.epl.a2btransfer.xto.LocationRq.TransferOnly());
 		locationRq.getTransferOnly().setCacheLocations(new LocationRq.TransferOnly.CacheLocations());
 		locationRq.getTransferOnly().getCacheLocations()

@@ -40,14 +40,14 @@ public class A2BController {
 	@RequestMapping(value = "/block", method = RequestMethod.POST, produces = MediaType.APPLICATION_XML_VALUE, consumes = MediaType.APPLICATION_XML_VALUE)
 	@ResponseBody
 	public ReserveRs block(@RequestBody ReserveRq reserveRq) {
-		log.info("====================== Avail Controller ======================");
+		log.info("====================== Block Controller ======================");
 		return client.block(reserveRq);
 	}
 
 	@RequestMapping(value = "/book", method = RequestMethod.POST, produces = MediaType.APPLICATION_XML_VALUE, consumes = MediaType.APPLICATION_XML_VALUE)
 	@ResponseBody
 	public BookingRs book(@RequestBody BookingRq bookingRq) {
-		log.info("====================== Avail Controller ======================");
+		log.info("====================== Book Controller ======================");
 		return client.booking(bookingRq);
 	}
 
@@ -72,7 +72,7 @@ public class A2BController {
 	@RequestMapping(value = "/bookCheapest", method = RequestMethod.POST, produces = MediaType.APPLICATION_XML_VALUE, consumes = MediaType.APPLICATION_XML_VALUE)
 	@ResponseBody
 	public BookingRs bookCheapest(@RequestBody AvailRq availRq) {
-		log.info("====================== Avail Controller ======================");
+		log.info("====================== bookCheapest Controller ======================");
 		// AvailRq availRq = getDefaultAvailRq();
 		AvailRs availRs = client.avail(availRq);
 		if (availRs.getTransferOnly().getErrors() != null)
@@ -141,13 +141,13 @@ public class A2BController {
 		return bookingRs;
 	}
 
-	@RequestMapping(value = "/loadRoutes", method = RequestMethod.GET, produces = MediaType.APPLICATION_XML_VALUE, consumes = MediaType.APPLICATION_XML_VALUE)
+	@RequestMapping(value = "/loadRoutes", method = RequestMethod.GET, produces = MediaType.APPLICATION_XML_VALUE)
 	@ResponseBody
 	public String routes() {
 		return client.loadRoutes();
 	}
 
-	@RequestMapping(value = "/loadLocations", method = RequestMethod.GET, produces = MediaType.APPLICATION_XML_VALUE, consumes = MediaType.APPLICATION_XML_VALUE)
+	@RequestMapping(value = "/loadLocations", method = RequestMethod.GET, produces = MediaType.APPLICATION_XML_VALUE)
 	@ResponseBody
 	public String locations() {
 		return client.loadLocations();

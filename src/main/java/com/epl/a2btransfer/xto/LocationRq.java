@@ -72,7 +72,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "transferOnly"
 })
-@XmlRootElement(name = "LocationRq")
+@XmlRootElement(name = "TCOML")
 public class LocationRq {
 
     @XmlElement(name = "TransferOnly", required = true)
