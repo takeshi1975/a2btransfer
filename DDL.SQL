@@ -21,11 +21,157 @@ CREATE TABLE A2BT_ROUTE(
     	ON DELETE CASCADE    
 );
 
-CREATE OR REPLACE VIEW  A2B_TRANSFER_COMISSION AS
-  SELECT T2.ID, T2.CODIGO, MARGEN, COMI, FECHA_INICIO, FECHA_FIN 
-  FROM POLITICA_COMERCIAL_MEDIDA T1 
-    LEFT JOIN TIPO_SERVICIO T2 
-      ON (T1.TIPO_SERVICIO_ID=T2.ID) 
-    LEFT JOIN INTEGRACION T3 
-      ON (T1.INTEGRACION_ID=T3.ID) 
-         WHERE (T3.CODIGO='A2B' AND T2.CODIGO='TRAS');     
+-- VISTA PARA OBTENER LA COMISION DE EPL EN Netos Y PVP's
+CREATE OR REPLACE FORCE VIEW ETOUR.A2B_TRANSFER_COMISSION
+(ID, MARGEN, COMI, FECHA_INICIO, FECHA_FIN, 
+ CLIENTE_ID, SISTEMA_ID, MERCADO_ID, NETO)
+AS 
+SELECT T1.id, T1.margen, T1.comi, T1.fecha_inicio, T1.fecha_fin, 
+	         T1.cliente_id, T1.sistema_id, t1.mercado_id, 'N' AS NETO
+	  FROM POLITICA_COMERCIAL_MEDIDA T1 		    
+		    LEFT JOIN CLIENTE_MERCADO T2 ON (T2.CLIENTE_ID=T1.CLIENTE_ID) 
+		    LEFT JOIN INTEGRACION     T3 ON (T3.ID=T1.INTEGRACION_ID) 
+		    LEFT JOIN TIPO_RESERVA_COMISION T4 ON (T4.ID=T1.TIPO_RESERVA_COMISION_ID) 
+		    LEFT JOIN TIPO_SERVICIO   T5 ON (T5.ID=TIPO_SERVICIO_ID)	     
+		    WHERE 
+		      (T1.MERCADO_ID=T2.MERCADO_ID OR T1.MERCADO_ID IS NULL) AND 
+		      (CONTRATO_ID IS NULL) AND 
+		      (T3.CODIGO='A2B')     AND 
+		      (T4.CODIGO='TRA' )    AND 
+		      (T5.CODIGO='TRAS')
+UNION		                     
+    SELECT T1.ID, T1.MARGEN, 'S', T1.FECHA_INICIO, T1.FECHA_FIN,
+            T1.CLIENTE_ID, T1.SISTEMA_ID, T1.MERCADO_ID, 'S' AS NETO 
+       FROM POLITICA_COMERCIAL_CLIENTE T1
+            INNER JOIN INTEGRACION   T2 ON (T1.INTEGRACION_ID=T2.ID)
+            INNER JOIN TIPO_RESERVA_COMISION T3 ON (T3.ID=T1.TIPO_RESERVA_COMISION_ID)
+            WHERE T2.CODIGO='A2B'
+            AND T3.CODIGO='TRA';
+            
+CREATE OR REPLACE PACKAGE ETOUR.VALORACION_PCM AS 
+
+  FUNCTION FIND_PCM(
+    P_CLIENTE_ID CLIENTE.ID%TYPE,
+    P_SISTEMA_ID SISTEMA.ID%TYPE,
+    P_FECHA DATE        
+  ) RETURN NUMBER;
+  
+  FUNCTION VALORACION_COM(
+    P_CLIENTE_ID IN INTEGER,
+    P_SISTEMA_ID IN INTEGER,
+    P_FECHA_RES IN DATE
+  ) RETURN NUMBER;
+
+END VALORACION_PCM;
+/
+
+CREATE OR REPLACE PACKAGE BODY ETOUR.VALORACION_PCM AS
+  
+  FUNCTION FIND_PCM(
+    P_CLIENTE_ID CLIENTE.ID%TYPE,
+    P_SISTEMA_ID SISTEMA.ID%TYPE,
+    P_FECHA DATE        
+  ) RETURN NUMBER AS
+   PRAGMA AUTONOMOUS_TRANSACTION;   
+   CURSOR PCM_CUR( P_CLIENTE_ID NUMBER, P_SISTEMA_ID NUMBER, P_FECHA DATE) IS
+        SELECT * FROM A2B_TRANSFER_COMISSION T1 
+        WHERE 
+          (T1.CLIENTE_ID=p_cliente_id OR T1.CLIENTE_ID IS NULL) AND 	
+          (T1.SISTEMA_ID=p_sistema_id OR T1.SISTEMA_ID IS NULL) AND	       
+           p_fecha BETWEEN T1.FECHA_INICIO AND T1.FECHA_FIN 
+		   ORDER BY 
+            T1.CLIENTE_ID NULLS LAST, 
+		   	T1.MERCADO_ID NULLS LAST, 
+		   	T1.SISTEMA_ID NULLS LAST;
+        pcm1 PCM_CUR%ROWTYPE;
+        pcm2 PCM_CUR%ROWTYPE;
+        v_resultado NUMBER DEFAULT NULL;
+  BEGIN    
+    OPEN pcm_cur(p_cliente_id, p_sistema_id, p_fecha);
+    FETCH pcm_cur INTO pcm1;
+    IF (NOT pcm_cur%NOTFOUND) THEN          
+      FETCH pcm_cur INTO pcm2;
+      IF (pcm_cur%NOTFOUND) THEN
+            v_resultado := pcm1.ID;
+      ELSIF (pcm1.cliente_id IS NOT NULL AND 
+            pcm2.cliente_id IS NULL) THEN
+            v_resultado := pcm1.id;
+      ELSIF (pcm1.mercado_id IS NOT NULL AND 
+            pcm2.mercado_id IS NULL) THEN
+            v_resultado:= pcm1.id;
+      ELSIF (pcm1.sistema_id IS NOT NULL AND
+            pcm2.sistema_id IS NULL) THEN
+            v_resultado:= pcm1.id;
+      END IF;
+    END IF;
+    IF (pcm_cur%ISOPEN) THEN
+        CLOSE pcm_cur;
+    END IF;
+    INSERT INTO A2B_TRANSFER_AUD 
+        VALUES( p_cliente_id, p_sistema_id, p_fecha, v_resultado);
+    COMMIT;
+    RETURN  v_resultado;    
+  END FIND_PCM;
+
+  
+  FUNCTION VALORACION_COM(
+    P_CLIENTE_ID IN INTEGER,
+    P_SISTEMA_ID IN INTEGER,
+    P_FECHA_RES IN DATE
+  ) RETURN NUMBER IS
+    PRAGMA AUTONOMOUS_TRANSACTION;
+    CURSOR CUR_COM(P_CLIENTE_ID NUMBER,
+      P_SISTEMA_ID NUMBER,
+      P_FECHA DATE)
+      IS
+      SELECT T1.* FROM COMISION T1 
+        LEFT JOIN CLIENTE_MERCADO T2
+          ON (T1.CLIENTE_ID=T2.CLIENTE_ID)
+        LEFT JOIN CLIENTE T3 
+          ON (T1.CLIENTE_ID=T2.CLIENTE_ID)
+      WHERE (T1.CLIENTE_ID=P_CLIENTE_ID OR T1.CLIENTE_ID IS NULL)
+        AND (T1.SISTEMA_ID=P_SISTEMA_ID OR T1.SISTEMA_ID IS NULL)
+        AND (T2.MERCADO_ID=T1.MERCADO_ID OR T1.MERCADO_ID IS NULL)
+        AND (T1.FECHA_INI_APL IS NULL OR T1.FECHA_INI_APL<SYSDATE)
+        AND (T1.FECHA_FIN_APL IS NULL OR T1.FECHA_FIN_APL>SYSDATE)
+        AND (T1.FECHA_INI_RES IS NULL OR T1.FECHA_INI_RES<P_FECHA_RES)
+        AND (T1.FECHA_FIN_RES IS NULL OR T1.FECHA_FIN_RES>P_FECHA_RES)
+        AND (T1.GRUPO_CLIENTE_ID IS NULL OR T1.GRUPO_CLIENTE_ID=T3.GRUPO_CLIENTE_ID)
+      ORDER BY 
+        T1.CLIENTE_ID NULLS LAST,
+        T1.MERCADO_ID NULLS LAST,
+        T1.GRUPO_CLIENTE_ID NULLS LAST;
+        v_comision_agencia1 CUR_COM%ROWTYPE;
+        v_comision_agencia2 CUR_COM%ROWTYPE;
+        v_resultado NUMBER DEFAULT NULL;
+    BEGIN
+       OPEN CUR_COM(P_CLIENTE_ID, P_SISTEMA_ID, P_FECHA_RES);
+       FETCH CUR_COM INTO v_comision_agencia1;
+       IF CUR_COM%NOTFOUND THEN
+          v_resultado := NULL;
+       ELSE
+         FETCH CUR_COM INTO v_comision_agencia2;
+         IF CUR_COM%NOTFOUND THEN
+            v_resultado := v_comision_agencia1.id;
+         ELSIF (v_comision_agencia1.cliente_id IS NOT NULL 
+                AND v_comision_agencia2.cliente_id IS NULL) THEN                      
+                v_resultado := v_comision_agencia1.ID;
+         ELSIF (v_comision_agencia1.mercado_id IS NOT NULL
+                AND v_comision_agencia2.mercado_id IS NULL) THEN
+                v_resultado := v_comision_agencia1.ID;
+         ELSIF (v_comision_agencia1.grupo_cliente_id IS NOT NULL
+                AND v_comision_agencia2.grupo_cliente_id IS NULL) THEN
+                v_resultado := v_comision_agencia1.ID;
+         END IF;         
+       END IF;
+       IF (cur_com%ISOPEN) THEN
+            CLOSE cur_com;
+       END IF;
+       INSERT INTO A2B_TRANSFER_AUD 
+         VALUES (p_cliente_id, p_sistema_id, p_fecha_res, v_resultado);
+       COMMIT;
+       RETURN v_resultado;
+    END VALORACION_COM;
+
+END VALORACION_PCM;
+/

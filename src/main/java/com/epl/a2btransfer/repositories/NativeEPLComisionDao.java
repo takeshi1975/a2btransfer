@@ -10,8 +10,14 @@ import com.epl.a2btransfer.exception.NotApplicableException;
  * @author Juanjo
  */
 public interface NativeEPLComisionDao {
-				
-	public long findComission(long cliente, long sistema, Date fecha) 
+	
+	public boolean isNeto();
+	
+	public Long getId();
+	
+	public void findComission(long cliente, long sistema, Date fecha) 
 			throws NotApplicableException;
 			
+	
+	
 }

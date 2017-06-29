@@ -1,4 +1,3 @@
-
 package com.testepl.a2btransfer;
 
 import org.apache.log4j.Logger;
@@ -82,8 +81,7 @@ public class AvailTest {
 			}
 		else log.info("OK No hay errores en la disponibilidad");
 		return availRs;
-	}
-			
+	}			
 	
 	public ReserveRs bloqueo(){
 		AvailRs rs = availWithDates();

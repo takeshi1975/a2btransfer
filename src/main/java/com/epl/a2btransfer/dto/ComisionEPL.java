@@ -31,6 +31,7 @@ public class ComisionEPL {
 	private Long sistemaId; // id del sistema...
 	@Column(name="mercado_id")
 	private Long mercadoId; // id del mercado...
+	private String neto;
 	
 	private ComisionEPL(){
 		// inherited

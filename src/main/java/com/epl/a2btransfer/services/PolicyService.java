@@ -38,8 +38,10 @@ public class PolicyService {
 	
 	// Comisión del cliente para el desglose
 	private float applyFee(long cliente, long sistema, float price, Date date) throws NotApplicableException{
-		long pcmId = comisionEPLRepository.findComission(cliente, sistema, date);		
-		ComisionEPL comisionEPL = comisionEPLRepository.findOne(pcmId);
+		comisionEPLRepository.findComission(cliente, sistema, date);
+		long id = comisionEPLRepository.getId();		
+		log.info("Se recoge "+id+" Neto = "+(comisionEPLRepository.isNeto()?"S":"N")) ;
+		ComisionEPL comisionEPL = comisionEPLRepository.findOne(id);
 		if (comisionEPL==null)		
 			throw new NotApplicableException();		
 		float pct = comisionEPL.getMargen();		
