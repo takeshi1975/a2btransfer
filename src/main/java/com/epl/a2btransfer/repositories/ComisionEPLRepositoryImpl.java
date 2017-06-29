@@ -1,6 +1,5 @@
 package com.epl.a2btransfer.repositories;
 
-import java.math.BigDecimal;
 import java.sql.CallableStatement;
 import java.sql.Types;
 import java.util.Date;

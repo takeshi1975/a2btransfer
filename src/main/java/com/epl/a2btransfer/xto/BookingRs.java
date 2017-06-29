@@ -214,8 +214,8 @@ public class BookingRs {
 		return breakdown;
 	}
 
-	public void setBreakdown(List<String> breakdown) {
-		this.breakdown = breakdown;
+	public void setBreakdown(List<String> pbreakdown) {
+		breakdown = pbreakdown;
 	}
 
 	/**

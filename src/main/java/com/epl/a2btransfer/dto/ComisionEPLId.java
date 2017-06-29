@@ -7,7 +7,8 @@ import javax.persistence.Embeddable;
 
 @Embeddable
 public class ComisionEPLId implements Serializable{
-	
+
+	private static final long serialVersionUID = -8318048287868214232L;
 	private Long id;
 	private String neto;
 	

@@ -1,6 +1,5 @@
 package com.epl.a2btransfer.xto;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -14,7 +13,7 @@ public class Errors {
 	
 	
 	@XmlElement(name = "error", required = true)
-	protected List<Error> error;
+	protected List<Error> error = null;
 
 	public List<Error> getError() {
 		return error;
