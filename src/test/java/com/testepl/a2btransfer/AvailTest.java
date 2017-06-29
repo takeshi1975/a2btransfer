@@ -130,12 +130,7 @@ public class AvailTest {
 	}
 	
 	public BookingRs booking(){
-		ReserveRs reserveRs = this.bloqueo();
-		if (reserveRs.getTransferOnly().getErrors()!=null){
-			log.info("Se ha obtenido un error en el bloqueo ");
-			reserveRs.getTransferOnly().getErrors().getError().forEach(message->log.error(message));
-			return null;
-		}
+		
 		BookingRq bookingRq = new BookingRq();
 		String url ="http://localhost:"+port+"/a2btransfer/book";
 		bookingRq.setAgency(164L);
@@ -143,12 +138,10 @@ public class AvailTest {
 		
 		bookingRq.setTransferOnly(new BookingRq.TransferOnly());
 		bookingRq.getTransferOnly().setBooking(new BookingRq.TransferOnly.Booking());
-		BookingRq.TransferOnly.Booking.Confirm confirm = new BookingRq.TransferOnly.Booking.Confirm();
-		bookingRq.getTransferOnly().getBooking().setConfirm(confirm);
-		bookingRq.setVersion(NEWFORMAT);						
-		confirm.setTransacNo(reserveRs.getTransferOnly().getBooking().getReserve().getTransacNo());
+		bookingRq.setVersion(NEWFORMAT);								
 		bookingRq.setTransferOnly(new BookingRq.TransferOnly());
 		bookingRq.getTransferOnly().setBooking(new BookingRq.TransferOnly.Booking());
+		
 		bookingRq.getTransferOnly().getBooking().setConfirm(new BookingRq.TransferOnly.Booking.Confirm());
 		bookingRq.getTransferOnly().getBooking().getConfirm().setAccommodationAddress("Accomodation Address 1");
 		bookingRq.getTransferOnly().getBooking().getConfirm().setAccommodationAddress2("Acoomodation Address 2");
@@ -172,7 +165,8 @@ public class AvailTest {
 		bookingRq.getTransferOnly().getBooking().getConfirm().setRetInfo("Return info");
 		bookingRq.getTransferOnly().getBooking().getConfirm().setRetPoint("Return point");
 		bookingRq.getTransferOnly().getBooking().getConfirm().setSendEmailToCustomer((byte) 0x0);
-		int transactionNo = this.bloqueo().getTransferOnly().getBooking().getReserve().getTransacNo(); 		
+		int transactionNo = this.bloqueo().getTransferOnly().getBooking().getReserve().getTransacNo();
+		
 		bookingRq.getTransferOnly().getBooking().getConfirm().setTransacNo(transactionNo);
 		bookingRq.getTransferOnly().getBooking().getConfirm()
 				.setUsername("Juacho");
