@@ -33,6 +33,8 @@ public class AvailTest {
 	@Value("${local.server.port}")
 	private String port="8080";
 	
+	private String host="locahost";	
+	
 	private final static String NEWFORMAT = "NEWFORMAT"; 
 	
 	@Autowired
@@ -43,7 +45,7 @@ public class AvailTest {
 	private AvailRs availWithDates() {
 		log.info("Se pide disponibilidad por fechas");
 		log.info("App Name-->"+appname);
-		String url = "http://localhost:"+port+"/a2btransfer/avail";
+		String url = "http://"+host+":"+port+app+"/a2btransfer/avail";
 		AvailRq availRq = new AvailRq();
 		availRq.setVersion("NEWFORMAT");
 		availRq.setAgency(32965L);
@@ -89,7 +91,7 @@ public class AvailTest {
 			rs.getTransferOnly().getErrors().getError().forEach(message->log.error(message));
 			return null;
 		}
-		String url ="http://localhost:"+port+"/a2btransfer/block";
+		String url = "http://"+host+":"+port+"/a2btransfer-1.0/a2btransfer/avail";
 		int size = rs.getTransferOnly().getAvailability().getAvline().size();	
 		if (size==0)
 			throw new RuntimeException("No se ha encontrado disponibilidad en el proceso");
@@ -130,7 +132,7 @@ public class AvailTest {
 	public BookingRs booking(){
 		
 		BookingRq bookingRq = new BookingRq();
-		String url ="http://localhost:"+port+"/a2btransfer/book";
+		String url = "http://"+host+":"+port+"/a2btransfer-1.0/a2btransfer/avail";
 		bookingRq.setAgency(164L);
 		bookingRq.setSystem(81L);
 		
