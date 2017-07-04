@@ -113,7 +113,7 @@ public class PolicyService {
 			float customerComissionValue = agencyRepository.findComissionValue(comissionId);
 			float impcom = round(pvp * customerComissionValue/100.0f);
 			float imptax = round(impcom * tax.getPct()/100.0f);	
-			results.add(("PVP #"+df.format(pvp)));
+			results.add(("PVP#"+df.format(pvp)));
 			results.add("COMAG#"+customerComissionValue+"#"+df.format(impcom));
 			results.add("TAX#"+tax.getName()+ "#"+df.format(imptax));												
 		} else{			

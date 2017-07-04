@@ -27,7 +27,8 @@ public class LoggingRequestInterceptor implements ClientHttpRequestInterceptor {
         log.info("URI         : "+ request.getURI());
         log.info("Method      : "+ request.getMethod());
         log.info("Headers     :  "+ request.getHeaders() );
-        log.info("Request body:  "+ new String(body, "UTF-8"));
+        String buffer = new String(body,"UTF-8");        
+        log.info(XmlFormatter.format(buffer));                 
         log.info("==========================request end================================================");
     }
 
@@ -44,7 +45,8 @@ public class LoggingRequestInterceptor implements ClientHttpRequestInterceptor {
         log.info("Status code  : " + response.getStatusCode());
         log.info("Status text  : "+ response.getStatusText());
         log.info("Headers      : "+ response.getHeaders());
-        log.info("Response body: " + inputStringBuilder.toString());
+        String buffer = inputStringBuilder.toString();
+        log.info(XmlFormatter.format(buffer));         	       
         log.info("=======================response end=================================================");
     }
 

@@ -61,29 +61,13 @@ UNION
             WHERE T2.CODIGO='A2B'
             AND T3.CODIGO='TRA';
             
-CREATE OR REPLACE PACKAGE ETOUR.VALORACION_PCM AS 
-
-  FUNCTION FIND_PCM(
-    P_CLIENTE_ID CLIENTE.ID%TYPE,
-    P_SISTEMA_ID SISTEMA.ID%TYPE,
-    P_FECHA DATE        
-  ) RETURN NUMBER;
-  
-  FUNCTION VALORACION_COM(
-    P_CLIENTE_ID IN INTEGER,
-    P_SISTEMA_ID IN INTEGER,
-    P_FECHA_RES IN DATE
-  ) RETURN NUMBER;
-
-END VALORACION_PCM;
-/
-
 CREATE OR REPLACE PACKAGE BODY ETOUR.VALORACION_PCM AS
   
-  FUNCTION FIND_PCM(
+  FUNCTION VALORACION_COM_EPL(
     P_CLIENTE_ID CLIENTE.ID%TYPE,
     P_SISTEMA_ID SISTEMA.ID%TYPE,
-    P_FECHA DATE        
+    P_FECHA DATE,   
+    P_NETO OUT VARCHAR2
   ) RETURN NUMBER AS
    PRAGMA AUTONOMOUS_TRANSACTION;   
    CURSOR PCM_CUR( P_CLIENTE_ID NUMBER, P_SISTEMA_ID NUMBER, P_FECHA DATE) IS
@@ -105,18 +89,28 @@ CREATE OR REPLACE PACKAGE BODY ETOUR.VALORACION_PCM AS
     IF (NOT pcm_cur%NOTFOUND) THEN          
       FETCH pcm_cur INTO pcm2;
       IF (pcm_cur%NOTFOUND) THEN
-            v_resultado := pcm1.ID;
-      ELSIF (pcm1.cliente_id IS NOT NULL AND 
+            p_neto := pcm1.NETO;
+            RETURN pcm1.id;                         
+        ELSIF (pcm1.cliente_id IS NOT NULL AND 
             pcm2.cliente_id IS NULL) THEN
             v_resultado := pcm1.id;
-      ELSIF (pcm1.mercado_id IS NOT NULL AND 
+            p_neto:= pcm1.NETO;
+        ELSIF (pcm1.mercado_id IS NOT NULL AND 
             pcm2.mercado_id IS NULL) THEN
             v_resultado:= pcm1.id;
-      ELSIF (pcm1.sistema_id IS NOT NULL AND
+            p_neto:= pcm1.NETO;
+        ELSIF (pcm1.sistema_id IS NOT NULL AND
             pcm2.sistema_id IS NULL) THEN
             v_resultado:= pcm1.id;
-      END IF;
-    END IF;
+            p_neto:= pcm1.NETO;
+        ELSE -- NO SE PUEDEN DISTINGUIR
+            p_neto:='N';
+            RETURN NULL;        
+        END IF;
+     ELSE -- NO HAY NINGUN DATO DISPONIBLE
+        p_neto:='N';
+        RETURN NULL;
+     END IF;    
     IF (pcm_cur%ISOPEN) THEN
         CLOSE pcm_cur;
     END IF;
@@ -124,7 +118,7 @@ CREATE OR REPLACE PACKAGE BODY ETOUR.VALORACION_PCM AS
         VALUES( p_cliente_id, p_sistema_id, p_fecha, v_resultado);
     COMMIT;
     RETURN  v_resultado;    
-  END FIND_PCM;
+  END VALORACION_COM_EPL;
 
   
   FUNCTION VALORACION_COM(
