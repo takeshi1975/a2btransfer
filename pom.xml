@@ -6,7 +6,7 @@
 	<groupId>com.epl.a2btransfer</groupId>
 	<artifactId>a2btransfer</artifactId>
 	<version>1.0</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
 	<name>a2btransfer</name>
 	<description>Integracion con a2btransfers</description>

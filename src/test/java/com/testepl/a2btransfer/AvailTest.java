@@ -27,6 +27,9 @@ import com.epl.a2btransfer.xto.ReserveRs;
 @SpringBootTest(classes = Application.class, webEnvironment = WebEnvironment.DEFINED_PORT)
 public class AvailTest {
 
+	private final long AGEN = 1329;
+	private final long SYS = 84;
+	
 	@Value("${app.name}")
 	private String appname;
 	
@@ -50,8 +53,8 @@ public class AvailTest {
 		String url = "http://"+host+":"+port+"/a2btransfer/avail";
 		AvailRq availRq = new AvailRq();
 		availRq.setVersion("NEWFORMAT");
-		availRq.setAgency(32965L);
-		availRq.setSystem(23L);
+		availRq.setAgency(AGEN);
+		availRq.setSystem(SYS);
 		TransferOnly transferOnly = new TransferOnly();
 		availRq.setTransferOnly(transferOnly);
 		Availability availability = new Availability();
@@ -100,8 +103,8 @@ public class AvailTest {
 		int index = (int) (Math.random()*10) % size;
 		log.info("Se escoge index -->" +index);
 		ReserveRq reserveRq = new ReserveRq();
-		reserveRq.setAgency(164L);
-		reserveRq.setSystem(81L);		
+		reserveRq.setAgency(AGEN);
+		reserveRq.setSystem(SYS);		
 		reserveRq.setDate("30/07/17");
 		reserveRq.setVersion(NEWFORMAT);
 		reserveRq.setTransferOnly(new ReserveRq.TransferOnly());
@@ -136,8 +139,8 @@ public class AvailTest {
 		BookingRq bookingRq = new BookingRq();
 		String url = "http://"+host+":"+port+"/a2btransfer/book";
 		
-		bookingRq.setAgency(164L);
-		bookingRq.setSystem(81L);
+		bookingRq.setAgency(AGEN);
+		bookingRq.setSystem(SYS);
 		
 		bookingRq.setTransferOnly(new BookingRq.TransferOnly());
 		bookingRq.getTransferOnly().setBooking(new BookingRq.TransferOnly.Booking());
