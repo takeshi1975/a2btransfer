@@ -34,10 +34,10 @@ public class AvailTest {
 	private String appname;
 	
 	//@Value("${local.server.port}")
-	//private String port="8080/a2btransfer-1.0";
-	private String port="8080";
-	private String host="localhost";
-	//private String host="34.253.173.28";
+	private String port="8080/a2btransfer-1.0";
+	//private String port="8080";
+	//private String host="localhost";
+	private String host="34.253.173.28";
 	//private String host="doraemon.com"
 	
 	private final static String NEWFORMAT = "NEWFORMAT"; 

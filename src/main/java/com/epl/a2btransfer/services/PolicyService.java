@@ -104,7 +104,10 @@ public class PolicyService {
 	public List<String> breakdown(float pvp, long agency, long system, Date bookingDate)
 	throws NotApplicableException{
 		List<String> results = new ArrayList<String>();
+		log.info("Voy a buscar el sistema "+system);
 		Sistema sistema = sistemaRepo.findOne(system);
+		if (sistema==null)
+			log.error("No se ha podido encontrar el sistema "+sistema+"!!!");
 		DecimalFormat df = new DecimalFormat("#.##");
 		Agency customer = agencyRepository.findOne(agency); // Obtener los datos de la agencia
 		if (!sistema.isNeto()){	
