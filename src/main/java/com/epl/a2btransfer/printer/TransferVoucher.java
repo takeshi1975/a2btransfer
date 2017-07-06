@@ -8,6 +8,8 @@ import static net.sf.dynamicreports.report.builder.DynamicReports.type;
 
 import java.awt.Color;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -108,11 +110,19 @@ public class TransferVoucher {
 						, new PageContent(transferOnly)												
 						, cmp.verticalGap(30)
 						
-				).setDataSource(SecondPage.createDataSource())
+				).setDataSource(SecondPage.createDataSource(transferOnly))
 				.setSummaryOnANewPage(false)				
 				.summary(new PickupInfo(getBookingRs()))
 				.addPageFooter(new PageFooter());
 		 ByteArrayOutputStream memBuffer = new ByteArrayOutputStream();
+		 try {
+			File f = new File("Fichero.pdf");
+			if (!f.exists())
+				f.createNewFile();
+			report.toPdf(new FileOutputStream("Fichero.pdf"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		 report.toPdf(memBuffer);
 		 return memBuffer.toByteArray();		
 	}						
