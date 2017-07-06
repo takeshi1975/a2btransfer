@@ -54,7 +54,7 @@
 						<source>xsd/LocationRq.xsd</source>
 						<source>xsd/CancelFeeRq.xsd</source>
 						<source>xsd/CancelFeeRs.xsd</source>
-					</sources>					
+					</sources>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -99,44 +99,30 @@
 			<artifactId>xstream</artifactId>
 			<version>1.2.2</version>
 		</dependency>
-
-		<!-- <dependency>Hibernate -->
-		<!-- <groupId>org.hibernate</groupId> -->
-		<!-- <artifactId>hibernate-validator</artifactId> -->
-		<!-- <version>5.4.0.Final</version> -->
-		<!-- </dependency> -->
-
-		<!-- <dependency>Base de datos de test -->
-		<!-- <groupId>com.h2database</groupId> -->
-		<!-- <artifactId>h2</artifactId> -->
-		<!-- </dependency> -->
-
+				
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 		</dependency>
 
-		<!-- <dependency>Common Collections -->
-		<!-- <groupId>org.apache.commons</groupId> -->
-		<!-- <artifactId>commons-collections4</artifactId> -->
-		<!-- <version>4.0</version> -->
-		<!-- </dependency> -->
-
-		<!-- <dependency>EH-Cache -->
-		<!-- <groupId>org.ehcache</groupId> -->
-		<!-- <artifactId>ehcache</artifactId> -->
-		<!-- <version>3.0.0</version> -->
-		<!-- </dependency> -->
-
-		<!-- <dependency>Cache JSR-107 -->
-		<!-- <groupId>javax.cache</groupId> -->
-		<!-- <artifactId>cache-api</artifactId> -->
-		<!-- </dependency> -->
-
-		<!--dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-security</artifactId> 
-			<exclusions> <exclusion> <groupId>ch.qos.logback</groupId> <artifactId>logback-classic</artifactId> 
-			</exclusion> </exclusions> </dependency -->
+		<dependency>
+			<groupId>net.sourceforge.dynamicreports</groupId>
+			<artifactId>dynamicreports-core</artifactId>
+			<version>5.0.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>net.sourceforge.dynamicreports</groupId>
+			<artifactId>dynamicreports-adhoc</artifactId>
+			<version>5.0.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>net.sourceforge.dynamicreports</groupId>
+			<artifactId>dynamicreports-googlecharts</artifactId>
+			<version>5.0.0</version>
+		</dependency>		
 
 		<dependency>
 			<groupId>com.oracle</groupId>

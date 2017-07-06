@@ -1795,7 +1795,7 @@ public class BookingRs {
 					@XmlType(name = "", propOrder = { "joinline" })
 					public static class JoiningIns {
 
-						@XmlElement(name = "Joinline")
+						@XmlElement(name = "JoinLine")
 						protected List<String> joinline;
 
 						/**

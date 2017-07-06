@@ -12,6 +12,8 @@ import org.springframework.util.Assert;
 import org.springframework.web.client.RestTemplate;
 
 import com.epl.a2btransfer.Application;
+import com.epl.a2btransfer.dto.Agency;
+import com.epl.a2btransfer.repositories.AgencyRepository;
 import com.epl.a2btransfer.xto.AvailRq;
 import com.epl.a2btransfer.xto.AvailRq.TransferOnly;
 import com.epl.a2btransfer.xto.AvailRq.TransferOnly.Availability;
@@ -32,6 +34,9 @@ public class AvailTest {
 	
 	@Value("${app.name}")
 	private String appname;
+
+	@Autowired
+	private AgencyRepository agencyRepository;
 	
 	//@Value("${local.server.port}")
 	private String port="8080/a2btransfer-1.0";
@@ -177,7 +182,16 @@ public class AvailTest {
 		bookingRq.getTransferOnly().getBooking().getConfirm()
 				.setUsername("Juacho");
 		BookingRs bookingRs = restTemplate.postForObject(url,bookingRq, BookingRs.class);
+		Agency agency = agencyRepository.findOne(AGEN);
+		log.info("Datos de la agencia:");
+		log.info("Nombre "+agency.getName());
+		agency.getAddresses().forEach(address->{ 
+			log.info(address.getNombreVia()+", "+address.getPoblacion());
+			log.info(address.getTelefono());
+		});
+		
 		Assert.notNull(bookingRs);
+		bookingRs.getTransferOnly().getBooking().getConfirm().getVoucherInfo().getJoiningIns().getJoinline().forEach(t->System.out.println(t));
 		return bookingRs;
 	}
 	

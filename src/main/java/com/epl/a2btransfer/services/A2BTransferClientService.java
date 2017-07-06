@@ -15,8 +15,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import com.epl.a2btransfer.dto.Agency;
 import com.epl.a2btransfer.dto.Route;
 import com.epl.a2btransfer.exception.NotApplicableException;
+import com.epl.a2btransfer.printer.TransferVoucher;
+import com.epl.a2btransfer.repositories.AgencyRepository;
 import com.epl.a2btransfer.xto.AvailRq;
 import com.epl.a2btransfer.xto.AvailRs;
 import com.epl.a2btransfer.xto.BookingRq;
@@ -26,6 +29,7 @@ import com.epl.a2btransfer.xto.CancelFeeRs;
 import com.epl.a2btransfer.xto.Errors;
 import com.epl.a2btransfer.xto.LocationRq;
 import com.epl.a2btransfer.xto.LocationRs;
+import com.epl.a2btransfer.xto.PrintRq;
 import com.epl.a2btransfer.xto.ReserveRq;
 import com.epl.a2btransfer.xto.ReserveRs;
 
@@ -47,8 +51,11 @@ public class A2BTransferClientService {
 	private RestTemplate restTemplate;
 
 	@Autowired
-	private PolicyService policyService;
+	private PolicyService policyService;	
 
+	@Autowired
+	private AgencyRepository agencyRepository;
+	
 	private Errors handleError(String description) {
 		Errors errors = new Errors();
 		Errors.Error error = new Errors.Error();		
@@ -231,4 +238,18 @@ public class A2BTransferClientService {
 		return response.getBody();
 	}
 
+	@Description("Impresión del bono")
+	public byte[] print(PrintRq printRq){
+		TransferVoucher transferVoucher = new TransferVoucher();
+		String locata = printRq.getLocata();
+		long agencyId = printRq.getAgency();
+		Agency agency = agencyRepository.findOne(agencyId); 
+		try {
+			return transferVoucher.build(locata, agency, printRq.getTransferOnly());
+		}catch(Exception exception){
+			log.error("No se ha impreso el bono", exception);
+			return null;
+		}		
+	}
+	
 }
