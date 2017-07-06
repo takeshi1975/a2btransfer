@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PrintRq cancelFee="0.0" version="3.0">
+	<Agency>1329</Agency>
+	<Locata>P21983</Locata>
+    <TransferOnly>
+        <Booking>
+            <Confirm>
+                <BookingType>TEST BOOKING</BookingType>
+                <VoucherInfo>
+                    <BookingRef>G1011150</BookingRef>
+                    <BookingDate>06/07/2017</BookingDate>
+                    <BookingStatus>Confirmed</BookingStatus>
+                    <DeparturePointCode>PMI</DeparturePointCode>
+                    <ArrivalPointCode>ARE</ArrivalPointCode>
+                    <SectorType>RETURN</SectorType>
+                    <Client>
+                        <LastName>de Alejandro</LastName>
+                        <FirstName>Juanjo</FirstName>
+                        <Title>Sr</Title>
+                        <Phone>972652489</Phone>
+                        <Mobile>628629988</Mobile>
+                        <CountryCode>ES</CountryCode>
+                        <Email>juanjo.alejandro@gmail</Email>
+                    </Client>
+                    <UserReference>EPL</UserReference>
+                    <Adults>2</Adults>
+                    <Children>1</Children>
+                    <Infants>1</Infants>
+                    <TransferDescription>Traslado (Ida-Vuelta)</TransferDescription>
+                    <HolidayValue>74.18</HolidayValue>
+                    <CommissionValue>0</CommissionValue>
+                    <VATValue SelfBill="N">0</VATValue>
+                    <InvoiceValue>81.6</InvoiceValue>
+                    <CurrencyCode>EUR</CurrencyCode>
+                    <PriceBreakdown>
+                        <PriceLine>
+                            <Description>1 x Traslado (Ida-Vuelta)</Description>
+                            <Amount>74.18</Amount>
+                        </PriceLine>
+                    </PriceBreakdown>
+                    <PropertyName>property name</PropertyName>
+                    <AccommodationAddress>Accomodation Address 1</AccommodationAddress>
+                    <AccommodationAddress2>Acoomodation Address 2</AccommodationAddress2>
+                    <SpecialRequest>remark</SpecialRequest>
+                    <SupplierName>Jumbo Tours Espana S.L</SupplierName>
+                    <OutboundTransferDetails>
+                        <OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin>
+                        <OutboundDestination>El Arenal</OutboundDestination>
+                        <DepInfo>Information about departure</DepInfo>
+                        <ArrDate>30/07/2017</ArrDate>
+                        <ArrTime>1000</ArrTime>
+                        <NumUnits>1</NumUnits>
+                        <Vehicle>Traslado Compartido Express Max 4 paradas</Vehicle>
+                    </OutboundTransferDetails>
+                    <ReturnTransferDetails>
+                        <ReturnOrigin>El Arenal</ReturnOrigin>
+                        <ReturnDestination>Palma de Mallorca (PMI)</ReturnDestination>
+                        <RetInfo>Return info</RetInfo>
+                        <RetDate>10/08/2017</RetDate>
+                        <RetTime>1000</RetTime>
+                        <NumUnits>1</NumUnits>
+                        <Vehicle>Traslado Compartido Express Max 4 paradas</Vehicle>
+                    </ReturnTransferDetails>
+                    <JoiningIns>
+                        <JoinLine>
+                        	Comprueba los datos de tu reserva
+						</JoinLine>
+                    </JoiningIns>
+                </VoucherInfo>
+            </Confirm>
+        </Booking>
+    </TransferOnly>
+    <breakdown>PVP#81,6</breakdown>
+    <breakdown>COMAG#11.5#9,38</breakdown>
+    <breakdown>TAX#IVA21#1,97</breakdown>
+</PrintRq>

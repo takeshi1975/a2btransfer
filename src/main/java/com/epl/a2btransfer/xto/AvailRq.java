@@ -851,7 +851,7 @@ public class AvailRq {
     	xstream.aliasField("TransferOnly",AvailRq.class,"transferOnly");
     	xstream.aliasField("Availability",TransferOnly.class,"availability");
     	xstream.aliasField("Request",TransferOnly.Availability.class,"request");    	
-    	xstream.alias("Request", TransferOnly.Availability.Request.class);
+    	xstream.alias("Request", TransferOnly.Availability.Request.class);    	
     	for (Field f:TransferOnly.Availability.Request.class.getDeclaredFields()){
     		String newName = f.getName().substring(0, 1).toUpperCase() + f.getName().substring(1);    		
     		xstream.aliasField(newName,TransferOnly.Availability.Request.class,f.getName());

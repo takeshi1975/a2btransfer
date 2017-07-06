@@ -119,7 +119,10 @@ public class TransferVoucher {
 			File f = new File("Fichero.pdf");
 			if (!f.exists())
 				f.createNewFile();
-			report.toPdf(new FileOutputStream("Fichero.pdf"));
+			FileOutputStream fos = new FileOutputStream("Fichero.pdf");
+			report.toPdf(fos);
+			fos.flush();
+			fos.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

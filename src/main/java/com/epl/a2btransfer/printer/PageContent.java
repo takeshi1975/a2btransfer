@@ -57,14 +57,7 @@ public class PageContent extends VerticalListBuilder{
                 .setBackgroundColor(new Color(200,201,191))
                 .setForegroundColor(Color.white);
 		
-		BookingRs.TransferOnly.Booking.Confirm  confirm = transferOnly.getBooking().getConfirm();		
-		
-		try{
-			String content = new String(Files.readAllBytes(Paths.get("a2bInfo.txt")));
-			confirm.getVoucherInfo().getJoiningIns().getJoinline().add(content);
-		}catch(IOException ioex){
-			System.out.println(ioex.toString());
-		}		
+		BookingRs.TransferOnly.Booking.Confirm  confirm = transferOnly.getBooking().getConfirm();				
 		
 		this.add(
 				cmp.verticalList()				

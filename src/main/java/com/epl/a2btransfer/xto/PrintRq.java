@@ -41,8 +41,6 @@ public class PrintRq {
 
 	public void setTransferOnly(BookingRs.TransferOnly transferOnly) {
 		this.transferOnly = transferOnly;
-	}
-	
-	
+	}	
 	
 }

@@ -86,7 +86,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
+		</dependency>		
 
 		<!-- dependency -->
 		<!-- <groupId>org.springframework.boot</groupId> -->
@@ -99,7 +99,7 @@
 			<artifactId>xstream</artifactId>
 			<version>1.2.2</version>
 		</dependency>
-				
+
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
@@ -111,18 +111,18 @@
 			<artifactId>dynamicreports-core</artifactId>
 			<version>5.0.0</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>net.sourceforge.dynamicreports</groupId>
 			<artifactId>dynamicreports-adhoc</artifactId>
 			<version>5.0.0</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>net.sourceforge.dynamicreports</groupId>
 			<artifactId>dynamicreports-googlecharts</artifactId>
 			<version>5.0.0</version>
-		</dependency>		
+		</dependency>
 
 		<dependency>
 			<groupId>com.oracle</groupId>
