@@ -5,7 +5,6 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -91,8 +90,8 @@ public class AvailTest {
 		request.setArrTime("10:00");
 		request.setRetDate("10/09/17");
 		request.setRetTime("10:00");
-		request.setDeparturePointCode("PMI");
-		request.setArrivalPointCode("ARE");
+		request.setDeparturePointCode("BCN");
+		request.setArrivalPointCode("BAC");
 		request.setLang("ES");
 		request.setUsername("Juacho");
 		request.setPassword("Juancho123");

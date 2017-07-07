@@ -556,7 +556,7 @@ public class AvailRs {
 			@XmlType(name = "", propOrder = { "prid", "transferCode", "transferDescription", "transferPrice",
 					"departurePointType", "arrivalPointType", "vehicleDetails", "currencyCode", "distanceKM",
 					"outboundTransferDetails", "returnTransferDetails", "transferTotalPrice", "pricing", "discount",
-					"discountPercent", "disclaimer", "disclaimertxt" })
+					"discountPercent", "disclaimer", "disclaimerTitle", "disclaimerTxt" })
 			public static class Avline {
 
 				@XmlElement(name = "PRID")
