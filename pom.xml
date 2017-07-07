@@ -6,7 +6,7 @@
 	<groupId>com.epl.a2btransfer</groupId>
 	<artifactId>a2btransfer</artifactId>
 	<version>1.0</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>a2btransfer</name>
 	<description>Integracion con a2btransfers</description>
@@ -50,7 +50,10 @@
 					<!-- The package of your generated sources -->
 					<packageName>com.epl.a2btransfer.model</packageName>
 					<sources>
-						<source>xsd/LocationRs.xsd</source>
+						<source>xsd/CancelRq.xsd</source>
+						<source>xsd/CancelRs.xsd</source>
+						<source>xsd/DisclaimerRq.xsd</source>
+						<source>xsd/DisclaimerRs.xsd</source>
 						<source>xsd/LocationRq.xsd</source>
 						<source>xsd/CancelFeeRq.xsd</source>
 						<source>xsd/CancelFeeRs.xsd</source>

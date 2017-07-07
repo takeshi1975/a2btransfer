@@ -22,6 +22,8 @@ import com.epl.a2btransfer.xto.BookingRq;
 import com.epl.a2btransfer.xto.BookingRs;
 import com.epl.a2btransfer.xto.CancelFeeRq;
 import com.epl.a2btransfer.xto.CancelFeeRs;
+import com.epl.a2btransfer.xto.CancelRq;
+import com.epl.a2btransfer.xto.CancelRs;
 import com.epl.a2btransfer.xto.Errors;
 import com.epl.a2btransfer.xto.PrintRq;
 import com.epl.a2btransfer.xto.ReserveRq;
@@ -164,6 +166,12 @@ public class A2BController {
 	public CancelFeeRs cancelFees(@RequestBody CancelFeeRq cancelFeeRq) {
 		String bookingRef = cancelFeeRq.getTransferOnly().getBooking().getCancelFees().getBookingRef();
 		return client.cancelFees(bookingRef);
+	}
+
+	@RequestMapping(value = "/cancel", method = RequestMethod.POST, produces = MediaType.APPLICATION_XML_VALUE, consumes = MediaType.APPLICATION_XML_VALUE)
+	@ResponseBody
+	public CancelRs cancel(@RequestBody CancelRq cancelRq) {		
+		return client.cancel(cancelRq);
 	}
 	
 	@RequestMapping(value="/print", method=RequestMethod.POST, produces = "application/pdf", consumes = MediaType.APPLICATION_XML_VALUE)

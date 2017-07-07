@@ -56,10 +56,11 @@ public class AvailTest {
 	private AgencyRepository agencyRepository;
 
 	// @Value("${local.server.port}")
-	// private String port="8080/a2btransfer-1.0";
+	//private String port="8080/a2btransfer-1.0";
 	private String port = "8080";
 	private String host = "localhost";
-	// private String host="34.253.173.28";
+	//private String host = "34.251.215.240"; // PROD
+	// private String host="34.253.173.28"; // STG
 	// private String host="doraemon.com"
 
 	private final static String NEWFORMAT = "NEWFORMAT";

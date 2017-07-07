@@ -22,10 +22,17 @@ import com.epl.a2btransfer.printer.TransferVoucher;
 import com.epl.a2btransfer.repositories.AgencyRepository;
 import com.epl.a2btransfer.xto.AvailRq;
 import com.epl.a2btransfer.xto.AvailRs;
+import com.epl.a2btransfer.xto.AvailRs.TransferOnly.Availability.Avline;
 import com.epl.a2btransfer.xto.BookingRq;
 import com.epl.a2btransfer.xto.BookingRs;
 import com.epl.a2btransfer.xto.CancelFeeRq;
 import com.epl.a2btransfer.xto.CancelFeeRs;
+import com.epl.a2btransfer.xto.CancelRq;
+import com.epl.a2btransfer.xto.CancelRs;
+import com.epl.a2btransfer.xto.DisclaimerRq;
+import com.epl.a2btransfer.xto.DisclaimerRq.TransferOnly.Info;
+import com.epl.a2btransfer.xto.DisclaimerRq.TransferOnly.Info.Disclaimer;
+import com.epl.a2btransfer.xto.DisclaimerRs;
 import com.epl.a2btransfer.xto.Errors;
 import com.epl.a2btransfer.xto.LocationRq;
 import com.epl.a2btransfer.xto.LocationRs;
@@ -41,12 +48,18 @@ public class A2BTransferClientService {
 	@Value("${app.url}")
 	private String url;
 
+	@Value("${app.url}")
+	private String version;
+	
 	@Value("${app.username}")
 	private String username;
 
 	@Value("${app.password}")
 	private String password;
 
+	@Value("${app.lang}")
+	private String lang;
+	
 	@Autowired
 	private RestTemplate restTemplate;
 
@@ -77,19 +90,33 @@ public class A2BTransferClientService {
 			AvailRs availRs = response.getBody();
 			if (availRs.getTransferOnly().getErrors() == null)
 				try {
-					List<AvailRs.TransferOnly.Availability.Avline> lines = availRs.getTransferOnly().getAvailability()
+					List<Avline> lines = availRs.getTransferOnly().getAvailability()
 							.getAvline();					
 					DateFormat df = new SimpleDateFormat("dd/MM/yy");
 					Date date = df.parse(availRq.getTransferOnly().getAvailability().getRequest().getArrDate());
 					long cliente = availRq.getAgency();
 					long sistema = availRq.getSystem();
 					lines = policyService.calculatePrice(lines,cliente, sistema, date);
-					availRs.getTransferOnly().getAvailability().getAvline().addAll(lines);
+					availRs.getTransferOnly().getAvailability().getAvline().addAll(lines);					
 				} catch (Exception ex) {
-					log.error("Error en el parseo de fechas...", ex);
+					log.error("Error en el cálculo de comisiones", ex);
 					availRs.getTransferOnly().setAvailability(null);
 					availRs.getTransferOnly().setErrors(this.handleError(ex.toString()));
 				} 
+			
+				try{
+					List<Avline> lines = availRs.getTransferOnly().getAvailability()
+							.getAvline();
+					lines.forEach(line ->{
+						if (line.getDisclaimer()==1){																													
+							DisclaimerRs disclaimerRs = this.disclaimer(line.getTransferCode());
+							line.setDisclaimerTitle(disclaimerRs.getTransferOnly().getInfo().getDisclaimer().getDisclaimerInfo().getTitle());
+							line.setDisclaimerTxt(disclaimerRs.getTransferOnly().getInfo().getDisclaimer().getDisclaimerInfo().getDescription());
+						}						
+					});
+				}catch(Exception ex){
+					log.error("No se ha podido obtener la descarga de responsabilidad", ex);
+				}
 			return availRs;
 		} else
 			log.error("No se ha podido establecer comunicacion con el servicio externo");
@@ -184,7 +211,7 @@ public class A2BTransferClientService {
 	public String loadRoutes() {
 		log.info("Se va a llamar al método de lectura de rutas");
 		com.epl.a2btransfer.xto.RouteRq route = new com.epl.a2btransfer.xto.RouteRq();
-		route.setVersion("NEWFORMAT");
+		route.setVersion(version);
 		route.setTransferOnly(new com.epl.a2btransfer.xto.RouteRq.TransferOnly());
 		route.getTransferOnly().setCacheRoutes(new com.epl.a2btransfer.xto.RouteRq.TransferOnly.CacheRoutes());
 		route.getTransferOnly().getCacheRoutes()
@@ -250,6 +277,37 @@ public class A2BTransferClientService {
 			log.error("No se ha impreso el bono", exception);
 			return null;
 		}		
+	}
+	
+	@Description("Cancelación de reserva")
+	public CancelRs cancel(CancelRq cancelRq){
+		try{
+			ResponseEntity<CancelRs> response = restTemplate.postForEntity(url, cancelRq, CancelRs.class);
+			return response.getBody();
+		}catch(Exception exception){
+			log.error("No se ha podido efectuar la cancelación", exception);
+			return null;
+		}
+	}
+	
+	@Description("Texto legal para descarga de responsabilidad")
+	private DisclaimerRs disclaimer(String transferCode){
+		DisclaimerRq disclaimerRq = new DisclaimerRq();
+		disclaimerRq.setTransferOnly(new DisclaimerRq.TransferOnly());
+		disclaimerRq.setVersion(version);							
+		disclaimerRq.getTransferOnly().setInfo(new Info());
+		disclaimerRq.getTransferOnly().getInfo().setDisclaimer(new Disclaimer());
+		disclaimerRq.getTransferOnly().getInfo().getDisclaimer().setLang(lang);
+		disclaimerRq.getTransferOnly().getInfo().getDisclaimer().setPassword(this.password);
+		disclaimerRq.getTransferOnly().getInfo().getDisclaimer().setUsername(this.username);
+		disclaimerRq.getTransferOnly().getInfo().getDisclaimer().setTransferCode(transferCode);
+		try{
+			ResponseEntity<DisclaimerRs> response = restTemplate.postForEntity(url, disclaimerRq, DisclaimerRs.class);
+			return response.getBody();
+		}catch(Exception exception){
+			log.error("No se ha podido obtener el disclaimer", exception);
+			return null;
+		}
 	}
 	
 }

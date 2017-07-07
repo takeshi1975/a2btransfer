@@ -556,7 +556,7 @@ public class AvailRs {
 			@XmlType(name = "", propOrder = { "prid", "transferCode", "transferDescription", "transferPrice",
 					"departurePointType", "arrivalPointType", "vehicleDetails", "currencyCode", "distanceKM",
 					"outboundTransferDetails", "returnTransferDetails", "transferTotalPrice", "pricing", "discount",
-					"discountPercent", "disclaimer" })
+					"discountPercent", "disclaimer", "disclaimertxt" })
 			public static class Avline {
 
 				@XmlElement(name = "PRID")
@@ -591,6 +591,10 @@ public class AvailRs {
 				protected float discountPercent;
 				@XmlElement(name = "Disclaimer")
 				protected byte disclaimer;
+				@XmlElement(name="DisclaimerTxt", required=false)
+				protected String disclaimerTxt;
+				@XmlElement(name="DisclaimerTitle", required=false)
+				protected String disclaimerTitle;
 				@XmlAttribute(name = "count")
 				protected Byte count;
 
@@ -598,7 +602,7 @@ public class AvailRs {
 				 * Obtiene el valor de la propiedad prid.
 				 * 
 				 */
-				public int getPRID() {
+				public int getPrid() {
 					return prid;
 				}
 
@@ -606,7 +610,7 @@ public class AvailRs {
 				 * Define el valor de la propiedad prid.
 				 * 
 				 */
-				public void setPRID(int value) {
+				public void setPrid(int value) {
 					this.prid = value;
 				}
 
@@ -901,6 +905,22 @@ public class AvailRs {
 				 */
 				public void setDisclaimer(byte value) {
 					this.disclaimer = value;
+				}												
+				
+				public String getDisclaimerTitle() {
+					return disclaimerTitle;
+				}
+
+				public void setDisclaimerTitle(String disclaimerTitle) {
+					this.disclaimerTitle = disclaimerTitle;
+				}
+
+				public String getDisclaimerTxt() {
+					return disclaimerTxt;
+				}
+
+				public void setDisclaimerTxt(String disclaimerTxt) {
+					this.disclaimerTxt = disclaimerTxt;
 				}
 
 				/**

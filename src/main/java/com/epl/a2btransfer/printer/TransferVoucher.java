@@ -14,6 +14,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+import org.jfree.util.Log;
+
 import com.epl.a2btransfer.dto.Address;
 import com.epl.a2btransfer.dto.Agency;
 import com.epl.a2btransfer.xto.BookingRs;
@@ -120,6 +122,7 @@ public class TransferVoucher {
 			if (!f.exists())
 				f.createNewFile();
 			FileOutputStream fos = new FileOutputStream("Fichero.pdf");
+			Log.debug("Se ha guardado el fichero pdf");
 			report.toPdf(fos);
 			fos.flush();
 			fos.close();
@@ -127,6 +130,7 @@ public class TransferVoucher {
 			e.printStackTrace();
 		}
 		 report.toPdf(memBuffer);
+		 Log.info("Se ha escrito el fichero en memoria");
 		 return memBuffer.toByteArray();		
 	}						
 		
