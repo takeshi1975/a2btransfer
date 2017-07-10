@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PrintRq cancelFee="0.0" version="3.0">
+<TCOML cancelFee="0.0" version="3.0">
 	<Agency>1329</Agency>
 	<Locata>P21983</Locata>
     <TransferOnly>
@@ -73,4 +73,4 @@
     <breakdown>PVP#81,6</breakdown>
     <breakdown>COMAG#11.5#9,38</breakdown>
     <breakdown>TAX#IVA21#1,97</breakdown>
-</PrintRq>
+</TCOML>

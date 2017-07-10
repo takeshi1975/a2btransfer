@@ -74,10 +74,10 @@ public class TransferVoucher {
 		confirm.getVoucherInfo().getPriceBreakdown().getPriceLine().setAmount(48.8f);;
 		confirm.getVoucherInfo().getPriceBreakdown().getPriceLine().setDescription("1 x Traslado (Ida-Vuelta)");
 		confirm.getVoucherInfo().setJoiningIns(new BookingRs.TransferOnly.Booking.Confirm.VoucherInfo.JoiningIns());
-		confirm.getVoucherInfo().getJoiningIns().getJoinline().add("");
+		confirm.getVoucherInfo().getJoiningIns().getJoinLine().add("");
 		try{
 			String content = new String(Files.readAllBytes(Paths.get("a2bInfo.txt")));
-			confirm.getVoucherInfo().getJoiningIns().getJoinline().add(content);
+			confirm.getVoucherInfo().getJoiningIns().getJoinLine().add(content);
 		}catch(IOException ioex){
 			System.out.println(ioex.toString());
 		}		

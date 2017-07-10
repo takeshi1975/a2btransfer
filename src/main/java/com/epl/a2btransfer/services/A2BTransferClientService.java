@@ -96,8 +96,7 @@ public class A2BTransferClientService {
 					Date date = df.parse(availRq.getTransferOnly().getAvailability().getRequest().getArrDate());
 					long cliente = availRq.getAgency();
 					long sistema = availRq.getSystem();
-					lines = policyService.calculatePrice(lines,cliente, sistema, date);
-					availRs.getTransferOnly().getAvailability().getAvline().addAll(lines);					
+					policyService.calculatePrice(lines,cliente, sistema, date); // Modifica los precios de las líneas.										
 				} catch (Exception ex) {
 					log.error("Error en el cálculo de comisiones", ex);
 					availRs.getTransferOnly().setAvailability(null);
@@ -251,7 +250,7 @@ public class A2BTransferClientService {
 		log.info("Se va a llamar para obtener los gastos de cancelación");
 		CancelFeeRq cancelFeeRq = new CancelFeeRq();
 		cancelFeeRq.setVersion("NEWFORMAT");	
-		cancelFeeRq.setSess("");
+		cancelFeeRq.setSess("");		
 		cancelFeeRq.setTransferOnly(new CancelFeeRq.TransferOnly());
 		cancelFeeRq.getTransferOnly().setBooking(new CancelFeeRq.TransferOnly.Booking());
 		cancelFeeRq.getTransferOnly().getBooking().setCancelFees(new CancelFeeRq.TransferOnly.Booking.CancelFees());

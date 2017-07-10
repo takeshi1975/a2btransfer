@@ -24,8 +24,8 @@ public interface SecondPage{
 		try{
 			if (transferOnly!=null && transferOnly.getBooking().getConfirm().getVoucherInfo().getJoiningIns()!=null){
 				JoiningIns joiningIns = transferOnly.getBooking().getConfirm().getVoucherInfo().getJoiningIns(); 
-				if (joiningIns.getJoinline()!=null)
-					content = joiningIns.getJoinline();
+				if (joiningIns.getJoinLine()!=null)
+					content = joiningIns.getJoinLine();
 				else
 					content.add("No hay información adicional de A2BTransfers");
 			}			
@@ -45,7 +45,6 @@ public interface SecondPage{
 		BufferedReader br = null;		
 		try{						
 			for(String line:buffer){	
-				log.info("Input ->"+line);
 				line = StringEscapeUtils.unescapeHtml(line);
 				int position=-1;
 				while ((position = line.indexOf("&#"))>-1){
@@ -57,7 +56,6 @@ public interface SecondPage{
 					String replace = new String(new char[]{x});
 					line = line.replaceAll("&#"+sub+";", replace);
 				}
-				log.info("Output ->"+line);
 				if (!line.trim().equals("")){
 					System.out.println(line);
 					text.add(line);

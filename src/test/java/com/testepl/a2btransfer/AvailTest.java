@@ -1,5 +1,6 @@
 package com.testepl.a2btransfer;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -7,6 +8,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang.StringEscapeUtils;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,14 +22,15 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.http.converter.ByteArrayHttpMessageConverter;
 import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.util.Assert;
 import org.springframework.web.client.RestTemplate;
 
 import com.epl.a2btransfer.Application;
 import com.epl.a2btransfer.dto.Agency;
+import com.epl.a2btransfer.printer.SecondPage;
 import com.epl.a2btransfer.repositories.AgencyRepository;
 import com.epl.a2btransfer.xto.AvailRq;
 import com.epl.a2btransfer.xto.AvailRq.TransferOnly;
@@ -54,14 +57,16 @@ public class AvailTest {
 	@Autowired
 	private AgencyRepository agencyRepository;
 
-	// @Value("${local.server.port}")
-	//private String port="8080/a2btransfer-1.0";
+	
+	
 	private String port = "8080";
 	private String host = "localhost";
 	//private String host = "34.251.215.240"; // PROD
 	// private String host="34.253.173.28"; // STG
-	// private String host="doraemon.com"
-
+	
+	//private String host="doraemon.com";
+	//private String port="8080/a2btransfer-1.0";
+	
 	private final static String NEWFORMAT = "NEWFORMAT";
 
 	@Autowired
@@ -90,13 +95,13 @@ public class AvailTest {
 		request.setArrTime("10:00");
 		request.setRetDate("10/09/17");
 		request.setRetTime("10:00");
-		request.setDeparturePointCode("BCN");
-		request.setArrivalPointCode("BAC");
+		request.setDeparturePointCode("PMI");
+		request.setArrivalPointCode("AAZ");
 		request.setLang("ES");
 		request.setUsername("Juacho");
 		request.setPassword("Juancho123");
 		request.setVehicletype((byte) 0);
-		request.setSectorType("RETURN");
+		request.setSectorType("RETURN"); // SINGLE/RETURN
 		request.setLatitude("");
 		request.setLongitude("");
 
@@ -124,6 +129,7 @@ public class AvailTest {
 		if (size == 0)
 			throw new RuntimeException("No se ha encontrado disponibilidad en el proceso");
 		int index = (int) (Math.random() * 10) % size;
+		index=0;
 		log.info("Se escoge index -->" + index);
 		ReserveRq reserveRq = new ReserveRq();
 		reserveRq.setAgency(AGEN);
@@ -208,32 +214,86 @@ public class AvailTest {
 		});
 
 		Assert.notNull(bookingRs);
-		bookingRs.getTransferOnly().getBooking().getConfirm().getVoucherInfo().getJoiningIns().getJoinline()
-				.forEach(t -> System.out.println(t));
+//		bookingRs.getTransferOnly().getBooking().getConfirm().getVoucherInfo().getJoiningIns().getJoinline()
+//				.forEach(t -> System.out.println(t));
 		return bookingRs;
 	}
 
+/*	
+	@Test
+	public void cancel(){
+		
+		String url = "http://" + host + ":" + port + "/a2btransfer/cancel";
+		CancelRq cancelRq = new CancelRq();	
+		cancelRq.setTransferOnly(new CancelRq.TransferOnly());
+		cancelRq.getTransferOnly().setBooking(new CancelRq.TransferOnly.Booking());
+		cancelRq.getTransferOnly().getBooking().setCancel(new Cancel());
+		
+		cancelRq.getTransferOnly().getBooking().getCancel().setUsername("Juacho");
+		cancelRq.getTransferOnly().getBooking().getCancel().setPassword("Juancho123");		
+		cancelRq.setVersion(NEWFORMAT);
+					
+		BookingRs bookingRs = booking();
+		cancelRq.getTransferOnly().getBooking().getCancel().setBookingRef(bookingRs.getTransferOnly().getBooking().getConfirm().getVoucherInfo().getBookingRef());		
+		CancelRs cancelRs = restTemplate.postForObject(url, cancelRq, CancelRs.class);
 	
+	} */	
+	
+	public static List<String> conversion(List<String> buffer) throws IOException{
+		Logger log = Logger.getLogger(SecondPage.class);
+		List<String> text = new ArrayList<String>();
+		BufferedReader br = null;		
+		try{						
+			for(String line:buffer){	
+				log.info("Input ->"+line);
+				line = StringEscapeUtils.unescapeHtml(line);
+				int position=-1;
+				while ((position = line.indexOf("&#"))>-1){
+					int posend = position;
+					while (line.charAt(posend)!=';') 
+						posend++;
+					String sub = line.substring(position+2, posend);
+					char x = (char) Integer.valueOf(sub).intValue();
+					String replace = new String(new char[]{x});
+					line = line.replaceAll("&#"+sub+";", replace);
+				}
+				log.info("Output ->"+line);
+				if (!line.trim().equals("")){
+					System.out.println(line);
+					text.add(line);
+				}						
+			}
+			text.add(" ");
+			text.add(" ");
+		} finally{
+			if (br!=null)
+				br.close();
+		}
+		return text;
+	}
 	
 	@Test
 	public void testBooking() throws IOException {
-		BookingRs bookingRs = booking();
-		log.info("Fin del proceso!!!");
-		PrintRq printRq = new PrintRq();
+		BookingRs bookingRs = booking();		
+		PrintRq printRq = new PrintRq();		
 		printRq.setAgency(AGEN);
 		printRq.setLocata("202348239");
 		printRq.setTransferOnly(bookingRs.getTransferOnly());
-		String xml = new String(Files.readAllBytes(Paths.get("printRq.xml")), StandardCharsets.UTF_8);
+		String xml = printRq.toString();				
+		xml = xml.replaceAll("<string>", "").replaceAll("</string>", "");
+		log.info("PrintRq:"+xml);
+		
 		String url = "http://" + host + ":" + port + "/a2btransfer/print";
-		List<HttpMessageConverter<?>> messageConverters = new ArrayList<HttpMessageConverter<?>>();
-		messageConverters.add(new ByteArrayHttpMessageConverter());
-		RestTemplate restTemplate = new RestTemplate(messageConverters);
+		List<HttpMessageConverter<?>> messageConverters = new ArrayList<HttpMessageConverter<?>>();	
+	    messageConverters.add(new StringHttpMessageConverter());	
+	    restTemplate.setMessageConverters(messageConverters);	    
 		HttpHeaders headers = new HttpHeaders();
-		headers.setContentType(MediaType.APPLICATION_XML);
+		MediaType mediaType = new MediaType("application", "xml", StandardCharsets.UTF_8);
+		headers.setContentType(mediaType);
+		//headers.setContentType(MediaType.APPLICATION_XML);
 		HttpEntity<String> entity = new HttpEntity<String>(xml,headers);		
 		ResponseEntity<byte[]> response = restTemplate.exchange(url,
-				HttpMethod.POST, entity, byte[].class, "1");
-		
+				HttpMethod.POST, entity, byte[].class, "1");		
 		if (response.getStatusCode() == HttpStatus.OK) {
 			Files.write(Paths.get("fichero2.pdf"), response.getBody());
 		}

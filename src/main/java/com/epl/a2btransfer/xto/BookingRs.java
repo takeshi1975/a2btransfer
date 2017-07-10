@@ -1792,11 +1792,11 @@ public class BookingRs {
 					 * 
 					 */
 					@XmlAccessorType(XmlAccessType.FIELD)
-					@XmlType(name = "", propOrder = { "joinline" })
+					@XmlType(name = "", propOrder = { "joinLine" })
 					public static class JoiningIns {
 
 						@XmlElement(name = "JoinLine")
-						protected List<String> joinline;
+						protected List<String> joinLine;
 
 						/**
 						 * Gets the value of the joinline property.
@@ -1822,11 +1822,11 @@ public class BookingRs {
 						 * 
 						 * 
 						 */
-						public List<String> getJoinline() {
-							if (joinline == null) {
-								joinline = new ArrayList<String>();
+						public List<String> getJoinLine() {
+							if (joinLine == null) {
+								joinLine = new ArrayList<String>();
 							}
-							return this.joinline;
+							return this.joinLine;
 						}
 
 					}

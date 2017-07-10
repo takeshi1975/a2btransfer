@@ -54,15 +54,14 @@ public class PolicyService {
 		
 	}
 	
-	public List<AvailRs.TransferOnly.Availability.Avline> calculatePrice(List<AvailRs.TransferOnly.Availability.Avline>  availlines, 
-			long cliente, 	long sistema,	Date date) throws NotApplicableException{
+	public void calculatePrice(List<AvailRs.TransferOnly.Availability.Avline>  availlines, 
+			long cliente, 	long sistema,	Date date) throws NotApplicableException{		
 		for (int i=0; i<availlines.size(); i++){						 
-			float price = availlines.get(i).getTransferPrice();
+			float price = availlines.get(i).getTransferTotalPrice();
 			price = applyFee(cliente, sistema, price, date);			
 			availlines.get(i).setTransferTotalPrice(price);
 			log.debug("Precio anteror -->"+price+" Precio final "+price);
-		}
-		return availlines;
+		}		
 	}
 	
 	public ReserveRs calculatePrice(ReserveRs reserveRs, long cliente, long sistema, Date date) throws NotApplicableException{
