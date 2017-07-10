@@ -39,6 +39,9 @@ import com.epl.a2btransfer.xto.AvailRq.TransferOnly.Availability.Request;
 import com.epl.a2btransfer.xto.AvailRs;
 import com.epl.a2btransfer.xto.BookingRq;
 import com.epl.a2btransfer.xto.BookingRs;
+import com.epl.a2btransfer.xto.CancelRq;
+import com.epl.a2btransfer.xto.CancelRq.TransferOnly.Booking.Cancel;
+import com.epl.a2btransfer.xto.CancelRs;
 import com.epl.a2btransfer.xto.Errors;
 import com.epl.a2btransfer.xto.PrintRq;
 import com.epl.a2btransfer.xto.ReserveRq;
@@ -61,11 +64,11 @@ public class AvailTest {
 	
 	private String port = "8080";
 	private String host = "localhost";
-	//private String host = "34.251.215.240"; // PROD
+	// private String host = "34.251.215.240"; // PROD
 	// private String host="34.253.173.28"; // STG
 	
-	//private String host="doraemon.com";
-	//private String port="8080/a2btransfer-1.0";
+	// private String host="doraemon.com";
+	// private String port="8080/a2btransfer-1.0";
 	
 	private final static String NEWFORMAT = "NEWFORMAT";
 
@@ -214,15 +217,12 @@ public class AvailTest {
 		});
 
 		Assert.notNull(bookingRs);
-//		bookingRs.getTransferOnly().getBooking().getConfirm().getVoucherInfo().getJoiningIns().getJoinline()
-//				.forEach(t -> System.out.println(t));
 		return bookingRs;
 	}
 
-/*	
+	
 	@Test
-	public void cancel(){
-		
+	public void cancel(){		
 		String url = "http://" + host + ":" + port + "/a2btransfer/cancel";
 		CancelRq cancelRq = new CancelRq();	
 		cancelRq.setTransferOnly(new CancelRq.TransferOnly());
@@ -235,9 +235,8 @@ public class AvailTest {
 					
 		BookingRs bookingRs = booking();
 		cancelRq.getTransferOnly().getBooking().getCancel().setBookingRef(bookingRs.getTransferOnly().getBooking().getConfirm().getVoucherInfo().getBookingRef());		
-		CancelRs cancelRs = restTemplate.postForObject(url, cancelRq, CancelRs.class);
-	
-	} */	
+		CancelRs cancelRs = restTemplate.postForObject(url, cancelRq, CancelRs.class);	
+	} 	
 	
 	public static List<String> conversion(List<String> buffer) throws IOException{
 		Logger log = Logger.getLogger(SecondPage.class);
