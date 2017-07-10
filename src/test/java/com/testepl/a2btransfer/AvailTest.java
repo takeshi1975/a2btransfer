@@ -107,7 +107,6 @@ public class AvailTest {
 		request.setSectorType("SINGLE"); // SINGLE/RETURN
 		request.setLatitude("");
 		request.setLongitude("");
-
 		request.setGIATAID("");
 		request.setTTICode("");
 		AvailRs availRs = restTemplate.postForObject(url, availRq, AvailRs.class);
@@ -190,8 +189,8 @@ public class AvailTest {
 		bookingRq.getTransferOnly().getBooking().getConfirm().getClient().setEmail("juanjo.alejandro@gmail");
 		bookingRq.getTransferOnly().getBooking().getConfirm().getClient().setFirstName("Juanjo");
 		bookingRq.getTransferOnly().getBooking().getConfirm().getClient().setLastName("de Alejandro");
-		bookingRq.getTransferOnly().getBooking().getConfirm().getClient().setMobile(628629988L);
-		bookingRq.getTransferOnly().getBooking().getConfirm().getClient().setPhone(972652489L);
+		bookingRq.getTransferOnly().getBooking().getConfirm().getClient().setMobile(34628629988L);
+		bookingRq.getTransferOnly().getBooking().getConfirm().getClient().setPhone(34972652489L);
 		bookingRq.getTransferOnly().getBooking().getConfirm().getClient().setTitle("Sr");
 		bookingRq.getTransferOnly().getBooking().getConfirm().setDepExtraInfo("No extra info");
 		bookingRq.getTransferOnly().getBooking().getConfirm().setDepPoint("Casa del cliente");
@@ -204,7 +203,10 @@ public class AvailTest {
 		bookingRq.getTransferOnly().getBooking().getConfirm().setRetPoint("Return point");
 		bookingRq.getTransferOnly().getBooking().getConfirm().setSendEmailToCustomer((byte) 0x0);
 		int transactionNo = this.bloqueo().getTransferOnly().getBooking().getReserve().getTransacNo();
-
+		bookingRq.getTransferOnly().getBooking().getConfirm().setDepInfo("VUE3032");
+		bookingRq.getTransferOnly().getBooking().getConfirm().setDepInfo("VUE5598");
+		bookingRq.getTransferOnly().getBooking().getConfirm().setDepExtraInfo("Vueling");
+		bookingRq.getTransferOnly().getBooking().getConfirm().setRetExtraInfo("Vueling");
 		bookingRq.getTransferOnly().getBooking().getConfirm().setTransacNo(transactionNo);
 		bookingRq.getTransferOnly().getBooking().getConfirm().setUsername("Juacho");
 		BookingRs bookingRs = restTemplate.postForObject(url, bookingRq, BookingRs.class);

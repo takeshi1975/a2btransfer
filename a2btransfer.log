@@ -1,43 +1,80 @@
-13:34:18.266 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.testepl.a2btransfer.AvailTest]
-13:34:18.283 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-13:34:18.307 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-13:34:18.335 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.testepl.a2btransfer.AvailTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-13:34:18.364 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.testepl.a2btransfer.AvailTest], using SpringBootContextLoader
-13:34:18.371 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.testepl.a2btransfer.AvailTest]: class path resource [com/testepl/a2btransfer/AvailTest-context.xml] does not exist
-13:34:18.371 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.testepl.a2btransfer.AvailTest]: class path resource [com/testepl/a2btransfer/AvailTestContext.groovy] does not exist
-13:34:18.372 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.testepl.a2btransfer.AvailTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-13:34:18.423 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.testepl.a2btransfer.AvailTest]
-13:34:18.472 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.testepl.a2btransfer.AvailTest]: using defaults.
-13:34:18.480 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-13:34:18.545 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@dbd940d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@71d15f18, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@17695df3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6c9f5c0d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@de3a06f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@76b10754, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2bea5ab4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3d8314f0, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2df32bf7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@530612ba, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2a40cd94, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@f4168b8]
-13:34:18.550 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.testepl.a2btransfer.AvailTest]
-13:34:18.551 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.testepl.a2btransfer.AvailTest]
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building a2btransfer 1.0
+[INFO] ------------------------------------------------------------------------
+[WARNING] The artifact xstream:xstream:jar:1.2.2 has been relocated to com.thoughtworks.xstream:xstream:jar:1.2.2
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ a2btransfer ---
+[INFO] Deleting C:\Users\desar\workspace\a2btransfer\target
+[INFO] 
+[INFO] --- jaxb2-maven-plugin:2.3.1:xjc (xjc) @ a2btransfer ---
+[INFO] Adding 'extension' flag to XJC arguments, since the 'generateEpisode' argument is given. (XJCs 'episode' argument requires that the 'extension' argument is provided).
+[INFO] Ignored given or default xjbSources [C:\Users\desar\workspace\a2btransfer\src\main\xjb], since it is not an existent file or directory.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ a2btransfer ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ a2btransfer ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 68 source files to C:\Users\desar\workspace\a2btransfer\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ a2btransfer ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ a2btransfer ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to C:\Users\desar\workspace\a2btransfer\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ a2btransfer ---
+[INFO] Surefire report directory: C:\Users\desar\workspace\a2btransfer\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+16:01:33.562 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.testepl.a2btransfer.AvailTest]
+16:01:33.578 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+16:01:33.593 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+16:01:33.617 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.testepl.a2btransfer.AvailTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+16:01:33.641 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.testepl.a2btransfer.AvailTest], using SpringBootContextLoader
+16:01:33.647 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.testepl.a2btransfer.AvailTest]: class path resource [com/testepl/a2btransfer/AvailTest-context.xml] does not exist
+16:01:33.648 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.testepl.a2btransfer.AvailTest]: class path resource [com/testepl/a2btransfer/AvailTestContext.groovy] does not exist
+16:01:33.648 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.testepl.a2btransfer.AvailTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+16:01:33.702 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.testepl.a2btransfer.AvailTest]
+16:01:33.758 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.testepl.a2btransfer.AvailTest]: using defaults.
+16:01:33.766 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+16:01:33.821 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@dbd940d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@71d15f18, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@17695df3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6c9f5c0d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@de3a06f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@76b10754, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2bea5ab4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3d8314f0, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2df32bf7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@530612ba, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2a40cd94, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@f4168b8]
+16:01:33.827 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.testepl.a2btransfer.AvailTest]
+16:01:33.829 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.testepl.a2btransfer.AvailTest]
 Running com.testepl.a2btransfer.AvailTest
-13:34:18.554 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.testepl.a2btransfer.AvailTest]
-13:34:18.554 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-13:34:18.555 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-13:34:18.555 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.testepl.a2btransfer.AvailTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-13:34:18.556 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.testepl.a2btransfer.AvailTest], using SpringBootContextLoader
-13:34:18.557 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.testepl.a2btransfer.AvailTest]: class path resource [com/testepl/a2btransfer/AvailTest-context.xml] does not exist
-13:34:18.558 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.testepl.a2btransfer.AvailTest]: class path resource [com/testepl/a2btransfer/AvailTestContext.groovy] does not exist
-13:34:18.558 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.testepl.a2btransfer.AvailTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-13:34:18.572 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.testepl.a2btransfer.AvailTest]
-13:34:18.576 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.testepl.a2btransfer.AvailTest]: using defaults.
-13:34:18.579 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-13:34:18.583 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@473b46c3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@516be40f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3c0a50da, org.springframework.test.context.support.DirtiesContextTestExecutionListener@646be2c3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@797badd3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@77be656f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@19dc67c2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@221af3c0, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@62bd765, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@23a5fd2, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@78a2da20, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@dd3b207]
-13:34:18.583 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.testepl.a2btransfer.AvailTest]
-13:34:18.583 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.testepl.a2btransfer.AvailTest]
-13:34:18.584 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.testepl.a2btransfer.AvailTest]
-13:34:18.585 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.testepl.a2btransfer.AvailTest]
-13:34:18.590 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@5a4aa2f2 testClass = AvailTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@6591f517 testClass = AvailTest, locations = '{}', classes = '{class com.epl.a2btransfer.Application, class com.epl.a2btransfer.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.SpringBootTestContextCustomizer@59e5ddf, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1f57539, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7a187f14], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null].
-13:34:18.591 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.testepl.a2btransfer.AvailTest]
-13:34:18.591 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.testepl.a2btransfer.AvailTest]
-13:34:18.596 [main] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@5a4aa2f2 testClass = AvailTest, testInstance = com.testepl.a2btransfer.AvailTest@2b4a2ec7, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@6591f517 testClass = AvailTest, locations = '{}', classes = '{class com.epl.a2btransfer.Application, class com.epl.a2btransfer.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.SpringBootTestContextCustomizer@59e5ddf, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1f57539, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7a187f14], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]]].
-13:34:18.693 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
-13:34:18.694 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
-13:34:18.694 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
-13:34:18.697 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
-13:34:18.698 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [Inlined Test Properties] PropertySource with highest search precedence
+16:01:33.834 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.testepl.a2btransfer.AvailTest]
+16:01:33.834 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+16:01:33.834 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+16:01:33.835 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.testepl.a2btransfer.AvailTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+16:01:33.836 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.testepl.a2btransfer.AvailTest], using SpringBootContextLoader
+16:01:33.837 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.testepl.a2btransfer.AvailTest]: class path resource [com/testepl/a2btransfer/AvailTest-context.xml] does not exist
+16:01:33.838 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.testepl.a2btransfer.AvailTest]: class path resource [com/testepl/a2btransfer/AvailTestContext.groovy] does not exist
+16:01:33.838 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.testepl.a2btransfer.AvailTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+16:01:33.860 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.testepl.a2btransfer.AvailTest]
+16:01:33.867 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.testepl.a2btransfer.AvailTest]: using defaults.
+16:01:33.872 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+16:01:33.878 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@473b46c3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@516be40f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3c0a50da, org.springframework.test.context.support.DirtiesContextTestExecutionListener@646be2c3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@797badd3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@77be656f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@19dc67c2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@221af3c0, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@62bd765, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@23a5fd2, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@78a2da20, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@dd3b207]
+16:01:33.878 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.testepl.a2btransfer.AvailTest]
+16:01:33.878 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.testepl.a2btransfer.AvailTest]
+16:01:33.880 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.testepl.a2btransfer.AvailTest]
+16:01:33.880 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.testepl.a2btransfer.AvailTest]
+16:01:33.888 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@5a4aa2f2 testClass = AvailTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@6591f517 testClass = AvailTest, locations = '{}', classes = '{class com.epl.a2btransfer.Application, class com.epl.a2btransfer.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.SpringBootTestContextCustomizer@59e5ddf, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1f57539, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7a187f14], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null].
+16:01:33.889 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.testepl.a2btransfer.AvailTest]
+16:01:33.889 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.testepl.a2btransfer.AvailTest]
+16:01:33.894 [main] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@5a4aa2f2 testClass = AvailTest, testInstance = com.testepl.a2btransfer.AvailTest@2b4a2ec7, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@6591f517 testClass = AvailTest, locations = '{}', classes = '{class com.epl.a2btransfer.Application, class com.epl.a2btransfer.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.SpringBootTestContextCustomizer@59e5ddf, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1f57539, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7a187f14], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]]].
+16:01:34.002 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+16:01:34.004 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+16:01:34.005 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+16:01:34.009 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+16:01:34.010 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [Inlined Test Properties] PropertySource with highest search precedence
 
   ___   _____ ______ _____                    __              
  / _ \ / __  \| ___ \_   _|                  / _|             
@@ -48,58 +85,58 @@ Running com.testepl.a2btransfer.AvailTest
                                                               
                                                               
 @JAC::Transfers
-2017-07-10 13:34:19.231  INFO 9620 --- [           main] com.testepl.a2btransfer.AvailTest        : Starting AvailTest on NUC3 with PID 9620 (started by Juanjo in C:\Users\desar\workspace\a2btransfer)
-2017-07-10 13:34:19.236  INFO 9620 --- [           main] com.testepl.a2btransfer.AvailTest        : No active profile set, falling back to default profiles: default
-2017-07-10 13:34:19.270  INFO 9620 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@120f102b: startup date [Mon Jul 10 13:34:19 CEST 2017]; root of context hierarchy
-2017-07-10 13:34:21.842  INFO 9620 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2017-07-10 13:34:21.977  INFO 9620 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2017-07-10 13:34:22.027  INFO 9620 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bf474b30] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2017-07-10 13:34:22.846  INFO 9620 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
-2017-07-10 13:34:22.870  INFO 9620 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
-2017-07-10 13:34:22.872  INFO 9620 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
-2017-07-10 13:34:23.116  INFO 9620 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2017-07-10 13:34:23.116  INFO 9620 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3851 ms
-2017-07-10 13:34:23.436  INFO 9620 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
-2017-07-10 13:34:23.444  INFO 9620 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'errorPageFilter' to: [/*]
-2017-07-10 13:34:23.447  INFO 9620 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2017-07-10 13:34:23.447  INFO 9620 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2017-07-10 13:34:23.448  INFO 9620 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2017-07-10 13:34:23.448  INFO 9620 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2017-07-10 13:34:29.442  INFO 9620 --- [           main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2017-07-10 13:34:29.473  INFO 9620 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2017-07-10 16:01:34.556  INFO 1352 --- [           main] com.testepl.a2btransfer.AvailTest        : Starting AvailTest on NUC3 with PID 1352 (started by Juanjo in C:\Users\desar\workspace\a2btransfer)
+2017-07-10 16:01:34.559  INFO 1352 --- [           main] com.testepl.a2btransfer.AvailTest        : No active profile set, falling back to default profiles: default
+2017-07-10 16:01:34.596  INFO 1352 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@120f102b: startup date [Mon Jul 10 16:01:34 CEST 2017]; root of context hierarchy
+2017-07-10 16:01:37.234  INFO 1352 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-07-10 16:01:37.422  INFO 1352 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-07-10 16:01:37.497  INFO 1352 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5a6feae4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-07-10 16:01:38.344  INFO 1352 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-07-10 16:01:38.372  INFO 1352 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-07-10 16:01:38.376  INFO 1352 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-07-10 16:01:38.646  INFO 1352 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-07-10 16:01:38.646  INFO 1352 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4053 ms
+2017-07-10 16:01:38.961  INFO 1352 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-10 16:01:38.967  INFO 1352 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'errorPageFilter' to: [/*]
+2017-07-10 16:01:38.968  INFO 1352 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-10 16:01:38.969  INFO 1352 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-10 16:01:38.969  INFO 1352 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-10 16:01:38.970  INFO 1352 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-10 16:01:44.907  INFO 1352 --- [           main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-07-10 16:01:44.976  INFO 1352 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2017-07-10 13:34:29.770  INFO 9620 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.11.Final}
-2017-07-10 13:34:29.772  INFO 9620 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2017-07-10 13:34:29.774  INFO 9620 --- [           main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
-2017-07-10 13:34:29.836  INFO 9620 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2017-07-10 13:34:30.037  INFO 9620 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
-2017-07-10 13:34:31.678  INFO 9620 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2017-07-10 13:34:32.255  INFO 9620 --- [           main] com.epl.a2btransfer.services.AppConfig   : Configuración de la plantilla para WS-RESTful
-2017-07-10 13:34:32.877  INFO 9620 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@120f102b: startup date [Mon Jul 10 13:34:19 CEST 2017]; root of context hierarchy
-2017-07-10 13:34:33.025  INFO 9620 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a2btransfer/print],methods=[POST],consumes=[application/xml],produces=[application/pdf]}" onto public org.springframework.http.ResponseEntity<org.springframework.core.io.InputStreamSource> com.epl.a2btransfer.controller.A2BController.print(com.epl.a2btransfer.xto.PrintRq)
-2017-07-10 13:34:33.029  INFO 9620 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a2btransfer/block],methods=[POST],consumes=[application/xml],produces=[application/xml]}" onto public com.epl.a2btransfer.xto.ReserveRs com.epl.a2btransfer.controller.A2BController.block(com.epl.a2btransfer.xto.ReserveRq)
-2017-07-10 13:34:33.032  INFO 9620 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a2btransfer/cancel],methods=[POST],consumes=[application/xml],produces=[application/xml]}" onto public com.epl.a2btransfer.xto.CancelRs com.epl.a2btransfer.controller.A2BController.cancel(com.epl.a2btransfer.xto.CancelRq)
-2017-07-10 13:34:33.036  INFO 9620 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a2btransfer/loadLocations],methods=[GET],produces=[application/xml]}" onto public java.lang.String com.epl.a2btransfer.controller.A2BController.locations()
-2017-07-10 13:34:33.036  INFO 9620 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a2btransfer/loadRoutes],methods=[GET],produces=[application/xml]}" onto public java.lang.String com.epl.a2btransfer.controller.A2BController.routes()
-2017-07-10 13:34:33.037  INFO 9620 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a2btransfer/avail],methods=[POST],consumes=[application/xml],produces=[application/xml]}" onto public com.epl.a2btransfer.xto.AvailRs com.epl.a2btransfer.controller.A2BController.avail(com.epl.a2btransfer.xto.AvailRq)
-2017-07-10 13:34:33.038  INFO 9620 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a2btransfer/book],methods=[POST],consumes=[application/xml],produces=[application/xml]}" onto public com.epl.a2btransfer.xto.BookingRs com.epl.a2btransfer.controller.A2BController.book(com.epl.a2btransfer.xto.BookingRq)
-2017-07-10 13:34:33.038  INFO 9620 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a2btransfer/bookCheapest],methods=[POST],consumes=[application/xml],produces=[application/xml]}" onto public com.epl.a2btransfer.xto.BookingRs com.epl.a2btransfer.controller.A2BController.bookCheapest(com.epl.a2btransfer.xto.AvailRq)
-2017-07-10 13:34:33.038  INFO 9620 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a2btransfer/cancelFees],methods=[POST],consumes=[application/xml],produces=[application/xml]}" onto public com.epl.a2btransfer.xto.CancelFeeRs com.epl.a2btransfer.controller.A2BController.cancelFees(com.epl.a2btransfer.xto.CancelFeeRq)
-2017-07-10 13:34:33.044  INFO 9620 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2017-07-10 13:34:33.047  INFO 9620 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2017-07-10 13:34:33.116  INFO 9620 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2017-07-10 13:34:33.116  INFO 9620 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2017-07-10 13:34:33.192  INFO 9620 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2017-07-10 13:34:33.648  INFO 9620 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
-2017-07-10 13:34:33.656  INFO 9620 --- [           main] com.testepl.a2btransfer.AvailTest        : Started AvailTest in 14.953 seconds (JVM running for 16.047)
-2017-07-10 13:34:33.726  INFO 9620 --- [           main] com.testepl.a2btransfer.AvailTest        : Se pide disponibilidad por fechas
-2017-07-10 13:34:33.727  INFO 9620 --- [           main] com.testepl.a2btransfer.AvailTest        : App Name-->A2bTransfer
-2017-07-10 13:34:33.844  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
-2017-07-10 13:34:33.844  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : URI         : http://localhost:8080/a2btransfer/avail
-2017-07-10 13:34:33.844  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
-2017-07-10 13:34:33.845  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[669]}
-2017-07-10 13:34:33.885  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML version="NEWFORMAT">
+2017-07-10 16:01:45.275  INFO 1352 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.11.Final}
+2017-07-10 16:01:45.277  INFO 1352 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-07-10 16:01:45.279  INFO 1352 --- [           main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-07-10 16:01:45.341  INFO 1352 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-07-10 16:01:45.533  INFO 1352 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2017-07-10 16:01:47.215  INFO 1352 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-07-10 16:01:47.881  INFO 1352 --- [           main] com.epl.a2btransfer.services.AppConfig   : Configuración de la plantilla para WS-RESTful
+2017-07-10 16:01:48.599  INFO 1352 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@120f102b: startup date [Mon Jul 10 16:01:34 CEST 2017]; root of context hierarchy
+2017-07-10 16:01:48.774  INFO 1352 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a2btransfer/print],methods=[POST],consumes=[application/xml],produces=[application/pdf]}" onto public org.springframework.http.ResponseEntity<org.springframework.core.io.InputStreamSource> com.epl.a2btransfer.controller.A2BController.print(com.epl.a2btransfer.xto.PrintRq)
+2017-07-10 16:01:48.779  INFO 1352 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a2btransfer/block],methods=[POST],consumes=[application/xml],produces=[application/xml]}" onto public com.epl.a2btransfer.xto.ReserveRs com.epl.a2btransfer.controller.A2BController.block(com.epl.a2btransfer.xto.ReserveRq)
+2017-07-10 16:01:48.784  INFO 1352 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a2btransfer/cancel],methods=[POST],consumes=[application/xml],produces=[application/xml]}" onto public com.epl.a2btransfer.xto.CancelRs com.epl.a2btransfer.controller.A2BController.cancel(com.epl.a2btransfer.xto.CancelRq)
+2017-07-10 16:01:48.785  INFO 1352 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a2btransfer/loadLocations],methods=[GET],produces=[application/xml]}" onto public java.lang.String com.epl.a2btransfer.controller.A2BController.locations()
+2017-07-10 16:01:48.785  INFO 1352 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a2btransfer/avail],methods=[POST],consumes=[application/xml],produces=[application/xml]}" onto public com.epl.a2btransfer.xto.AvailRs com.epl.a2btransfer.controller.A2BController.avail(com.epl.a2btransfer.xto.AvailRq)
+2017-07-10 16:01:48.786  INFO 1352 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a2btransfer/book],methods=[POST],consumes=[application/xml],produces=[application/xml]}" onto public com.epl.a2btransfer.xto.BookingRs com.epl.a2btransfer.controller.A2BController.book(com.epl.a2btransfer.xto.BookingRq)
+2017-07-10 16:01:48.787  INFO 1352 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a2btransfer/bookCheapest],methods=[POST],consumes=[application/xml],produces=[application/xml]}" onto public com.epl.a2btransfer.xto.BookingRs com.epl.a2btransfer.controller.A2BController.bookCheapest(com.epl.a2btransfer.xto.AvailRq)
+2017-07-10 16:01:48.788  INFO 1352 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a2btransfer/cancelFees],methods=[POST],consumes=[application/xml],produces=[application/xml]}" onto public com.epl.a2btransfer.xto.CancelFeeRs com.epl.a2btransfer.controller.A2BController.cancelFees(com.epl.a2btransfer.xto.CancelFeeRq)
+2017-07-10 16:01:48.788  INFO 1352 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/a2btransfer/loadRoutes],methods=[GET],produces=[application/xml]}" onto public java.lang.String com.epl.a2btransfer.controller.A2BController.routes()
+2017-07-10 16:01:48.796  INFO 1352 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-10 16:01:48.797  INFO 1352 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-10 16:01:48.878  INFO 1352 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-10 16:01:48.879  INFO 1352 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-10 16:01:48.971  INFO 1352 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-10 16:01:49.552  INFO 1352 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-07-10 16:01:49.559  INFO 1352 --- [           main] com.testepl.a2btransfer.AvailTest        : Started AvailTest in 15.544 seconds (JVM running for 16.582)
+2017-07-10 16:01:49.636  INFO 1352 --- [           main] com.testepl.a2btransfer.AvailTest        : Se pide disponibilidad por fechas
+2017-07-10 16:01:49.636  INFO 1352 --- [           main] com.testepl.a2btransfer.AvailTest        : App Name-->A2bTransfer
+2017-07-10 16:01:49.818  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-07-10 16:01:49.818  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : URI         : http://localhost:8080/a2btransfer/avail
+2017-07-10 16:01:49.819  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-07-10 16:01:49.820  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[669]}
+2017-07-10 16:01:49.899  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML version="NEWFORMAT">
     <Agency>1329</Agency>
     <System>84</System>
     <TransferOnly>
@@ -128,17 +165,17 @@ Running com.testepl.a2btransfer.AvailTest
     </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:33.886  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
-2017-07-10 13:34:33.993  INFO 9620 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2017-07-10 13:34:33.994  INFO 9620 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2017-07-10 13:34:34.032  INFO 9620 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 38 ms
-2017-07-10 13:34:34.120  INFO 9620 --- [nio-8080-exec-1] c.e.a.controller.A2BController           : ====================== Avail Controller ======================
-2017-07-10 13:34:34.121  INFO 9620 --- [nio-8080-exec-1] c.e.a.services.A2BTransferClientService  : Se va a llamar al metodo de disponibilidad
-2017-07-10 13:34:34.123  INFO 9620 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
-2017-07-10 13:34:34.124  INFO 9620 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : URI         : http://test.xmlp2p.com/xml/
-2017-07-10 13:34:34.124  INFO 9620 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
-2017-07-10 13:34:34.124  INFO 9620 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[669]}
-2017-07-10 13:34:34.130  INFO 9620 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML version="NEWFORMAT">
+2017-07-10 16:01:49.899  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-07-10 16:01:50.063  INFO 1352 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-07-10 16:01:50.063  INFO 1352 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-07-10 16:01:50.130  INFO 1352 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 64 ms
+2017-07-10 16:01:50.314  INFO 1352 --- [nio-8080-exec-1] c.e.a.controller.A2BController           : ====================== Avail Controller ======================
+2017-07-10 16:01:50.316  INFO 1352 --- [nio-8080-exec-1] c.e.a.services.A2BTransferClientService  : Se va a llamar al metodo de disponibilidad
+2017-07-10 16:01:50.319  INFO 1352 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-07-10 16:01:50.321  INFO 1352 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : URI         : http://test.xmlp2p.com/xml/
+2017-07-10 16:01:50.322  INFO 1352 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-07-10 16:01:50.322  INFO 1352 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[669]}
+2017-07-10 16:01:50.332  INFO 1352 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML version="NEWFORMAT">
     <Agency>1329</Agency>
     <System>84</System>
     <TransferOnly>
@@ -167,13 +204,13 @@ Running com.testepl.a2btransfer.AvailTest
     </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:34.130  INFO 9620 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
-2017-07-10 13:34:34.923  INFO 9620 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
-2017-07-10 13:34:34.925  INFO 9620 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
-2017-07-10 13:34:34.925  INFO 9620 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : Status text  : OK
-2017-07-10 13:34:34.925  INFO 9620 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Cache-Control=[private], Content-Length=[2840], Content-Type=[text/XML; Charset=UTF-8], Server=[Microsoft-IIS/8.0], Set-Cookie=[ASPSESSIONIDSAQRBSTS=KOJGNAFBJPMNLKAJNHKNGAEC; path=/], X-Powered-By=[ASP.NET], Date=[Mon, 10 Jul 2017 11:34:34 GMT]}
-2017-07-10 13:34:34.932  INFO 9620 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<TCOML company="SSH" sess="201707101234347959354996" version="3.0">
+2017-07-10 16:01:50.333  INFO 1352 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-07-10 16:01:51.159  INFO 1352 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-07-10 16:01:51.162  INFO 1352 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-07-10 16:01:51.162  INFO 1352 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : Status text  : OK
+2017-07-10 16:01:51.162  INFO 1352 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Cache-Control=[private], Content-Length=[2840], Content-Type=[text/XML; Charset=UTF-8], Server=[Microsoft-IIS/8.0], Set-Cookie=[ASPSESSIONIDCQTQTSBC=DHMAKDABGPCNNDGCJKGKGBEG; path=/], X-Powered-By=[ASP.NET], Date=[Mon, 10 Jul 2017 14:01:47 GMT]}
+2017-07-10 16:01:51.183  INFO 1352 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TCOML company="SSH" sess="201707101501468066609025" version="3.0">
 <TransferOnly>
 <Availability>
 <A2BDeepLink>http://www.a2btransfers.com/</A2BDeepLink>
@@ -254,18 +291,18 @@ Running com.testepl.a2btransfer.AvailTest
 </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:34.933  INFO 9620 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
-2017-07-10 13:34:34.934  INFO 9620 --- [nio-8080-exec-1] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.AvailRs
-2017-07-10 13:34:34.934  INFO 9620 --- [nio-8080-exec-1] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
-2017-07-10 13:34:35.247  INFO 9620 --- [nio-8080-exec-1] c.e.a2btransfer.services.PolicyService   : Se recoge 350 Neto = S
-2017-07-10 13:34:35.420  INFO 9620 --- [nio-8080-exec-1] c.e.a2btransfer.services.PolicyService   : Precio anterior =43.38 / Precio final =47.72
-2017-07-10 13:34:35.472  INFO 9620 --- [nio-8080-exec-1] c.e.a2btransfer.services.PolicyService   : Se recoge 350 Neto = S
-2017-07-10 13:34:35.523  INFO 9620 --- [nio-8080-exec-1] c.e.a2btransfer.services.PolicyService   : Precio anterior =67.78 / Precio final =74.56
-2017-07-10 13:34:35.558  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
-2017-07-10 13:34:35.559  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
-2017-07-10 13:34:35.559  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status text  : null
-2017-07-10 13:34:35.559  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Content-Type=[application/xml], Transfer-Encoding=[chunked], Date=[Mon, 10 Jul 2017 11:34:35 GMT]}
-2017-07-10 13:34:35.566  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML company="SSH" sess="201707101234347959354996" version="3.0">
+2017-07-10 16:01:51.184  INFO 1352 --- [nio-8080-exec-1] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-07-10 16:01:51.191  INFO 1352 --- [nio-8080-exec-1] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.AvailRs
+2017-07-10 16:01:51.191  INFO 1352 --- [nio-8080-exec-1] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-07-10 16:01:51.590  INFO 1352 --- [nio-8080-exec-1] c.e.a2btransfer.services.PolicyService   : Se recoge 350 Neto = S
+2017-07-10 16:01:51.767  INFO 1352 --- [nio-8080-exec-1] c.e.a2btransfer.services.PolicyService   : Precio anterior =43.38 / Precio final =47.72
+2017-07-10 16:01:51.819  INFO 1352 --- [nio-8080-exec-1] c.e.a2btransfer.services.PolicyService   : Se recoge 350 Neto = S
+2017-07-10 16:01:51.872  INFO 1352 --- [nio-8080-exec-1] c.e.a2btransfer.services.PolicyService   : Precio anterior =67.78 / Precio final =74.56
+2017-07-10 16:01:51.900  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-07-10 16:01:51.900  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-07-10 16:01:51.900  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status text  : null
+2017-07-10 16:01:51.901  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Content-Type=[application/xml], Transfer-Encoding=[chunked], Date=[Mon, 10 Jul 2017 14:01:51 GMT]}
+2017-07-10 16:01:51.908  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML company="SSH" sess="201707101501468066609025" version="3.0">
     <TransferOnly>
         <Availability>
             <A2BDeepLink>http://www.a2btransfers.com/</A2BDeepLink>
@@ -346,16 +383,16 @@ Running com.testepl.a2btransfer.AvailTest
     </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:35.567  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
-2017-07-10 13:34:35.567  INFO 9620 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.AvailRs
-2017-07-10 13:34:35.567  INFO 9620 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
-2017-07-10 13:34:35.571  INFO 9620 --- [           main] com.testepl.a2btransfer.AvailTest        : OK No hay errores en la disponibilidad
-2017-07-10 13:34:35.572  INFO 9620 --- [           main] com.testepl.a2btransfer.AvailTest        : Se escoge index -->0
-2017-07-10 13:34:35.617  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
-2017-07-10 13:34:35.617  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : URI         : http://localhost:8080/a2btransfer/block
-2017-07-10 13:34:35.618  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
-2017-07-10 13:34:35.618  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[642]}
-2017-07-10 13:34:35.622  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML agency="1329" date="30/07/17" system="84" version="NEWFORMAT">
+2017-07-10 16:01:51.908  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-07-10 16:01:51.909  INFO 1352 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.AvailRs
+2017-07-10 16:01:51.909  INFO 1352 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-07-10 16:01:51.913  INFO 1352 --- [           main] com.testepl.a2btransfer.AvailTest        : OK No hay errores en la disponibilidad
+2017-07-10 16:01:51.914  INFO 1352 --- [           main] com.testepl.a2btransfer.AvailTest        : Se escoge index -->0
+2017-07-10 16:01:51.958  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-07-10 16:01:51.959  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : URI         : http://localhost:8080/a2btransfer/block
+2017-07-10 16:01:51.959  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-07-10 16:01:51.959  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[642]}
+2017-07-10 16:01:51.962  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML agency="1329" date="30/07/17" system="84" version="NEWFORMAT">
     <TransferOnly>
         <Booking>
             <Reserve>
@@ -380,14 +417,14 @@ Running com.testepl.a2btransfer.AvailTest
     </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:35.622  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
-2017-07-10 13:34:35.643  INFO 9620 --- [nio-8080-exec-2] c.e.a.controller.A2BController           : ====================== Block Controller ======================
-2017-07-10 13:34:35.643  INFO 9620 --- [nio-8080-exec-2] c.e.a.services.A2BTransferClientService  : Se va a llamar al metodo de bloqueo
-2017-07-10 13:34:35.648  INFO 9620 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
-2017-07-10 13:34:35.649  INFO 9620 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : URI         : http://test.xmlp2p.com/xml/
-2017-07-10 13:34:35.649  INFO 9620 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
-2017-07-10 13:34:35.649  INFO 9620 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[642]}
-2017-07-10 13:34:35.653  INFO 9620 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML agency="1329" date="30/07/17" system="84" version="NEWFORMAT">
+2017-07-10 16:01:51.963  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-07-10 16:01:51.983  INFO 1352 --- [nio-8080-exec-2] c.e.a.controller.A2BController           : ====================== Block Controller ======================
+2017-07-10 16:01:51.983  INFO 1352 --- [nio-8080-exec-2] c.e.a.services.A2BTransferClientService  : Se va a llamar al metodo de bloqueo
+2017-07-10 16:01:51.984  INFO 1352 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-07-10 16:01:51.984  INFO 1352 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : URI         : http://test.xmlp2p.com/xml/
+2017-07-10 16:01:51.984  INFO 1352 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-07-10 16:01:51.984  INFO 1352 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[642]}
+2017-07-10 16:01:51.989  INFO 1352 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML agency="1329" date="30/07/17" system="84" version="NEWFORMAT">
     <TransferOnly>
         <Booking>
             <Reserve>
@@ -412,17 +449,17 @@ Running com.testepl.a2btransfer.AvailTest
     </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:35.653  INFO 9620 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
-2017-07-10 13:34:36.195  INFO 9620 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
-2017-07-10 13:34:36.195  INFO 9620 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
-2017-07-10 13:34:36.195  INFO 9620 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : Status text  : OK
-2017-07-10 13:34:36.195  INFO 9620 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Cache-Control=[private], Content-Length=[261], Content-Type=[text/XML; Charset=UTF-8], Server=[Microsoft-IIS/8.0], Set-Cookie=[ASPSESSIONIDCQBQAABC=IJEPDHDBEKOKDBJAEDPPGNGE; path=/], X-Powered-By=[ASP.NET], Date=[Mon, 10 Jul 2017 11:34:37 GMT]}
-2017-07-10 13:34:36.198  INFO 9620 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<TCOML company="SSH" sess="201707101234378407911002" version="3.0">
+2017-07-10 16:01:51.990  INFO 1352 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-07-10 16:01:52.198  INFO 1352 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-07-10 16:01:52.198  INFO 1352 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-07-10 16:01:52.198  INFO 1352 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : Status text  : OK
+2017-07-10 16:01:52.199  INFO 1352 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Cache-Control=[private], Content-Length=[261], Content-Type=[text/XML; Charset=UTF-8], Server=[Microsoft-IIS/8.0], Set-Cookie=[ASPSESSIONIDSAQRBSTS=PCMLNAFBJONHEPCFAOLAEEMJ; path=/], X-Powered-By=[ASP.NET], Date=[Mon, 10 Jul 2017 14:01:51 GMT]}
+2017-07-10 16:01:52.201  INFO 1352 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TCOML company="SSH" sess="201707101501517950742423" version="3.0">
 <TransferOnly>
 <Booking>
 <Reserve>
-<TransacNo>11873295</TransacNo>
+<TransacNo>11875822</TransacNo>
 <HolidayValue>43.38</HolidayValue>
 <CurrencyCode>EUR</CurrencyCode>
 </Reserve>
@@ -430,27 +467,27 @@ Running com.testepl.a2btransfer.AvailTest
 </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:36.198  INFO 9620 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
-2017-07-10 13:34:36.199  INFO 9620 --- [nio-8080-exec-2] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.ReserveRs
-2017-07-10 13:34:36.199  INFO 9620 --- [nio-8080-exec-2] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
-2017-07-10 13:34:36.274  INFO 9620 --- [nio-8080-exec-2] c.e.a2btransfer.services.PolicyService   : Se recoge 350 Neto = S
-2017-07-10 13:34:36.376  INFO 9620 --- [nio-8080-exec-2] c.e.a2btransfer.services.PolicyService   : Precio anterior =43.38 / Precio final =47.72
-2017-07-10 13:34:36.377  INFO 9620 --- [nio-8080-exec-2] c.e.a2btransfer.services.PolicyService   : Voy a buscar el sistema 84
-2017-07-10 13:34:36.752  INFO 9620 --- [nio-8080-exec-2] c.e.a.repositories.AgencyRepositoryImpl  : Respuesta de comisión de cliente 11.5
-2017-07-10 13:34:36.754  INFO 9620 --- [nio-8080-exec-2] c.e.a2btransfer.services.PolicyService   : ____________________BREAKDOWN____________________________________
-2017-07-10 13:34:36.754  INFO 9620 --- [nio-8080-exec-2] c.e.a2btransfer.services.PolicyService   : PVP#47,72
-2017-07-10 13:34:36.754  INFO 9620 --- [nio-8080-exec-2] c.e.a2btransfer.services.PolicyService   : COMAG#11.5#5,49
-2017-07-10 13:34:36.755  INFO 9620 --- [nio-8080-exec-2] c.e.a2btransfer.services.PolicyService   : TAX#IVA21#1,15
-2017-07-10 13:34:36.755  INFO 9620 --- [nio-8080-exec-2] c.e.a2btransfer.services.PolicyService   : __________________________________________________________________
-2017-07-10 13:34:36.762  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
-2017-07-10 13:34:36.762  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
-2017-07-10 13:34:36.762  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status text  : null
-2017-07-10 13:34:36.763  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Content-Type=[application/xml], Transfer-Encoding=[chunked], Date=[Mon, 10 Jul 2017 11:34:36 GMT]}
-2017-07-10 13:34:36.765  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML company="SSH" sess="201707101234378407911002" version="3.0">
+2017-07-10 16:01:52.201  INFO 1352 --- [nio-8080-exec-2] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-07-10 16:01:52.202  INFO 1352 --- [nio-8080-exec-2] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.ReserveRs
+2017-07-10 16:01:52.202  INFO 1352 --- [nio-8080-exec-2] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-07-10 16:01:52.280  INFO 1352 --- [nio-8080-exec-2] c.e.a2btransfer.services.PolicyService   : Se recoge 350 Neto = S
+2017-07-10 16:01:52.381  INFO 1352 --- [nio-8080-exec-2] c.e.a2btransfer.services.PolicyService   : Precio anterior =43.38 / Precio final =47.72
+2017-07-10 16:01:52.382  INFO 1352 --- [nio-8080-exec-2] c.e.a2btransfer.services.PolicyService   : Voy a buscar el sistema 84
+2017-07-10 16:01:52.780  INFO 1352 --- [nio-8080-exec-2] c.e.a.repositories.AgencyRepositoryImpl  : Respuesta de comisión de cliente 11.5
+2017-07-10 16:01:52.781  INFO 1352 --- [nio-8080-exec-2] c.e.a2btransfer.services.PolicyService   : ____________________BREAKDOWN____________________________________
+2017-07-10 16:01:52.782  INFO 1352 --- [nio-8080-exec-2] c.e.a2btransfer.services.PolicyService   : PVP#47,72
+2017-07-10 16:01:52.782  INFO 1352 --- [nio-8080-exec-2] c.e.a2btransfer.services.PolicyService   : COMAG#11.5#5,49
+2017-07-10 16:01:52.782  INFO 1352 --- [nio-8080-exec-2] c.e.a2btransfer.services.PolicyService   : TAX#IVA21#1,15
+2017-07-10 16:01:52.782  INFO 1352 --- [nio-8080-exec-2] c.e.a2btransfer.services.PolicyService   : __________________________________________________________________
+2017-07-10 16:01:52.793  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-07-10 16:01:52.794  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-07-10 16:01:52.794  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status text  : null
+2017-07-10 16:01:52.794  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Content-Type=[application/xml], Transfer-Encoding=[chunked], Date=[Mon, 10 Jul 2017 14:01:51 GMT]}
+2017-07-10 16:01:52.798  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML company="SSH" sess="201707101501517950742423" version="3.0">
     <TransferOnly>
         <Booking>
             <Reserve>
-                <TransacNo>11873295</TransacNo>
+                <TransacNo>11875822</TransacNo>
                 <HolidayValue>47.72</HolidayValue>
                 <CurrencyCode>EUR</CurrencyCode>
             </Reserve>
@@ -461,20 +498,20 @@ Running com.testepl.a2btransfer.AvailTest
     <breakdown>TAX#IVA21#1,15</breakdown>
 </TCOML>
 
-2017-07-10 13:34:36.765  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
-2017-07-10 13:34:36.765  INFO 9620 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.ReserveRs
-2017-07-10 13:34:36.765  INFO 9620 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
-2017-07-10 13:34:36.804  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
-2017-07-10 13:34:36.804  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : URI         : http://localhost:8080/a2btransfer/book
-2017-07-10 13:34:36.804  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
-2017-07-10 13:34:36.804  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[1000]}
-2017-07-10 13:34:36.808  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML version="NEWFORMAT">
+2017-07-10 16:01:52.798  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-07-10 16:01:52.798  INFO 1352 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.ReserveRs
+2017-07-10 16:01:52.798  INFO 1352 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-07-10 16:01:52.846  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-07-10 16:01:52.847  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : URI         : http://localhost:8080/a2btransfer/book
+2017-07-10 16:01:52.847  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-07-10 16:01:52.847  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[971]}
+2017-07-10 16:01:52.850  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML version="NEWFORMAT">
     <agency>1329</agency>
     <system>84</system>
     <TransferOnly>
         <Booking>
             <Confirm>
-                <TransacNo>11873295</TransacNo>
+                <TransacNo>11875822</TransacNo>
                 <Username>Juacho</Username>
                 <Password>Juancho123</Password>
                 <AgentBref>EPL</AgentBref>
@@ -483,16 +520,16 @@ Running com.testepl.a2btransfer.AvailTest
                 <AccommodationAddress2>Acoomodation Address 2</AccommodationAddress2>
                 <DepPoint>Casa del cliente</DepPoint>
                 <RetPoint>Return point</RetPoint>
-                <DepInfo>Information about departure</DepInfo>
+                <DepInfo>VUE5598</DepInfo>
                 <RetInfo>Return info</RetInfo>
-                <DepExtraInfo>No extra info</DepExtraInfo>
-                <RetExtraInfo>Ret extra info</RetExtraInfo>
+                <DepExtraInfo>Vueling</DepExtraInfo>
+                <RetExtraInfo>Vueling</RetExtraInfo>
                 <Client>
                     <LastName>de Alejandro</LastName>
                     <FirstName>Juanjo</FirstName>
                     <Title>Sr</Title>
-                    <Phone>972652489</Phone>
-                    <Mobile>628629988</Mobile>
+                    <Phone>34972652489</Phone>
+                    <Mobile>34628629988</Mobile>
                     <CountryCode>ES</CountryCode>
                     <Email>juanjo.alejandro@gmail</Email>
                 </Client>
@@ -503,20 +540,20 @@ Running com.testepl.a2btransfer.AvailTest
     </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:36.808  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
-2017-07-10 13:34:36.826  INFO 9620 --- [nio-8080-exec-3] c.e.a.controller.A2BController           : ====================== Book Controller ======================
-2017-07-10 13:34:36.826  INFO 9620 --- [nio-8080-exec-3] c.e.a.services.A2BTransferClientService  : Se va a llamar al metodo de reserva
-2017-07-10 13:34:36.828  INFO 9620 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
-2017-07-10 13:34:36.828  INFO 9620 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : URI         : http://test.xmlp2p.com/xml/
-2017-07-10 13:34:36.828  INFO 9620 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
-2017-07-10 13:34:36.829  INFO 9620 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[1000]}
-2017-07-10 13:34:36.832  INFO 9620 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML version="NEWFORMAT">
+2017-07-10 16:01:52.850  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-07-10 16:01:52.866  INFO 1352 --- [nio-8080-exec-3] c.e.a.controller.A2BController           : ====================== Book Controller ======================
+2017-07-10 16:01:52.866  INFO 1352 --- [nio-8080-exec-3] c.e.a.services.A2BTransferClientService  : Se va a llamar al metodo de reserva
+2017-07-10 16:01:52.867  INFO 1352 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-07-10 16:01:52.867  INFO 1352 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : URI         : http://test.xmlp2p.com/xml/
+2017-07-10 16:01:52.868  INFO 1352 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-07-10 16:01:52.868  INFO 1352 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[971]}
+2017-07-10 16:01:52.872  INFO 1352 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML version="NEWFORMAT">
     <agency>1329</agency>
     <system>84</system>
     <TransferOnly>
         <Booking>
             <Confirm>
-                <TransacNo>11873295</TransacNo>
+                <TransacNo>11875822</TransacNo>
                 <Username>Juacho</Username>
                 <Password>Juancho123</Password>
                 <AgentBref>EPL</AgentBref>
@@ -525,16 +562,16 @@ Running com.testepl.a2btransfer.AvailTest
                 <AccommodationAddress2>Acoomodation Address 2</AccommodationAddress2>
                 <DepPoint>Casa del cliente</DepPoint>
                 <RetPoint>Return point</RetPoint>
-                <DepInfo>Information about departure</DepInfo>
+                <DepInfo>VUE5598</DepInfo>
                 <RetInfo>Return info</RetInfo>
-                <DepExtraInfo>No extra info</DepExtraInfo>
-                <RetExtraInfo>Ret extra info</RetExtraInfo>
+                <DepExtraInfo>Vueling</DepExtraInfo>
+                <RetExtraInfo>Vueling</RetExtraInfo>
                 <Client>
                     <LastName>de Alejandro</LastName>
                     <FirstName>Juanjo</FirstName>
                     <Title>Sr</Title>
-                    <Phone>972652489</Phone>
-                    <Mobile>628629988</Mobile>
+                    <Phone>34972652489</Phone>
+                    <Mobile>34628629988</Mobile>
                     <CountryCode>ES</CountryCode>
                     <Email>juanjo.alejandro@gmail</Email>
                 </Client>
@@ -545,19 +582,19 @@ Running com.testepl.a2btransfer.AvailTest
     </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:36.832  INFO 9620 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
-2017-07-10 13:34:37.128  INFO 9620 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
-2017-07-10 13:34:37.129  INFO 9620 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
-2017-07-10 13:34:37.129  INFO 9620 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Status text  : OK
-2017-07-10 13:34:37.129  INFO 9620 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Cache-Control=[private], Content-Length=[3582], Content-Type=[text/XML; Charset=UTF-8], Server=[Microsoft-IIS/8.0], Set-Cookie=[ASPSESSIONIDSAQRBSTS=MOJGNAFBOFFLLJHFPAMCNEPJ; path=/], X-Powered-By=[ASP.NET], Date=[Mon, 10 Jul 2017 11:34:36 GMT]}
-2017-07-10 13:34:37.143  INFO 9620 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+2017-07-10 16:01:52.872  INFO 1352 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-07-10 16:01:53.056  INFO 1352 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-07-10 16:01:53.057  INFO 1352 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-07-10 16:01:53.057  INFO 1352 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Status text  : OK
+2017-07-10 16:01:53.057  INFO 1352 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Cache-Control=[private], Content-Length=[3566], Content-Type=[text/XML; Charset=UTF-8], Server=[Microsoft-IIS/8.0], Set-Cookie=[ASPSESSIONIDCQDATBQD=JKPPMNEBLHPMDBAGIGAPGHDG; path=/], X-Powered-By=[ASP.NET], Date=[Mon, 10 Jul 2017 14:01:52 GMT]}
+2017-07-10 16:01:53.071  INFO 1352 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <TCOML version="3.0">
 <TransferOnly>
 <Booking>
 <Confirm>
 <BookingType>TEST BOOKING</BookingType>
 <VoucherInfo>
-<BookingRef>R1004874</BookingRef>
+<BookingRef>R1004881</BookingRef>
 <BookingDate>10/07/2017</BookingDate>
 <BookingStatus>Confirmed</BookingStatus>
 <DeparturePointCode>PMI</DeparturePointCode>
@@ -567,8 +604,8 @@ Running com.testepl.a2btransfer.AvailTest
 	<LastName>de Alejandro</LastName>
 	<FirstName>Juanjo</FirstName>
 	<Title>Sr</Title>
-	<Phone>972652489</Phone>
-	<Mobile>628629988</Mobile>
+	<Phone>34972652489</Phone>
+	<Mobile>34628629988</Mobile>
 	<CountryCode>ES</CountryCode>
 	<Email>juanjo.alejandro@gmail</Email>
 </Client>
@@ -596,7 +633,7 @@ Running com.testepl.a2btransfer.AvailTest
 <OutboundTransferDetails>
 <OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin>
 <OutboundDestination>Alaro</OutboundDestination>
-<DepInfo>Information about departure</DepInfo>
+<DepInfo>VUE5598</DepInfo>
 <ArrDate>01/09/2017</ArrDate>
 <ArrTime>1000</ArrTime>
 <OutboundPickupDate/>
@@ -639,19 +676,19 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
 </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:37.144  INFO 9620 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
-2017-07-10 13:34:37.145  INFO 9620 --- [nio-8080-exec-3] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.BookingRs
-2017-07-10 13:34:37.145  INFO 9620 --- [nio-8080-exec-3] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
-2017-07-10 13:34:37.246  INFO 9620 --- [nio-8080-exec-3] c.e.a.services.A2BTransferClientService  : Se va a llamar para obtener los gastos de cancelación
-2017-07-10 13:34:42.282  INFO 9620 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
-2017-07-10 13:34:42.283  INFO 9620 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : URI         : http://test.xmlp2p.com/xml/
-2017-07-10 13:34:42.283  INFO 9620 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
-2017-07-10 13:34:42.283  INFO 9620 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[262]}
-2017-07-10 13:34:42.289  INFO 9620 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML sess="" version="NEWFORMAT">
+2017-07-10 16:01:53.071  INFO 1352 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-07-10 16:01:53.072  INFO 1352 --- [nio-8080-exec-3] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.BookingRs
+2017-07-10 16:01:53.072  INFO 1352 --- [nio-8080-exec-3] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-07-10 16:01:53.166  INFO 1352 --- [nio-8080-exec-3] c.e.a.services.A2BTransferClientService  : Se va a llamar para obtener los gastos de cancelación
+2017-07-10 16:01:58.193  INFO 1352 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-07-10 16:01:58.193  INFO 1352 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : URI         : http://test.xmlp2p.com/xml/
+2017-07-10 16:01:58.193  INFO 1352 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-07-10 16:01:58.194  INFO 1352 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[262]}
+2017-07-10 16:01:58.200  INFO 1352 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML sess="" version="NEWFORMAT">
     <TransferOnly>
         <Booking>
             <CancelFees>
-                <BookingRef>R1004874</BookingRef>
+                <BookingRef>R1004881</BookingRef>
                 <Username>Juacho</Username>
                 <Password>Juancho123</Password>
             </CancelFees>
@@ -659,45 +696,45 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
     </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:42.289  INFO 9620 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
-2017-07-10 13:34:42.397  INFO 9620 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
-2017-07-10 13:34:42.397  INFO 9620 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
-2017-07-10 13:34:42.397  INFO 9620 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Status text  : OK
-2017-07-10 13:34:42.397  INFO 9620 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Cache-Control=[private], Content-Length=[155], Content-Type=[text/XML; Charset=UTF-8], Server=[Microsoft-IIS/8.0], Set-Cookie=[ASPSESSIONIDSAQRBSTS=IPJGNAFBCKOJEADECEBPJALB; path=/], X-Powered-By=[ASP.NET], Date=[Mon, 10 Jul 2017 11:34:41 GMT]}
-2017-07-10 13:34:42.400  INFO 9620 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+2017-07-10 16:01:58.201  INFO 1352 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-07-10 16:01:58.301  INFO 1352 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-07-10 16:01:58.302  INFO 1352 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-07-10 16:01:58.302  INFO 1352 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Status text  : OK
+2017-07-10 16:01:58.302  INFO 1352 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Cache-Control=[private], Content-Length=[155], Content-Type=[text/XML; Charset=UTF-8], Server=[Microsoft-IIS/8.0], Set-Cookie=[ASPSESSIONIDSAQRBSTS=LEMLNAFBKNOKGNMNPDHBJLMN; path=/], X-Powered-By=[ASP.NET], Date=[Mon, 10 Jul 2017 14:01:57 GMT]}
+2017-07-10 16:01:58.304  INFO 1352 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <TCOML version="3.0">
 <TransferOnly>
 <Booking>
-<BookingRef>R1004874</BookingRef>
+<BookingRef>R1004881</BookingRef>
 <CancelFees>0.00</CancelFees>
 </Booking>
 </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:42.400  INFO 9620 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
-2017-07-10 13:34:42.400  INFO 9620 --- [nio-8080-exec-3] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.CancelFeeRs
-2017-07-10 13:34:42.400  INFO 9620 --- [nio-8080-exec-3] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
-2017-07-10 13:34:42.412  INFO 9620 --- [nio-8080-exec-3] c.e.a.services.A2BTransferClientService  : Se ha finalizado con el proceso de consulta de Fees
-2017-07-10 13:34:42.515  INFO 9620 --- [nio-8080-exec-3] c.e.a2btransfer.services.PolicyService   : Se recoge 350 Neto = S
-2017-07-10 13:34:42.620  INFO 9620 --- [nio-8080-exec-3] c.e.a2btransfer.services.PolicyService   : Precio anterior =43.38 / Precio final =47.72
-2017-07-10 13:34:42.620  INFO 9620 --- [nio-8080-exec-3] c.e.a2btransfer.services.PolicyService   : Voy a buscar el sistema 84
-2017-07-10 13:34:42.938  INFO 9620 --- [nio-8080-exec-3] c.e.a.repositories.AgencyRepositoryImpl  : Respuesta de comisión de cliente 11.5
-2017-07-10 13:34:42.938  INFO 9620 --- [nio-8080-exec-3] c.e.a2btransfer.services.PolicyService   : ____________________BREAKDOWN____________________________________
-2017-07-10 13:34:42.938  INFO 9620 --- [nio-8080-exec-3] c.e.a2btransfer.services.PolicyService   : PVP#47,72
-2017-07-10 13:34:42.938  INFO 9620 --- [nio-8080-exec-3] c.e.a2btransfer.services.PolicyService   : COMAG#11.5#5,49
-2017-07-10 13:34:42.939  INFO 9620 --- [nio-8080-exec-3] c.e.a2btransfer.services.PolicyService   : TAX#IVA21#1,15
-2017-07-10 13:34:42.939  INFO 9620 --- [nio-8080-exec-3] c.e.a2btransfer.services.PolicyService   : __________________________________________________________________
-2017-07-10 13:34:42.978  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
-2017-07-10 13:34:42.979  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
-2017-07-10 13:34:42.979  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status text  : null
-2017-07-10 13:34:42.979  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Content-Type=[application/xml], Transfer-Encoding=[chunked], Date=[Mon, 10 Jul 2017 11:34:42 GMT]}
-2017-07-10 13:34:42.984  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML cancelFee="0.0" version="3.0">
+2017-07-10 16:01:58.304  INFO 1352 --- [nio-8080-exec-3] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-07-10 16:01:58.304  INFO 1352 --- [nio-8080-exec-3] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.CancelFeeRs
+2017-07-10 16:01:58.305  INFO 1352 --- [nio-8080-exec-3] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-07-10 16:01:58.317  INFO 1352 --- [nio-8080-exec-3] c.e.a.services.A2BTransferClientService  : Se ha finalizado con el proceso de consulta de Fees
+2017-07-10 16:01:58.419  INFO 1352 --- [nio-8080-exec-3] c.e.a2btransfer.services.PolicyService   : Se recoge 350 Neto = S
+2017-07-10 16:01:58.522  INFO 1352 --- [nio-8080-exec-3] c.e.a2btransfer.services.PolicyService   : Precio anterior =43.38 / Precio final =47.72
+2017-07-10 16:01:58.522  INFO 1352 --- [nio-8080-exec-3] c.e.a2btransfer.services.PolicyService   : Voy a buscar el sistema 84
+2017-07-10 16:01:58.833  INFO 1352 --- [nio-8080-exec-3] c.e.a.repositories.AgencyRepositoryImpl  : Respuesta de comisión de cliente 11.5
+2017-07-10 16:01:58.834  INFO 1352 --- [nio-8080-exec-3] c.e.a2btransfer.services.PolicyService   : ____________________BREAKDOWN____________________________________
+2017-07-10 16:01:58.834  INFO 1352 --- [nio-8080-exec-3] c.e.a2btransfer.services.PolicyService   : PVP#47,72
+2017-07-10 16:01:58.834  INFO 1352 --- [nio-8080-exec-3] c.e.a2btransfer.services.PolicyService   : COMAG#11.5#5,49
+2017-07-10 16:01:58.835  INFO 1352 --- [nio-8080-exec-3] c.e.a2btransfer.services.PolicyService   : TAX#IVA21#1,15
+2017-07-10 16:01:58.835  INFO 1352 --- [nio-8080-exec-3] c.e.a2btransfer.services.PolicyService   : __________________________________________________________________
+2017-07-10 16:01:58.870  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-07-10 16:01:58.871  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-07-10 16:01:58.871  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status text  : null
+2017-07-10 16:01:58.871  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Content-Type=[application/xml], Transfer-Encoding=[chunked], Date=[Mon, 10 Jul 2017 14:01:58 GMT]}
+2017-07-10 16:01:58.880  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML cancelFee="0.0" version="3.0">
     <TransferOnly>
         <Booking>
             <Confirm>
                 <BookingType>TEST BOOKING</BookingType>
                 <VoucherInfo>
-                    <BookingRef>R1004874</BookingRef>
+                    <BookingRef>R1004881</BookingRef>
                     <BookingDate>10/07/2017</BookingDate>
                     <BookingStatus>Confirmed</BookingStatus>
                     <DeparturePointCode>PMI</DeparturePointCode>
@@ -707,8 +744,8 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
                         <LastName>de Alejandro</LastName>
                         <FirstName>Juanjo</FirstName>
                         <Title>Sr</Title>
-                        <Phone>972652489</Phone>
-                        <Mobile>628629988</Mobile>
+                        <Phone>34972652489</Phone>
+                        <Mobile>34628629988</Mobile>
                         <CountryCode>ES</CountryCode>
                         <Email>juanjo.alejandro@gmail</Email>
                     </Client>
@@ -736,7 +773,7 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
                     <OutboundTransferDetails>
                         <OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin>
                         <OutboundDestination>Alaro</OutboundDestination>
-                        <DepInfo>Information about departure</DepInfo>
+                        <DepInfo>VUE5598</DepInfo>
                         <ArrDate>01/09/2017</ArrDate>
                         <ArrTime>1000</ArrTime>
                         <NumUnits>1</NumUnits>
@@ -780,22 +817,22 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
     <breakdown>TAX#IVA21#1,15</breakdown>
 </TCOML>
 
-2017-07-10 13:34:42.984  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
-2017-07-10 13:34:42.985  INFO 9620 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.BookingRs
-2017-07-10 13:34:42.985  INFO 9620 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
-2017-07-10 13:34:43.091  INFO 9620 --- [           main] com.testepl.a2btransfer.AvailTest        : Datos de la agencia:
-2017-07-10 13:34:43.091  INFO 9620 --- [           main] com.testepl.a2btransfer.AvailTest        : Nombre PRUEBAS A2B
-2017-07-10 13:34:43.092  INFO 9620 --- [           main] com.testepl.a2btransfer.AvailTest        : PRUEBAS A2B, PRUEBAS A2B
-2017-07-10 13:34:43.093  INFO 9620 --- [           main] com.testepl.a2btransfer.AvailTest        : 4444444
-2017-07-10 13:34:43.104  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
-2017-07-10 13:34:43.104  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : URI         : http://localhost:8080/a2btransfer/cancel
-2017-07-10 13:34:43.104  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
-2017-07-10 13:34:43.104  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[246]}
-2017-07-10 13:34:43.107  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML version="NEWFORMAT">
+2017-07-10 16:01:58.880  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-07-10 16:01:58.880  INFO 1352 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.BookingRs
+2017-07-10 16:01:58.881  INFO 1352 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-07-10 16:01:58.987  INFO 1352 --- [           main] com.testepl.a2btransfer.AvailTest        : Datos de la agencia:
+2017-07-10 16:01:58.987  INFO 1352 --- [           main] com.testepl.a2btransfer.AvailTest        : Nombre PRUEBAS A2B
+2017-07-10 16:01:58.989  INFO 1352 --- [           main] com.testepl.a2btransfer.AvailTest        : PRUEBAS A2B, PRUEBAS A2B
+2017-07-10 16:01:58.989  INFO 1352 --- [           main] com.testepl.a2btransfer.AvailTest        : 4444444
+2017-07-10 16:01:58.998  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-07-10 16:01:58.999  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : URI         : http://localhost:8080/a2btransfer/cancel
+2017-07-10 16:01:58.999  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-07-10 16:01:58.999  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[246]}
+2017-07-10 16:01:59.002  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML version="NEWFORMAT">
     <TransferOnly>
         <Booking>
             <Cancel>
-                <BookingRef>R1004874</BookingRef>
+                <BookingRef>R1004881</BookingRef>
                 <Username>Juacho</Username>
                 <Password>Juancho123</Password>
             </Cancel>
@@ -803,16 +840,16 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
     </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:43.107  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
-2017-07-10 13:34:43.117  INFO 9620 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
-2017-07-10 13:34:43.118  INFO 9620 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : URI         : http://test.xmlp2p.com/xml/
-2017-07-10 13:34:43.118  INFO 9620 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
-2017-07-10 13:34:43.118  INFO 9620 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[246]}
-2017-07-10 13:34:43.120  INFO 9620 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML version="NEWFORMAT">
+2017-07-10 16:01:59.002  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-07-10 16:01:59.021  INFO 1352 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-07-10 16:01:59.021  INFO 1352 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : URI         : http://test.xmlp2p.com/xml/
+2017-07-10 16:01:59.021  INFO 1352 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-07-10 16:01:59.021  INFO 1352 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[246]}
+2017-07-10 16:01:59.026  INFO 1352 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML version="NEWFORMAT">
     <TransferOnly>
         <Booking>
             <Cancel>
-                <BookingRef>R1004874</BookingRef>
+                <BookingRef>R1004881</BookingRef>
                 <Username>Juacho</Username>
                 <Password>Juancho123</Password>
             </Cancel>
@@ -820,49 +857,49 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
     </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:43.121  INFO 9620 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
-2017-07-10 13:34:43.444  INFO 9620 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
-2017-07-10 13:34:43.444  INFO 9620 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
-2017-07-10 13:34:43.444  INFO 9620 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : Status text  : OK
-2017-07-10 13:34:43.444  INFO 9620 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Cache-Control=[private], Content-Length=[243], Content-Type=[text/XML; Charset=UTF-8], Server=[Microsoft-IIS/8.0], Set-Cookie=[ASPSESSIONIDAACQSCAT=PAPMMNEBLEHOPKGOGLMLJJDG; path=/], X-Powered-By=[ASP.NET], Date=[Mon, 10 Jul 2017 11:34:43 GMT]}
-2017-07-10 13:34:43.446  INFO 9620 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<TCOML company="SSH" sess="201707101234435256620109" version="3.0">
+2017-07-10 16:01:59.027  INFO 1352 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-07-10 16:01:59.471  INFO 1352 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-07-10 16:01:59.471  INFO 1352 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-07-10 16:01:59.471  INFO 1352 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : Status text  : OK
+2017-07-10 16:01:59.472  INFO 1352 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Cache-Control=[private], Content-Length=[243], Content-Type=[text/XML; Charset=UTF-8], Server=[Microsoft-IIS/8.0], Set-Cookie=[ASPSESSIONIDCQDATBQD=JLPPMNEBFKAGOEIAIMFBIHAH; path=/], X-Powered-By=[ASP.NET], Date=[Mon, 10 Jul 2017 14:01:59 GMT]}
+2017-07-10 16:01:59.473  INFO 1352 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TCOML company="SSH" sess="201707101501591498471915" version="3.0">
 <TransferOnly>
 <Booking>
-<BookingRef>R1004874</BookingRef>
+<BookingRef>R1004881</BookingRef>
 <CancelFees>0.00</CancelFees>
 <BookingStatus>Cancelled</BookingStatus>
 </Booking>
 </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:43.446  INFO 9620 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
-2017-07-10 13:34:43.446  INFO 9620 --- [nio-8080-exec-4] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.CancelRs
-2017-07-10 13:34:43.447  INFO 9620 --- [nio-8080-exec-4] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
-2017-07-10 13:34:43.465  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
-2017-07-10 13:34:43.466  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
-2017-07-10 13:34:43.466  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status text  : null
-2017-07-10 13:34:43.466  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Content-Type=[application/xml], Transfer-Encoding=[chunked], Date=[Mon, 10 Jul 2017 11:34:42 GMT]}
-2017-07-10 13:34:43.468  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML company="SSH" sess="201707101234435256620109" version="3.0">
+2017-07-10 16:01:59.474  INFO 1352 --- [nio-8080-exec-4] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-07-10 16:01:59.474  INFO 1352 --- [nio-8080-exec-4] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.CancelRs
+2017-07-10 16:01:59.474  INFO 1352 --- [nio-8080-exec-4] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-07-10 16:01:59.488  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-07-10 16:01:59.488  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-07-10 16:01:59.488  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status text  : null
+2017-07-10 16:01:59.488  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Content-Type=[application/xml], Transfer-Encoding=[chunked], Date=[Mon, 10 Jul 2017 14:01:58 GMT]}
+2017-07-10 16:01:59.490  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML company="SSH" sess="201707101501591498471915" version="3.0">
     <TransferOnly>
         <Booking>
-            <BookingRef>R1004874</BookingRef>
+            <BookingRef>R1004881</BookingRef>
             <CancelFees>0.0</CancelFees>
             <BookingStatus>Cancelled</BookingStatus>
         </Booking>
     </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:43.468  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
-2017-07-10 13:34:43.469  INFO 9620 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.CancelRs
-2017-07-10 13:34:43.469  INFO 9620 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
-2017-07-10 13:34:43.481  INFO 9620 --- [           main] com.testepl.a2btransfer.AvailTest        : Se pide disponibilidad por fechas
-2017-07-10 13:34:43.482  INFO 9620 --- [           main] com.testepl.a2btransfer.AvailTest        : App Name-->A2bTransfer
-2017-07-10 13:34:43.483  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
-2017-07-10 13:34:43.483  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : URI         : http://localhost:8080/a2btransfer/avail
-2017-07-10 13:34:43.483  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
-2017-07-10 13:34:43.483  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[669]}
-2017-07-10 13:34:43.486  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML version="NEWFORMAT">
+2017-07-10 16:01:59.490  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-07-10 16:01:59.491  INFO 1352 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.CancelRs
+2017-07-10 16:01:59.491  INFO 1352 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-07-10 16:01:59.504  INFO 1352 --- [           main] com.testepl.a2btransfer.AvailTest        : Se pide disponibilidad por fechas
+2017-07-10 16:01:59.504  INFO 1352 --- [           main] com.testepl.a2btransfer.AvailTest        : App Name-->A2bTransfer
+2017-07-10 16:01:59.505  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-07-10 16:01:59.505  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : URI         : http://localhost:8080/a2btransfer/avail
+2017-07-10 16:01:59.505  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-07-10 16:01:59.505  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[669]}
+2017-07-10 16:01:59.508  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML version="NEWFORMAT">
     <Agency>1329</Agency>
     <System>84</System>
     <TransferOnly>
@@ -891,14 +928,14 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
     </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:43.486  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
-2017-07-10 13:34:43.500  INFO 9620 --- [nio-8080-exec-5] c.e.a.controller.A2BController           : ====================== Avail Controller ======================
-2017-07-10 13:34:43.500  INFO 9620 --- [nio-8080-exec-5] c.e.a.services.A2BTransferClientService  : Se va a llamar al metodo de disponibilidad
-2017-07-10 13:34:43.501  INFO 9620 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
-2017-07-10 13:34:43.502  INFO 9620 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : URI         : http://test.xmlp2p.com/xml/
-2017-07-10 13:34:43.502  INFO 9620 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
-2017-07-10 13:34:43.502  INFO 9620 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[669]}
-2017-07-10 13:34:43.511  INFO 9620 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML version="NEWFORMAT">
+2017-07-10 16:01:59.509  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-07-10 16:01:59.518  INFO 1352 --- [nio-8080-exec-5] c.e.a.controller.A2BController           : ====================== Avail Controller ======================
+2017-07-10 16:01:59.518  INFO 1352 --- [nio-8080-exec-5] c.e.a.services.A2BTransferClientService  : Se va a llamar al metodo de disponibilidad
+2017-07-10 16:01:59.521  INFO 1352 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-07-10 16:01:59.522  INFO 1352 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : URI         : http://test.xmlp2p.com/xml/
+2017-07-10 16:01:59.522  INFO 1352 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-07-10 16:01:59.524  INFO 1352 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[669]}
+2017-07-10 16:01:59.527  INFO 1352 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML version="NEWFORMAT">
     <Agency>1329</Agency>
     <System>84</System>
     <TransferOnly>
@@ -927,13 +964,13 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
     </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:43.511  INFO 9620 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
-2017-07-10 13:34:44.265  INFO 9620 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
-2017-07-10 13:34:44.266  INFO 9620 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
-2017-07-10 13:34:44.266  INFO 9620 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : Status text  : OK
-2017-07-10 13:34:44.266  INFO 9620 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Cache-Control=[private], Content-Length=[2840], Content-Type=[text/XML; Charset=UTF-8], Server=[Microsoft-IIS/8.0], Set-Cookie=[ASPSESSIONIDCQDATBQD=BAPKMNEBOONFCBPOFBNKFIBE; path=/], X-Powered-By=[ASP.NET], Date=[Mon, 10 Jul 2017 11:34:44 GMT]}
-2017-07-10 13:34:44.270  INFO 9620 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<TCOML company="SSH" sess="201707101234433242375016" version="3.0">
+2017-07-10 16:01:59.528  INFO 1352 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-07-10 16:02:00.139  INFO 1352 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-07-10 16:02:00.139  INFO 1352 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-07-10 16:02:00.139  INFO 1352 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : Status text  : OK
+2017-07-10 16:02:00.139  INFO 1352 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Cache-Control=[private], Content-Length=[2840], Content-Type=[text/XML; Charset=UTF-8], Server=[Microsoft-IIS/8.0], Set-Cookie=[ASPSESSIONIDSAQRBSTS=PEMLNAFBNEPEHCEPHHBMNHFH; path=/], X-Powered-By=[ASP.NET], Date=[Mon, 10 Jul 2017 14:01:59 GMT]}
+2017-07-10 16:02:00.144  INFO 1352 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TCOML company="SSH" sess="201707101501592755268692" version="3.0">
 <TransferOnly>
 <Availability>
 <A2BDeepLink>http://www.a2btransfers.com/</A2BDeepLink>
@@ -1014,18 +1051,18 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
 </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:44.270  INFO 9620 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
-2017-07-10 13:34:44.270  INFO 9620 --- [nio-8080-exec-5] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.AvailRs
-2017-07-10 13:34:44.270  INFO 9620 --- [nio-8080-exec-5] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
-2017-07-10 13:34:44.326  INFO 9620 --- [nio-8080-exec-5] c.e.a2btransfer.services.PolicyService   : Se recoge 350 Neto = S
-2017-07-10 13:34:44.428  INFO 9620 --- [nio-8080-exec-5] c.e.a2btransfer.services.PolicyService   : Precio anterior =43.38 / Precio final =47.72
-2017-07-10 13:34:44.481  INFO 9620 --- [nio-8080-exec-5] c.e.a2btransfer.services.PolicyService   : Se recoge 350 Neto = S
-2017-07-10 13:34:44.531  INFO 9620 --- [nio-8080-exec-5] c.e.a2btransfer.services.PolicyService   : Precio anterior =67.78 / Precio final =74.56
-2017-07-10 13:34:44.534  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
-2017-07-10 13:34:44.535  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
-2017-07-10 13:34:44.535  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status text  : null
-2017-07-10 13:34:44.535  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Content-Type=[application/xml], Transfer-Encoding=[chunked], Date=[Mon, 10 Jul 2017 11:34:44 GMT]}
-2017-07-10 13:34:44.538  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML company="SSH" sess="201707101234433242375016" version="3.0">
+2017-07-10 16:02:00.144  INFO 1352 --- [nio-8080-exec-5] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-07-10 16:02:00.144  INFO 1352 --- [nio-8080-exec-5] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.AvailRs
+2017-07-10 16:02:00.144  INFO 1352 --- [nio-8080-exec-5] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-07-10 16:02:00.200  INFO 1352 --- [nio-8080-exec-5] c.e.a2btransfer.services.PolicyService   : Se recoge 350 Neto = S
+2017-07-10 16:02:00.302  INFO 1352 --- [nio-8080-exec-5] c.e.a2btransfer.services.PolicyService   : Precio anterior =43.38 / Precio final =47.72
+2017-07-10 16:02:00.356  INFO 1352 --- [nio-8080-exec-5] c.e.a2btransfer.services.PolicyService   : Se recoge 350 Neto = S
+2017-07-10 16:02:00.406  INFO 1352 --- [nio-8080-exec-5] c.e.a2btransfer.services.PolicyService   : Precio anterior =67.78 / Precio final =74.56
+2017-07-10 16:02:00.413  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-07-10 16:02:00.414  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-07-10 16:02:00.414  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status text  : null
+2017-07-10 16:02:00.414  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Content-Type=[application/xml], Transfer-Encoding=[chunked], Date=[Mon, 10 Jul 2017 14:02:00 GMT]}
+2017-07-10 16:02:00.423  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML company="SSH" sess="201707101501592755268692" version="3.0">
     <TransferOnly>
         <Availability>
             <A2BDeepLink>http://www.a2btransfers.com/</A2BDeepLink>
@@ -1106,16 +1143,16 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
     </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:44.539  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
-2017-07-10 13:34:44.539  INFO 9620 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.AvailRs
-2017-07-10 13:34:44.539  INFO 9620 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
-2017-07-10 13:34:44.542  INFO 9620 --- [           main] com.testepl.a2btransfer.AvailTest        : OK No hay errores en la disponibilidad
-2017-07-10 13:34:44.542  INFO 9620 --- [           main] com.testepl.a2btransfer.AvailTest        : Se escoge index -->0
-2017-07-10 13:34:44.543  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
-2017-07-10 13:34:44.543  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : URI         : http://localhost:8080/a2btransfer/block
-2017-07-10 13:34:44.543  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
-2017-07-10 13:34:44.544  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[642]}
-2017-07-10 13:34:44.547  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML agency="1329" date="30/07/17" system="84" version="NEWFORMAT">
+2017-07-10 16:02:00.423  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-07-10 16:02:00.424  INFO 1352 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.AvailRs
+2017-07-10 16:02:00.424  INFO 1352 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-07-10 16:02:00.429  INFO 1352 --- [           main] com.testepl.a2btransfer.AvailTest        : OK No hay errores en la disponibilidad
+2017-07-10 16:02:00.429  INFO 1352 --- [           main] com.testepl.a2btransfer.AvailTest        : Se escoge index -->0
+2017-07-10 16:02:00.431  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-07-10 16:02:00.431  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : URI         : http://localhost:8080/a2btransfer/block
+2017-07-10 16:02:00.431  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-07-10 16:02:00.431  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[642]}
+2017-07-10 16:02:00.435  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML agency="1329" date="30/07/17" system="84" version="NEWFORMAT">
     <TransferOnly>
         <Booking>
             <Reserve>
@@ -1140,14 +1177,14 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
     </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:44.547  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
-2017-07-10 13:34:44.554  INFO 9620 --- [nio-8080-exec-6] c.e.a.controller.A2BController           : ====================== Block Controller ======================
-2017-07-10 13:34:44.554  INFO 9620 --- [nio-8080-exec-6] c.e.a.services.A2BTransferClientService  : Se va a llamar al metodo de bloqueo
-2017-07-10 13:34:44.556  INFO 9620 --- [nio-8080-exec-6] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
-2017-07-10 13:34:44.556  INFO 9620 --- [nio-8080-exec-6] c.e.a.i.LoggingRequestInterceptor        : URI         : http://test.xmlp2p.com/xml/
-2017-07-10 13:34:44.556  INFO 9620 --- [nio-8080-exec-6] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
-2017-07-10 13:34:44.557  INFO 9620 --- [nio-8080-exec-6] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[642]}
-2017-07-10 13:34:44.560  INFO 9620 --- [nio-8080-exec-6] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML agency="1329" date="30/07/17" system="84" version="NEWFORMAT">
+2017-07-10 16:02:00.436  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-07-10 16:02:00.443  INFO 1352 --- [nio-8080-exec-6] c.e.a.controller.A2BController           : ====================== Block Controller ======================
+2017-07-10 16:02:00.443  INFO 1352 --- [nio-8080-exec-6] c.e.a.services.A2BTransferClientService  : Se va a llamar al metodo de bloqueo
+2017-07-10 16:02:00.444  INFO 1352 --- [nio-8080-exec-6] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-07-10 16:02:00.444  INFO 1352 --- [nio-8080-exec-6] c.e.a.i.LoggingRequestInterceptor        : URI         : http://test.xmlp2p.com/xml/
+2017-07-10 16:02:00.444  INFO 1352 --- [nio-8080-exec-6] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-07-10 16:02:00.444  INFO 1352 --- [nio-8080-exec-6] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[642]}
+2017-07-10 16:02:00.447  INFO 1352 --- [nio-8080-exec-6] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML agency="1329" date="30/07/17" system="84" version="NEWFORMAT">
     <TransferOnly>
         <Booking>
             <Reserve>
@@ -1172,17 +1209,17 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
     </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:44.560  INFO 9620 --- [nio-8080-exec-6] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
-2017-07-10 13:34:44.786  INFO 9620 --- [nio-8080-exec-6] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
-2017-07-10 13:34:44.786  INFO 9620 --- [nio-8080-exec-6] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
-2017-07-10 13:34:44.786  INFO 9620 --- [nio-8080-exec-6] c.e.a.i.LoggingRequestInterceptor        : Status text  : OK
-2017-07-10 13:34:44.787  INFO 9620 --- [nio-8080-exec-6] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Cache-Control=[private], Content-Length=[261], Content-Type=[text/XML; Charset=UTF-8], Server=[Microsoft-IIS/8.0], Set-Cookie=[ASPSESSIONIDCQBQAABC=LLEPDHDBBEONHLBCHDBHMPJK; path=/], X-Powered-By=[ASP.NET], Date=[Mon, 10 Jul 2017 11:34:46 GMT]}
-2017-07-10 13:34:44.789  INFO 9620 --- [nio-8080-exec-6] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<TCOML company="SSH" sess="201707101234468844068229" version="3.0">
+2017-07-10 16:02:00.447  INFO 1352 --- [nio-8080-exec-6] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-07-10 16:02:00.645  INFO 1352 --- [nio-8080-exec-6] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-07-10 16:02:00.646  INFO 1352 --- [nio-8080-exec-6] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-07-10 16:02:00.646  INFO 1352 --- [nio-8080-exec-6] c.e.a.i.LoggingRequestInterceptor        : Status text  : OK
+2017-07-10 16:02:00.646  INFO 1352 --- [nio-8080-exec-6] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Cache-Control=[private], Content-Length=[261], Content-Type=[text/XML; Charset=UTF-8], Server=[Microsoft-IIS/8.0], Set-Cookie=[ASPSESSIONIDCQTQTSBC=FJMAKDABLFLLMHFEGELHNAJI; path=/], X-Powered-By=[ASP.NET], Date=[Mon, 10 Jul 2017 14:01:55 GMT]}
+2017-07-10 16:02:00.650  INFO 1352 --- [nio-8080-exec-6] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TCOML company="SSH" sess="201707101501563519544303" version="3.0">
 <TransferOnly>
 <Booking>
 <Reserve>
-<TransacNo>11873300</TransacNo>
+<TransacNo>11875826</TransacNo>
 <HolidayValue>43.38</HolidayValue>
 <CurrencyCode>EUR</CurrencyCode>
 </Reserve>
@@ -1190,27 +1227,27 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
 </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:44.789  INFO 9620 --- [nio-8080-exec-6] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
-2017-07-10 13:34:44.790  INFO 9620 --- [nio-8080-exec-6] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.ReserveRs
-2017-07-10 13:34:44.790  INFO 9620 --- [nio-8080-exec-6] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
-2017-07-10 13:34:44.844  INFO 9620 --- [nio-8080-exec-6] c.e.a2btransfer.services.PolicyService   : Se recoge 350 Neto = S
-2017-07-10 13:34:44.947  INFO 9620 --- [nio-8080-exec-6] c.e.a2btransfer.services.PolicyService   : Precio anterior =43.38 / Precio final =47.72
-2017-07-10 13:34:44.947  INFO 9620 --- [nio-8080-exec-6] c.e.a2btransfer.services.PolicyService   : Voy a buscar el sistema 84
-2017-07-10 13:34:45.259  INFO 9620 --- [nio-8080-exec-6] c.e.a.repositories.AgencyRepositoryImpl  : Respuesta de comisión de cliente 11.5
-2017-07-10 13:34:45.260  INFO 9620 --- [nio-8080-exec-6] c.e.a2btransfer.services.PolicyService   : ____________________BREAKDOWN____________________________________
-2017-07-10 13:34:45.260  INFO 9620 --- [nio-8080-exec-6] c.e.a2btransfer.services.PolicyService   : PVP#47,72
-2017-07-10 13:34:45.260  INFO 9620 --- [nio-8080-exec-6] c.e.a2btransfer.services.PolicyService   : COMAG#11.5#5,49
-2017-07-10 13:34:45.260  INFO 9620 --- [nio-8080-exec-6] c.e.a2btransfer.services.PolicyService   : TAX#IVA21#1,15
-2017-07-10 13:34:45.261  INFO 9620 --- [nio-8080-exec-6] c.e.a2btransfer.services.PolicyService   : __________________________________________________________________
-2017-07-10 13:34:45.265  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
-2017-07-10 13:34:45.265  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
-2017-07-10 13:34:45.266  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status text  : null
-2017-07-10 13:34:45.266  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Content-Type=[application/xml], Transfer-Encoding=[chunked], Date=[Mon, 10 Jul 2017 11:34:44 GMT]}
-2017-07-10 13:34:45.272  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML company="SSH" sess="201707101234468844068229" version="3.0">
+2017-07-10 16:02:00.651  INFO 1352 --- [nio-8080-exec-6] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-07-10 16:02:00.651  INFO 1352 --- [nio-8080-exec-6] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.ReserveRs
+2017-07-10 16:02:00.651  INFO 1352 --- [nio-8080-exec-6] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-07-10 16:02:00.707  INFO 1352 --- [nio-8080-exec-6] c.e.a2btransfer.services.PolicyService   : Se recoge 350 Neto = S
+2017-07-10 16:02:00.812  INFO 1352 --- [nio-8080-exec-6] c.e.a2btransfer.services.PolicyService   : Precio anterior =43.38 / Precio final =47.72
+2017-07-10 16:02:00.813  INFO 1352 --- [nio-8080-exec-6] c.e.a2btransfer.services.PolicyService   : Voy a buscar el sistema 84
+2017-07-10 16:02:01.124  INFO 1352 --- [nio-8080-exec-6] c.e.a.repositories.AgencyRepositoryImpl  : Respuesta de comisión de cliente 11.5
+2017-07-10 16:02:01.125  INFO 1352 --- [nio-8080-exec-6] c.e.a2btransfer.services.PolicyService   : ____________________BREAKDOWN____________________________________
+2017-07-10 16:02:01.125  INFO 1352 --- [nio-8080-exec-6] c.e.a2btransfer.services.PolicyService   : PVP#47,72
+2017-07-10 16:02:01.125  INFO 1352 --- [nio-8080-exec-6] c.e.a2btransfer.services.PolicyService   : COMAG#11.5#5,49
+2017-07-10 16:02:01.125  INFO 1352 --- [nio-8080-exec-6] c.e.a2btransfer.services.PolicyService   : TAX#IVA21#1,15
+2017-07-10 16:02:01.125  INFO 1352 --- [nio-8080-exec-6] c.e.a2btransfer.services.PolicyService   : __________________________________________________________________
+2017-07-10 16:02:01.130  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-07-10 16:02:01.131  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-07-10 16:02:01.131  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status text  : null
+2017-07-10 16:02:01.131  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Content-Type=[application/xml], Transfer-Encoding=[chunked], Date=[Mon, 10 Jul 2017 14:02:00 GMT]}
+2017-07-10 16:02:01.136  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML company="SSH" sess="201707101501563519544303" version="3.0">
     <TransferOnly>
         <Booking>
             <Reserve>
-                <TransacNo>11873300</TransacNo>
+                <TransacNo>11875826</TransacNo>
                 <HolidayValue>47.72</HolidayValue>
                 <CurrencyCode>EUR</CurrencyCode>
             </Reserve>
@@ -1221,20 +1258,20 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
     <breakdown>TAX#IVA21#1,15</breakdown>
 </TCOML>
 
-2017-07-10 13:34:45.272  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
-2017-07-10 13:34:45.272  INFO 9620 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.ReserveRs
-2017-07-10 13:34:45.273  INFO 9620 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
-2017-07-10 13:34:45.277  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
-2017-07-10 13:34:45.278  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : URI         : http://localhost:8080/a2btransfer/book
-2017-07-10 13:34:45.279  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
-2017-07-10 13:34:45.279  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[1000]}
-2017-07-10 13:34:45.285  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML version="NEWFORMAT">
+2017-07-10 16:02:01.137  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-07-10 16:02:01.137  INFO 1352 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.ReserveRs
+2017-07-10 16:02:01.138  INFO 1352 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-07-10 16:02:01.143  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-07-10 16:02:01.143  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : URI         : http://localhost:8080/a2btransfer/book
+2017-07-10 16:02:01.143  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-07-10 16:02:01.143  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[971]}
+2017-07-10 16:02:01.149  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML version="NEWFORMAT">
     <agency>1329</agency>
     <system>84</system>
     <TransferOnly>
         <Booking>
             <Confirm>
-                <TransacNo>11873300</TransacNo>
+                <TransacNo>11875826</TransacNo>
                 <Username>Juacho</Username>
                 <Password>Juancho123</Password>
                 <AgentBref>EPL</AgentBref>
@@ -1243,16 +1280,16 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
                 <AccommodationAddress2>Acoomodation Address 2</AccommodationAddress2>
                 <DepPoint>Casa del cliente</DepPoint>
                 <RetPoint>Return point</RetPoint>
-                <DepInfo>Information about departure</DepInfo>
+                <DepInfo>VUE5598</DepInfo>
                 <RetInfo>Return info</RetInfo>
-                <DepExtraInfo>No extra info</DepExtraInfo>
-                <RetExtraInfo>Ret extra info</RetExtraInfo>
+                <DepExtraInfo>Vueling</DepExtraInfo>
+                <RetExtraInfo>Vueling</RetExtraInfo>
                 <Client>
                     <LastName>de Alejandro</LastName>
                     <FirstName>Juanjo</FirstName>
                     <Title>Sr</Title>
-                    <Phone>972652489</Phone>
-                    <Mobile>628629988</Mobile>
+                    <Phone>34972652489</Phone>
+                    <Mobile>34628629988</Mobile>
                     <CountryCode>ES</CountryCode>
                     <Email>juanjo.alejandro@gmail</Email>
                 </Client>
@@ -1263,20 +1300,20 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
     </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:45.286  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
-2017-07-10 13:34:45.293  INFO 9620 --- [nio-8080-exec-7] c.e.a.controller.A2BController           : ====================== Book Controller ======================
-2017-07-10 13:34:45.293  INFO 9620 --- [nio-8080-exec-7] c.e.a.services.A2BTransferClientService  : Se va a llamar al metodo de reserva
-2017-07-10 13:34:45.294  INFO 9620 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
-2017-07-10 13:34:45.294  INFO 9620 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : URI         : http://test.xmlp2p.com/xml/
-2017-07-10 13:34:45.294  INFO 9620 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
-2017-07-10 13:34:45.294  INFO 9620 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[1000]}
-2017-07-10 13:34:45.297  INFO 9620 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML version="NEWFORMAT">
+2017-07-10 16:02:01.150  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-07-10 16:02:01.163  INFO 1352 --- [nio-8080-exec-7] c.e.a.controller.A2BController           : ====================== Book Controller ======================
+2017-07-10 16:02:01.163  INFO 1352 --- [nio-8080-exec-7] c.e.a.services.A2BTransferClientService  : Se va a llamar al metodo de reserva
+2017-07-10 16:02:01.165  INFO 1352 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-07-10 16:02:01.165  INFO 1352 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : URI         : http://test.xmlp2p.com/xml/
+2017-07-10 16:02:01.165  INFO 1352 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-07-10 16:02:01.165  INFO 1352 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[971]}
+2017-07-10 16:02:01.168  INFO 1352 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML version="NEWFORMAT">
     <agency>1329</agency>
     <system>84</system>
     <TransferOnly>
         <Booking>
             <Confirm>
-                <TransacNo>11873300</TransacNo>
+                <TransacNo>11875826</TransacNo>
                 <Username>Juacho</Username>
                 <Password>Juancho123</Password>
                 <AgentBref>EPL</AgentBref>
@@ -1285,16 +1322,16 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
                 <AccommodationAddress2>Acoomodation Address 2</AccommodationAddress2>
                 <DepPoint>Casa del cliente</DepPoint>
                 <RetPoint>Return point</RetPoint>
-                <DepInfo>Information about departure</DepInfo>
+                <DepInfo>VUE5598</DepInfo>
                 <RetInfo>Return info</RetInfo>
-                <DepExtraInfo>No extra info</DepExtraInfo>
-                <RetExtraInfo>Ret extra info</RetExtraInfo>
+                <DepExtraInfo>Vueling</DepExtraInfo>
+                <RetExtraInfo>Vueling</RetExtraInfo>
                 <Client>
                     <LastName>de Alejandro</LastName>
                     <FirstName>Juanjo</FirstName>
                     <Title>Sr</Title>
-                    <Phone>972652489</Phone>
-                    <Mobile>628629988</Mobile>
+                    <Phone>34972652489</Phone>
+                    <Mobile>34628629988</Mobile>
                     <CountryCode>ES</CountryCode>
                     <Email>juanjo.alejandro@gmail</Email>
                 </Client>
@@ -1305,19 +1342,19 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
     </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:45.297  INFO 9620 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
-2017-07-10 13:34:45.486  INFO 9620 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
-2017-07-10 13:34:45.486  INFO 9620 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
-2017-07-10 13:34:45.487  INFO 9620 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : Status text  : OK
-2017-07-10 13:34:45.487  INFO 9620 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Cache-Control=[private], Content-Length=[3582], Content-Type=[text/XML; Charset=UTF-8], Server=[Microsoft-IIS/8.0], Set-Cookie=[ASPSESSIONIDCQBQAABC=OLEPDHDBGMKOGEACDHCDJGMK; path=/], X-Powered-By=[ASP.NET], Date=[Mon, 10 Jul 2017 11:34:47 GMT]}
-2017-07-10 13:34:45.495  INFO 9620 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+2017-07-10 16:02:01.169  INFO 1352 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-07-10 16:02:01.324  INFO 1352 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-07-10 16:02:01.325  INFO 1352 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-07-10 16:02:01.325  INFO 1352 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : Status text  : OK
+2017-07-10 16:02:01.325  INFO 1352 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Cache-Control=[private], Content-Length=[3566], Content-Type=[text/XML; Charset=UTF-8], Server=[Microsoft-IIS/8.0], Set-Cookie=[ASPSESSIONIDCCDTQCBT=IMNNIDMBDFOFOHBILLMELMIO; path=/], X-Powered-By=[ASP.NET], Date=[Mon, 10 Jul 2017 14:02:01 GMT]}
+2017-07-10 16:02:01.334  INFO 1352 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <TCOML version="3.0">
 <TransferOnly>
 <Booking>
 <Confirm>
 <BookingType>TEST BOOKING</BookingType>
 <VoucherInfo>
-<BookingRef>R1004875</BookingRef>
+<BookingRef>R1004882</BookingRef>
 <BookingDate>10/07/2017</BookingDate>
 <BookingStatus>Confirmed</BookingStatus>
 <DeparturePointCode>PMI</DeparturePointCode>
@@ -1327,8 +1364,8 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
 	<LastName>de Alejandro</LastName>
 	<FirstName>Juanjo</FirstName>
 	<Title>Sr</Title>
-	<Phone>972652489</Phone>
-	<Mobile>628629988</Mobile>
+	<Phone>34972652489</Phone>
+	<Mobile>34628629988</Mobile>
 	<CountryCode>ES</CountryCode>
 	<Email>juanjo.alejandro@gmail</Email>
 </Client>
@@ -1356,7 +1393,7 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
 <OutboundTransferDetails>
 <OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin>
 <OutboundDestination>Alaro</OutboundDestination>
-<DepInfo>Information about departure</DepInfo>
+<DepInfo>VUE5598</DepInfo>
 <ArrDate>01/09/2017</ArrDate>
 <ArrTime>1000</ArrTime>
 <OutboundPickupDate/>
@@ -1399,19 +1436,19 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
 </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:45.496  INFO 9620 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
-2017-07-10 13:34:45.497  INFO 9620 --- [nio-8080-exec-7] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.BookingRs
-2017-07-10 13:34:45.497  INFO 9620 --- [nio-8080-exec-7] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
-2017-07-10 13:34:45.501  INFO 9620 --- [nio-8080-exec-7] c.e.a.services.A2BTransferClientService  : Se va a llamar para obtener los gastos de cancelación
-2017-07-10 13:34:50.503  INFO 9620 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
-2017-07-10 13:34:50.503  INFO 9620 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : URI         : http://test.xmlp2p.com/xml/
-2017-07-10 13:34:50.503  INFO 9620 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
-2017-07-10 13:34:50.504  INFO 9620 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[262]}
-2017-07-10 13:34:50.508  INFO 9620 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML sess="" version="NEWFORMAT">
+2017-07-10 16:02:01.334  INFO 1352 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-07-10 16:02:01.335  INFO 1352 --- [nio-8080-exec-7] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.BookingRs
+2017-07-10 16:02:01.336  INFO 1352 --- [nio-8080-exec-7] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-07-10 16:02:01.341  INFO 1352 --- [nio-8080-exec-7] c.e.a.services.A2BTransferClientService  : Se va a llamar para obtener los gastos de cancelación
+2017-07-10 16:02:06.342  INFO 1352 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-07-10 16:02:06.342  INFO 1352 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : URI         : http://test.xmlp2p.com/xml/
+2017-07-10 16:02:06.343  INFO 1352 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-07-10 16:02:06.343  INFO 1352 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Accept=[application/xml, text/xml, application/*+xml], Content-Type=[application/xml], Content-Length=[262]}
+2017-07-10 16:02:06.348  INFO 1352 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML sess="" version="NEWFORMAT">
     <TransferOnly>
         <Booking>
             <CancelFees>
-                <BookingRef>R1004875</BookingRef>
+                <BookingRef>R1004882</BookingRef>
                 <Username>Juacho</Username>
                 <Password>Juancho123</Password>
             </CancelFees>
@@ -1419,45 +1456,45 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
     </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:50.509  INFO 9620 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
-2017-07-10 13:34:50.609  INFO 9620 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
-2017-07-10 13:34:50.610  INFO 9620 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
-2017-07-10 13:34:50.610  INFO 9620 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : Status text  : OK
-2017-07-10 13:34:50.610  INFO 9620 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Cache-Control=[private], Content-Length=[155], Content-Type=[text/XML; Charset=UTF-8], Server=[Microsoft-IIS/8.0], Set-Cookie=[ASPSESSIONIDCQTQTSBC=MIMLJDABBEGJAONMGBJEFGJD; path=/], X-Powered-By=[ASP.NET], Date=[Mon, 10 Jul 2017 11:34:46 GMT]}
-2017-07-10 13:34:50.616  INFO 9620 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+2017-07-10 16:02:06.348  INFO 1352 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-07-10 16:02:06.454  INFO 1352 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-07-10 16:02:06.454  INFO 1352 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-07-10 16:02:06.454  INFO 1352 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : Status text  : OK
+2017-07-10 16:02:06.455  INFO 1352 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Cache-Control=[private], Content-Length=[155], Content-Type=[text/XML; Charset=UTF-8], Server=[Microsoft-IIS/8.0], Set-Cookie=[ASPSESSIONIDSAQRBSTS=EGMLNAFBFCNJLCJMGIPMDLHP; path=/], X-Powered-By=[ASP.NET], Date=[Mon, 10 Jul 2017 14:02:06 GMT]}
+2017-07-10 16:02:06.459  INFO 1352 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <TCOML version="3.0">
 <TransferOnly>
 <Booking>
-<BookingRef>R1004875</BookingRef>
+<BookingRef>R1004882</BookingRef>
 <CancelFees>0.00</CancelFees>
 </Booking>
 </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:50.616  INFO 9620 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
-2017-07-10 13:34:50.616  INFO 9620 --- [nio-8080-exec-7] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.CancelFeeRs
-2017-07-10 13:34:50.616  INFO 9620 --- [nio-8080-exec-7] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
-2017-07-10 13:34:50.619  INFO 9620 --- [nio-8080-exec-7] c.e.a.services.A2BTransferClientService  : Se ha finalizado con el proceso de consulta de Fees
-2017-07-10 13:34:50.724  INFO 9620 --- [nio-8080-exec-7] c.e.a2btransfer.services.PolicyService   : Se recoge 350 Neto = S
-2017-07-10 13:34:50.829  INFO 9620 --- [nio-8080-exec-7] c.e.a2btransfer.services.PolicyService   : Precio anterior =43.38 / Precio final =47.72
-2017-07-10 13:34:50.830  INFO 9620 --- [nio-8080-exec-7] c.e.a2btransfer.services.PolicyService   : Voy a buscar el sistema 84
-2017-07-10 13:34:51.145  INFO 9620 --- [nio-8080-exec-7] c.e.a.repositories.AgencyRepositoryImpl  : Respuesta de comisión de cliente 11.5
-2017-07-10 13:34:51.146  INFO 9620 --- [nio-8080-exec-7] c.e.a2btransfer.services.PolicyService   : ____________________BREAKDOWN____________________________________
-2017-07-10 13:34:51.146  INFO 9620 --- [nio-8080-exec-7] c.e.a2btransfer.services.PolicyService   : PVP#47,72
-2017-07-10 13:34:51.146  INFO 9620 --- [nio-8080-exec-7] c.e.a2btransfer.services.PolicyService   : COMAG#11.5#5,49
-2017-07-10 13:34:51.146  INFO 9620 --- [nio-8080-exec-7] c.e.a2btransfer.services.PolicyService   : TAX#IVA21#1,15
-2017-07-10 13:34:51.146  INFO 9620 --- [nio-8080-exec-7] c.e.a2btransfer.services.PolicyService   : __________________________________________________________________
-2017-07-10 13:34:51.152  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
-2017-07-10 13:34:51.152  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
-2017-07-10 13:34:51.152  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status text  : null
-2017-07-10 13:34:51.152  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Content-Type=[application/xml], Transfer-Encoding=[chunked], Date=[Mon, 10 Jul 2017 11:34:51 GMT]}
-2017-07-10 13:34:51.160  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML cancelFee="0.0" version="3.0">
+2017-07-10 16:02:06.459  INFO 1352 --- [nio-8080-exec-7] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-07-10 16:02:06.460  INFO 1352 --- [nio-8080-exec-7] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.CancelFeeRs
+2017-07-10 16:02:06.460  INFO 1352 --- [nio-8080-exec-7] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-07-10 16:02:06.463  INFO 1352 --- [nio-8080-exec-7] c.e.a.services.A2BTransferClientService  : Se ha finalizado con el proceso de consulta de Fees
+2017-07-10 16:02:06.567  INFO 1352 --- [nio-8080-exec-7] c.e.a2btransfer.services.PolicyService   : Se recoge 350 Neto = S
+2017-07-10 16:02:06.673  INFO 1352 --- [nio-8080-exec-7] c.e.a2btransfer.services.PolicyService   : Precio anterior =43.38 / Precio final =47.72
+2017-07-10 16:02:06.673  INFO 1352 --- [nio-8080-exec-7] c.e.a2btransfer.services.PolicyService   : Voy a buscar el sistema 84
+2017-07-10 16:02:06.986  INFO 1352 --- [nio-8080-exec-7] c.e.a.repositories.AgencyRepositoryImpl  : Respuesta de comisión de cliente 11.5
+2017-07-10 16:02:06.986  INFO 1352 --- [nio-8080-exec-7] c.e.a2btransfer.services.PolicyService   : ____________________BREAKDOWN____________________________________
+2017-07-10 16:02:06.986  INFO 1352 --- [nio-8080-exec-7] c.e.a2btransfer.services.PolicyService   : PVP#47,72
+2017-07-10 16:02:06.986  INFO 1352 --- [nio-8080-exec-7] c.e.a2btransfer.services.PolicyService   : COMAG#11.5#5,49
+2017-07-10 16:02:06.986  INFO 1352 --- [nio-8080-exec-7] c.e.a2btransfer.services.PolicyService   : TAX#IVA21#1,15
+2017-07-10 16:02:06.986  INFO 1352 --- [nio-8080-exec-7] c.e.a2btransfer.services.PolicyService   : __________________________________________________________________
+2017-07-10 16:02:06.989  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-07-10 16:02:06.989  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-07-10 16:02:06.989  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status text  : null
+2017-07-10 16:02:06.989  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Content-Type=[application/xml], Transfer-Encoding=[chunked], Date=[Mon, 10 Jul 2017 14:02:06 GMT]}
+2017-07-10 16:02:06.992  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8"?><TCOML cancelFee="0.0" version="3.0">
     <TransferOnly>
         <Booking>
             <Confirm>
                 <BookingType>TEST BOOKING</BookingType>
                 <VoucherInfo>
-                    <BookingRef>R1004875</BookingRef>
+                    <BookingRef>R1004882</BookingRef>
                     <BookingDate>10/07/2017</BookingDate>
                     <BookingStatus>Confirmed</BookingStatus>
                     <DeparturePointCode>PMI</DeparturePointCode>
@@ -1467,8 +1504,8 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
                         <LastName>de Alejandro</LastName>
                         <FirstName>Juanjo</FirstName>
                         <Title>Sr</Title>
-                        <Phone>972652489</Phone>
-                        <Mobile>628629988</Mobile>
+                        <Phone>34972652489</Phone>
+                        <Mobile>34628629988</Mobile>
                         <CountryCode>ES</CountryCode>
                         <Email>juanjo.alejandro@gmail</Email>
                     </Client>
@@ -1496,7 +1533,7 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
                     <OutboundTransferDetails>
                         <OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin>
                         <OutboundDestination>Alaro</OutboundDestination>
-                        <DepInfo>Information about departure</DepInfo>
+                        <DepInfo>VUE5598</DepInfo>
                         <ArrDate>01/09/2017</ArrDate>
                         <ArrTime>1000</ArrTime>
                         <NumUnits>1</NumUnits>
@@ -1540,14 +1577,14 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
     <breakdown>TAX#IVA21#1,15</breakdown>
 </TCOML>
 
-2017-07-10 13:34:51.160  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
-2017-07-10 13:34:51.161  INFO 9620 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.BookingRs
-2017-07-10 13:34:51.161  INFO 9620 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
-2017-07-10 13:34:51.273  INFO 9620 --- [           main] com.testepl.a2btransfer.AvailTest        : Datos de la agencia:
-2017-07-10 13:34:51.273  INFO 9620 --- [           main] com.testepl.a2btransfer.AvailTest        : Nombre PRUEBAS A2B
-2017-07-10 13:34:51.273  INFO 9620 --- [           main] com.testepl.a2btransfer.AvailTest        : PRUEBAS A2B, PRUEBAS A2B
-2017-07-10 13:34:51.274  INFO 9620 --- [           main] com.testepl.a2btransfer.AvailTest        : 4444444
-2017-07-10 13:34:51.428  INFO 9620 --- [           main] com.testepl.a2btransfer.AvailTest        : PrintRq:<TCOML>
+2017-07-10 16:02:06.993  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : =======================response end=================================================
+2017-07-10 16:02:06.993  INFO 1352 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.xto.BookingRs
+2017-07-10 16:02:06.993  INFO 1352 --- [           main] c.e.a.c.CustomRouteHttpMessageConverter  :  --> com.epl.a2btransfer.dto.Route
+2017-07-10 16:02:07.100  INFO 1352 --- [           main] com.testepl.a2btransfer.AvailTest        : Datos de la agencia:
+2017-07-10 16:02:07.100  INFO 1352 --- [           main] com.testepl.a2btransfer.AvailTest        : Nombre PRUEBAS A2B
+2017-07-10 16:02:07.100  INFO 1352 --- [           main] com.testepl.a2btransfer.AvailTest        : PRUEBAS A2B, PRUEBAS A2B
+2017-07-10 16:02:07.100  INFO 1352 --- [           main] com.testepl.a2btransfer.AvailTest        : 4444444
+2017-07-10 16:02:07.222  INFO 1352 --- [           main] com.testepl.a2btransfer.AvailTest        : PrintRq:<TCOML>
   <Locata>202348239</Locata>
   <Agency>1329</Agency>
   <TransferOnly>
@@ -1555,7 +1592,7 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
       <Confirm>
         <BookingType>TEST BOOKING</BookingType>
         <VoucherInfo>
-          <BookingRef>R1004875</BookingRef>
+          <BookingRef>R1004882</BookingRef>
           <BookingDate>10/07/2017</BookingDate>
           <BookingStatus>Confirmed</BookingStatus>
           <DeparturePointCode>PMI</DeparturePointCode>
@@ -1565,8 +1602,8 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
             <LastName>de Alejandro</LastName>
             <FirstName>Juanjo</FirstName>
             <Title>Sr</Title>
-            <Phone>972652489</Phone>
-            <Mobile>628629988</Mobile>
+            <Phone>34972652489</Phone>
+            <Mobile>34628629988</Mobile>
             <CountryCode>ES</CountryCode>
             <Email>juanjo.alejandro@gmail</Email>
           </Client>
@@ -1597,7 +1634,7 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
           <OutboundTransferDetails>
             <OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin>
             <OutboundDestination>Alaro</OutboundDestination>
-            <DepInfo>Information about departure</DepInfo>
+            <DepInfo>VUE5598</DepInfo>
             <ArrDate>01/09/2017</ArrDate>
             <ArrTime>1000</ArrTime>
             <NumUnits>1</NumUnits>
@@ -1639,11 +1676,11 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
     </Booking>
   </TransferOnly>
 </TCOML>
-2017-07-10 13:34:51.431  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
-2017-07-10 13:34:51.431  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : URI         : http://localhost:8080/a2btransfer/print
-2017-07-10 13:34:51.431  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
-2017-07-10 13:34:51.431  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Content-Type=[application/xml;charset=UTF-8], Content-Length=[4089], Accept-Charset=[big5, big5-hkscs, cesu-8, euc-jp, euc-kr, gb18030, gb2312, gbk, ibm-thai, ibm00858, ibm01140, ibm01141, ibm01142, ibm01143, ibm01144, ibm01145, ibm01146, ibm01147, ibm01148, ibm01149, ibm037, ibm1026, ibm1047, ibm273, ibm277, ibm278, ibm280, ibm284, ibm285, ibm290, ibm297, ibm420, ibm424, ibm437, ibm500, ibm775, ibm850, ibm852, ibm855, ibm857, ibm860, ibm861, ibm862, ibm863, ibm864, ibm865, ibm866, ibm868, ibm869, ibm870, ibm871, ibm918, iso-2022-cn, iso-2022-jp, iso-2022-jp-2, iso-2022-kr, iso-8859-1, iso-8859-13, iso-8859-15, iso-8859-2, iso-8859-3, iso-8859-4, iso-8859-5, iso-8859-6, iso-8859-7, iso-8859-8, iso-8859-9, jis_x0201, jis_x0212-1990, koi8-r, koi8-u, shift_jis, tis-620, us-ascii, utf-16, utf-16be, utf-16le, utf-32, utf-32be, utf-32le, utf-8, windows-1250, windows-1251, windows-1252, windows-1253, windows-1254, windows-1255, windows-1256, windows-1257, windows-1258, windows-31j, x-big5-hkscs-2001, x-big5-solaris, x-euc-jp-linux, x-euc-tw, x-eucjp-open, x-ibm1006, x-ibm1025, x-ibm1046, x-ibm1097, x-ibm1098, x-ibm1112, x-ibm1122, x-ibm1123, x-ibm1124, x-ibm1166, x-ibm1364, x-ibm1381, x-ibm1383, x-ibm300, x-ibm33722, x-ibm737, x-ibm833, x-ibm834, x-ibm856, x-ibm874, x-ibm875, x-ibm921, x-ibm922, x-ibm930, x-ibm933, x-ibm935, x-ibm937, x-ibm939, x-ibm942, x-ibm942c, x-ibm943, x-ibm943c, x-ibm948, x-ibm949, x-ibm949c, x-ibm950, x-ibm964, x-ibm970, x-iscii91, x-iso-2022-cn-cns, x-iso-2022-cn-gb, x-iso-8859-11, x-jis0208, x-jisautodetect, x-johab, x-macarabic, x-maccentraleurope, x-maccroatian, x-maccyrillic, x-macdingbat, x-macgreek, x-machebrew, x-maciceland, x-macroman, x-macromania, x-macsymbol, x-macthai, x-macturkish, x-macukraine, x-ms932_0213, x-ms950-hkscs, x-ms950-hkscs-xp, x-mswin-936, x-pck, x-sjis_0213, x-utf-16le-bom, x-utf-32be-bom, x-utf-32le-bom, x-windows-50220, x-windows-50221, x-windows-874, x-windows-949, x-windows-950, x-windows-iso2022jp]}
-2017-07-10 13:34:51.435  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+2017-07-10 16:02:07.225  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ===========================request begin================================================
+2017-07-10 16:02:07.225  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : URI         : http://localhost:8080/a2btransfer/print
+2017-07-10 16:02:07.225  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Method      : POST
+2017-07-10 16:02:07.225  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers     :  {Content-Type=[application/xml;charset=UTF-8], Content-Length=[4073], Accept-Charset=[big5, big5-hkscs, cesu-8, euc-jp, euc-kr, gb18030, gb2312, gbk, ibm-thai, ibm00858, ibm01140, ibm01141, ibm01142, ibm01143, ibm01144, ibm01145, ibm01146, ibm01147, ibm01148, ibm01149, ibm037, ibm1026, ibm1047, ibm273, ibm277, ibm278, ibm280, ibm284, ibm285, ibm290, ibm297, ibm420, ibm424, ibm437, ibm500, ibm775, ibm850, ibm852, ibm855, ibm857, ibm860, ibm861, ibm862, ibm863, ibm864, ibm865, ibm866, ibm868, ibm869, ibm870, ibm871, ibm918, iso-2022-cn, iso-2022-jp, iso-2022-jp-2, iso-2022-kr, iso-8859-1, iso-8859-13, iso-8859-15, iso-8859-2, iso-8859-3, iso-8859-4, iso-8859-5, iso-8859-6, iso-8859-7, iso-8859-8, iso-8859-9, jis_x0201, jis_x0212-1990, koi8-r, koi8-u, shift_jis, tis-620, us-ascii, utf-16, utf-16be, utf-16le, utf-32, utf-32be, utf-32le, utf-8, windows-1250, windows-1251, windows-1252, windows-1253, windows-1254, windows-1255, windows-1256, windows-1257, windows-1258, windows-31j, x-big5-hkscs-2001, x-big5-solaris, x-euc-jp-linux, x-euc-tw, x-eucjp-open, x-ibm1006, x-ibm1025, x-ibm1046, x-ibm1097, x-ibm1098, x-ibm1112, x-ibm1122, x-ibm1123, x-ibm1124, x-ibm1166, x-ibm1364, x-ibm1381, x-ibm1383, x-ibm300, x-ibm33722, x-ibm737, x-ibm833, x-ibm834, x-ibm856, x-ibm874, x-ibm875, x-ibm921, x-ibm922, x-ibm930, x-ibm933, x-ibm935, x-ibm937, x-ibm939, x-ibm942, x-ibm942c, x-ibm943, x-ibm943c, x-ibm948, x-ibm949, x-ibm949c, x-ibm950, x-ibm964, x-ibm970, x-iscii91, x-iso-2022-cn-cns, x-iso-2022-cn-gb, x-iso-8859-11, x-jis0208, x-jisautodetect, x-johab, x-macarabic, x-maccentraleurope, x-maccroatian, x-maccyrillic, x-macdingbat, x-macgreek, x-machebrew, x-maciceland, x-macroman, x-macromania, x-macsymbol, x-macthai, x-macturkish, x-macukraine, x-ms932_0213, x-ms950-hkscs, x-ms950-hkscs-xp, x-mswin-936, x-pck, x-sjis_0213, x-utf-16le-bom, x-utf-32be-bom, x-utf-32le-bom, x-windows-50220, x-windows-50221, x-windows-874, x-windows-949, x-windows-950, x-windows-iso2022jp]}
+2017-07-10 16:02:07.229  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <TCOML>
   <Locata>202348239</Locata>
   <Agency>1329</Agency>
@@ -1652,7 +1689,7 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
       <Confirm>
         <BookingType>TEST BOOKING</BookingType>
         <VoucherInfo>
-          <BookingRef>R1004875</BookingRef>
+          <BookingRef>R1004882</BookingRef>
           <BookingDate>10/07/2017</BookingDate>
           <BookingStatus>Confirmed</BookingStatus>
           <DeparturePointCode>PMI</DeparturePointCode>
@@ -1662,8 +1699,8 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
             <LastName>de Alejandro</LastName>
             <FirstName>Juanjo</FirstName>
             <Title>Sr</Title>
-            <Phone>972652489</Phone>
-            <Mobile>628629988</Mobile>
+            <Phone>34972652489</Phone>
+            <Mobile>34628629988</Mobile>
             <CountryCode>ES</CountryCode>
             <Email>juanjo.alejandro@gmail</Email>
           </Client>
@@ -1694,7 +1731,7 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
           <OutboundTransferDetails>
             <OutboundOrigin>Palma de Mallorca (PMI)</OutboundOrigin>
             <OutboundDestination>Alaro</OutboundDestination>
-            <DepInfo>Information about departure</DepInfo>
+            <DepInfo>VUE5598</DepInfo>
             <ArrDate>01/09/2017</ArrDate>
             <ArrTime>1000</ArrTime>
             <NumUnits>1</NumUnits>
@@ -1737,7 +1774,7 @@ Estamos disponibles 24/7 en el tel&amp;#233;fono +44 (0) 1483 901 011. Por favor
   </TransferOnly>
 </TCOML>
 
-2017-07-10 13:34:51.436  INFO 9620 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
+2017-07-10 16:02:07.230  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ==========================request end================================================
 
               Comprueba los datos de tu reserva
 Si necesitas modificar o cancelar tu reserva dir�gete a www.a2btransfers.com/es/amendment.asp
@@ -1767,3 +1804,53 @@ Solo para llamadas de emergencia, llame a: 0034 910 609 323
 Si no consigues localizar a nuestro representante en resort, contacta con el equipo de atenci�n al cliente de A2B.
 Estamos disponibles 24/7 en el tel�fono +44 (0) 1483 901 011. Por favor no abandones el punto de encuentro sin llamarnos antes.
             
+java.nio.file.NoSuchFileException: a2bInfo.txt
+2017-07-10 16:02:09.873  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : ============================response begin==========================================
+2017-07-10 16:02:09.874  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status code  : 200
+2017-07-10 16:02:09.874  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Status text  : null
+2017-07-10 16:02:09.874  INFO 1352 --- [           main] c.e.a.i.LoggingRequestInterceptor        : Headers      : {Content-disposition=[attachment;filename=202348239.pdf], Cache-Control=[no-cache, no-store, must-revalidate], Pragma=[no-cache], Expires=[0], Content-Type=[application/octet-stream], Content-Length=[5070], Date=[Mon, 10 Jul 2017 14:02:09 GMT]}
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 36.064 sec <<< FAILURE! - in com.testepl.a2btransfer.AvailTest
+testBooking(com.testepl.a2btransfer.AvailTest)  Time elapsed: 10.387 sec  <<< ERROR!
+java.lang.RuntimeException: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; El contenido no est� permitido en el pr�logo.
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:257)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at com.epl.a2btransfer.inteceptor.XmlFormatter.parseXmlFile(XmlFormatter.java:52)
+	at com.epl.a2btransfer.inteceptor.XmlFormatter.format(XmlFormatter.java:35)
+	at com.epl.a2btransfer.inteceptor.LoggingRequestInterceptor.traceResponse(LoggingRequestInterceptor.java:49)
+	at com.epl.a2btransfer.inteceptor.LoggingRequestInterceptor.intercept(LoggingRequestInterceptor.java:21)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:85)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:69)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:652)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:613)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:531)
+	at com.testepl.a2btransfer.AvailTest.testBooking(AvailTest.java:297)
+
+2017-07-10 16:02:09.904  INFO 1352 --- [       Thread-4] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@120f102b: startup date [Mon Jul 10 16:01:34 CEST 2017]; root of context hierarchy
+2017-07-10 16:02:09.912  INFO 1352 --- [       Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+
+Results :
+
+Tests in error: 
+  AvailTest.testBooking:297 � Runtime org.xml.sax.SAXParseException; lineNumber:...
+
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 48.148 s
+[INFO] Finished at: 2017-07-10T16:02:10+02:00
+[INFO] Final Memory: 37M/346M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.18.1:test (default-test) on project a2btransfer: There are test failures.
+[ERROR] 
+[ERROR] Please refer to C:\Users\desar\workspace\a2btransfer\target\surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

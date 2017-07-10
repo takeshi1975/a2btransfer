@@ -72,21 +72,27 @@ public class PageContent extends VerticalListBuilder{
 				.add(addPair("H", "Fecha/hora llegada",outbound.getArrDate()+ " "+outbound.getArrTime()))
 				.add(addPair("H", "Tipo de vehículo",outbound.getVehicle()))
 				.add(addPair("H", "Proveedor",confirm.getVoucherInfo().getSupplierName())).setHeight(150)
-				.add(addPair("H", "Numero de unidades", String.valueOf((int) outbound.getNumUnits())));					
+				.add(addPair("H", "Numero de unidades", String.valueOf((int) outbound.getNumUnits())));
+		if (outbound.getDepInfo()!=null)
+			this.add(addPair("H","Detalles del vuelo (id)",outbound.getDepInfo()));
 				// Only When travelType is RETURN
-			if (transferOnly.getBooking().getConfirm().getVoucherInfo().getSectorType().equals("RETURN"))			
-				this.add(cmp.verticalList()
-						.add(cmp.horizontalList().add(cmp.text("Detalles del traslado (Vuelta) "+
-								voucherInfo.getArrivalPointCode()+"-"+voucherInfo.getDeparturePointCode()
-								).setStyle(columnTitleStyle)))
-						.add(cmp.gap(10,20))
-						.add(addPair("H", "Origen", destination.getReturnOrigin()))
-						.add(addPair("H", "Destino",destination.getReturnDestination()))
-						.add(addPair("H", "Fecha/hora llegada",destination.getRetDate()+" "+destination.getRetTime()))
-						.add(addPair("H", "Tipo de vehículo",destination.getVehicle()))
-						.add(addPair("H", "Numero de unidades",String.valueOf((int)destination.getNumUnits())))				
+		if (transferOnly.getBooking().getConfirm().getVoucherInfo().getSectorType().equals("RETURN"))			
+			this.add(cmp.verticalList()
+					.add(cmp.horizontalList().add(cmp.text("Detalles del traslado (Vuelta) "+
+							voucherInfo.getArrivalPointCode()+"-"+voucherInfo.getDeparturePointCode()
+							).setStyle(columnTitleStyle)))
+					.add(cmp.gap(10,20))
+					.add(addPair("H", "Origen", destination.getReturnOrigin()))
+					.add(addPair("H", "Destino",destination.getReturnDestination()))
+					.add(addPair("H", "Fecha/hora llegada",destination.getRetDate()+" "+destination.getRetTime()))
+					.add(addPair("H", "Tipo de vehículo",destination.getVehicle()))
+					.add(addPair("H", "Numero de unidades",String.valueOf((int)destination.getNumUnits())))
+					.setStyle(stl.style( stl.pen1Point()))
+					.setFixedHeight(250));
+		if (outbound.getDepInfo()!=null)
+			this.add(addPair("H","Detalles del vuelo (vuelta)",outbound.getDepInfo()));
+					
 				
-		.setStyle(stl.style( stl.pen1Point()))
-		.setFixedHeight(250));						
+								
 	}
 }
