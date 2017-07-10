@@ -72,14 +72,14 @@ public class PageContent extends VerticalListBuilder{
 				.add(addPair("H", "Fecha/hora llegada",outbound.getArrDate()+ " "+outbound.getArrTime()))
 				.add(addPair("H", "Tipo de vehículo",outbound.getVehicle()))
 				.add(addPair("H", "Proveedor",confirm.getVoucherInfo().getSupplierName())).setHeight(150)
-				.add(addPair("H", "Numero de unidades", String.valueOf((int)destination.getNumUnits())))
-				.add(cmp.horizontalList().add(cmp.text("Detalles del traslado (Vuelta) "+
-						voucherInfo.getArrivalPointCode()+"-"+voucherInfo.getDeparturePointCode()
-						).setStyle(columnTitleStyle)))
-				.add(cmp.gap(10,20));		
+				.add(addPair("H", "Numero de unidades", String.valueOf((int) outbound.getNumUnits())));					
 				// Only When travelType is RETURN
 			if (transferOnly.getBooking().getConfirm().getVoucherInfo().getSectorType().equals("RETURN"))			
 				this.add(cmp.verticalList()
+						.add(cmp.horizontalList().add(cmp.text("Detalles del traslado (Vuelta) "+
+								voucherInfo.getArrivalPointCode()+"-"+voucherInfo.getDeparturePointCode()
+								).setStyle(columnTitleStyle)))
+						.add(cmp.gap(10,20))
 						.add(addPair("H", "Origen", destination.getReturnOrigin()))
 						.add(addPair("H", "Destino",destination.getReturnDestination()))
 						.add(addPair("H", "Fecha/hora llegada",destination.getRetDate()+" "+destination.getRetTime()))

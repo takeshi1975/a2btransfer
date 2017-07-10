@@ -104,7 +104,7 @@ public class AvailTest {
 		request.setUsername("Juacho");
 		request.setPassword("Juancho123");
 		request.setVehicletype((byte) 0);
-		request.setSectorType("RETURN"); // SINGLE/RETURN
+		request.setSectorType("SINGLE"); // SINGLE/RETURN
 		request.setLatitude("");
 		request.setLongitude("");
 
@@ -148,17 +148,17 @@ public class AvailTest {
 		reserve.setAdults((byte) 2);
 		reserve.setChildren((byte) 1);
 		reserve.setInfants((byte) 1);
-		reserve.setArrDate("30/07/17");
+		reserve.setArrDate("01/09/17");
 		reserve.setArrTime("10:00");
-		reserve.setRetDate("10/08/17");
+		reserve.setRetDate("10/09/17");
 		reserve.setRetTime("10:00");
 		reserve.setDeparturePointCode("PMI");
-		reserve.setArrivalPointCode("ARE");
+		reserve.setArrivalPointCode("AAZ");
 		reserve.setLang("ES");
 		reserve.setUsername("Juacho");
 		reserve.setPassword("Juancho123");
 		reserve.setTransferCode(rs.getTransferOnly().getAvailability().getAvline().get(index).getTransferCode());
-		reserve.setSectorType("RETURN");
+		reserve.setSectorType("SINGLE");
 		reserve.setLatitude("");
 		reserve.setLongitude("");
 		reserveRq.getTransferOnly().getBooking().setReserve(reserve);
@@ -235,7 +235,8 @@ public class AvailTest {
 					
 		BookingRs bookingRs = booking();
 		cancelRq.getTransferOnly().getBooking().getCancel().setBookingRef(bookingRs.getTransferOnly().getBooking().getConfirm().getVoucherInfo().getBookingRef());		
-		CancelRs cancelRs = restTemplate.postForObject(url, cancelRq, CancelRs.class);	
+		CancelRs cancelRs = restTemplate.postForObject(url, cancelRq, CancelRs.class);
+		Assert.notNull(cancelRs);
 	} 	
 	
 	public static List<String> conversion(List<String> buffer) throws IOException{
