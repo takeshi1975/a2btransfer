@@ -2,14 +2,11 @@ package com.epl.a2btransfer.printer;
 
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import org.apache.commons.lang.StringEscapeUtils;
-import org.apache.log4j.Logger;
 
 import com.epl.a2btransfer.xto.BookingRs;
 import com.epl.a2btransfer.xto.BookingRs.TransferOnly.Booking.Confirm.VoucherInfo.JoiningIns;
@@ -39,8 +36,7 @@ public interface SecondPage{
 		return null;
 	}
 			
-	public static List<String> conversion(List<String> buffer) throws IOException{
-		Logger log = Logger.getLogger(SecondPage.class);
+	public static List<String> conversion(List<String> buffer) throws IOException{		
 		List<String> text = new ArrayList<String>();
 		BufferedReader br = null;		
 		try{						
