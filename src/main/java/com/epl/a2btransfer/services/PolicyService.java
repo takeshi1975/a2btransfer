@@ -47,7 +47,7 @@ public class PolicyService {
 		if (comisionEPL==null)		
 			throw new NotApplicableException();		
 		float pct = comisionEPL.getMargen();		
-		float value =  (float) price + price*pct/100.0f;
+		float value =  (float) price * 100.0f / (100.0f - pct);
 		value =  Math.round(value * 100.0) / 100.0f; // Rounded to 2 decimal places :-)
 		log.info("Precio anterior ="+price+ " / Precio final ="+value);
 		return value;
