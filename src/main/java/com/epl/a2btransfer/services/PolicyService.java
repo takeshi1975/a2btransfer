@@ -100,7 +100,7 @@ public class PolicyService {
 	 * @return Lista de strings donde se detalla el desglose de precios.
 	 * @throws NotApplicableException
 	 */
-	public List<String> breakdown(float pvp, long agency, long system, Date bookingDate)
+	public List<String> breakdown(float coste, float pvp, long agency, long system, Date bookingDate)
 	throws NotApplicableException{
 		List<String> results = new ArrayList<String>();
 		log.info("Voy a buscar el sistema "+system);
@@ -116,8 +116,9 @@ public class PolicyService {
 			float impcom = round(pvp * customerComissionValue/100.0f);
 			float imptax = round(impcom * tax.getPct()/100.0f);	
 			results.add(("PVP#"+df.format(pvp)));
-			results.add("COMAG#"+customerComissionValue+"#"+df.format(impcom));
-			results.add("TAX#"+tax.getName()+ "#"+df.format(imptax));												
+			results.add("CAG#"+customerComissionValue+"#"+df.format(impcom));
+			results.add("TAX#"+tax.getName()+ "#"+df.format(imptax));
+			results.add("COS#"+coste);
 		} else{			
 			results.add("PEPL#"+df.format(pvp));													
 		}

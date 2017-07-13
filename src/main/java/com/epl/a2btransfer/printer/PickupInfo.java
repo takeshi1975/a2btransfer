@@ -14,14 +14,12 @@ import net.sf.dynamicreports.report.builder.style.StyleBuilder;
 import net.sf.dynamicreports.report.constant.Constants;
 import net.sf.dynamicreports.report.constant.HorizontalTextAlignment;
 
-public class PickupInfo extends HorizontalListBuilder {
+public class PickupInfo extends VerticalListBuilder {
 
 	private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 	private StyleBuilder columnTitleStyle;
-	
-	@Override
-	protected void init(){		
-		super.init();		
+		
+	protected void init(){						
 		columnTitleStyle    = stl.style()
                 .setBorder(stl.pen1Point())
                 .setFontSize(12)
@@ -33,31 +31,41 @@ public class PickupInfo extends HorizontalListBuilder {
 	
 	private VerticalListBuilder leftSide(String accadd1) {
 		return cmp.verticalList().add(cmp.text("Dirección 1").setStyle(columnTitleStyle).setFixedHeight(15)).add(
-				cmp.gap(10, 10), cmp.text(accadd1))
+				cmp.gap(10, 10), cmp.text(" "+accadd1))
 				.setStyle(stl.style(stl.pen1Point()))
 				.setFixedHeight(87);
 	}													
 
 	private VerticalListBuilder rigthSide(String accadd2) {
 		return cmp.verticalList().add(cmp.text("Dirección 2").setStyle(columnTitleStyle).setFixedHeight(15)).add(
-				cmp.gap(10, 10), cmp.text(accadd2))
+				cmp.gap(20, 10), cmp.text(" "+accadd2))
 				.setStyle(stl.style(stl.pen1Point()))
 				.setFixedHeight(87);											
 	}
 
-	public PickupInfo(BookingRs bookingRs) {
+	public PickupInfo(BookingRs.TransferOnly transferOnly) {
 		init();
-		VoucherInfo voucherInfo = bookingRs.getTransferOnly().getBooking().getConfirm().getVoucherInfo();
+		VoucherInfo voucherInfo = transferOnly.getBooking().getConfirm().getVoucherInfo();
 		String accadd1 = voucherInfo.getAccommodationAddress();
-		String accadd2 = voucherInfo.getAccommodationAddress();
+		String accadd2 = voucherInfo.getAccommodationAddress2();
+		
 		if (accadd1 == null)
 			accadd1 = " ";
+		
 		if (accadd2 == null)
 			accadd2 = " ";
-		this.add(cmp.verticalGap(50),
-				leftSide(accadd1)
-				,cmp.horizontalGap(10)
-				,this.rigthSide(accadd2));
+		
+		this.add(cmp.horizontalList()
+				.add(cmp.verticalGap(50)
+					,leftSide(accadd1)
+					,cmp.horizontalGap(10)
+					,this.rigthSide(accadd2)));		
+		this.add(cmp.verticalGap(20));
+		this.add(
+				cmp.verticalGap(10),
+				cmp.text("*Dependiendo del vehículo sólo se admitirá una bolsa por pasajero ").setStyle(stl.style(stl.pen2Point())),
+				cmp.verticalGap(10)
+		);		
 	}
 
 }

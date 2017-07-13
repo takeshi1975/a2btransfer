@@ -136,7 +136,8 @@ public class A2BController {
 		bookingRq.getTransferOnly().getBooking().getConfirm().setDepPoint("Casa del cliente");
 		bookingRq.getTransferOnly().getBooking().getConfirm().setDepInfo("Information about departure");
 		bookingRq.getTransferOnly().getBooking().getConfirm().setPassword(request.getPassword());
-		bookingRq.getTransferOnly().getBooking().getConfirm().setPropertyName("property name");
+		bookingRq.getTransferOnly().getBooking().getConfirm().setPropertyName("Hotel Linda");
+		
 		bookingRq.getTransferOnly().getBooking().getConfirm().setRemark("remark");
 		bookingRq.getTransferOnly().getBooking().getConfirm().setRetExtraInfo("Ret extra info");
 		bookingRq.getTransferOnly().getBooking().getConfirm().setRetInfo("Return info");

@@ -59,8 +59,6 @@ public class AvailTest {
 
 	@Autowired
 	private AgencyRepository agencyRepository;
-
-	
 	
 	private String port = "8080";
 	private String host = "localhost";
@@ -99,12 +97,12 @@ public class AvailTest {
 		request.setRetDate("10/09/17");
 		request.setRetTime("10:00");
 		request.setDeparturePointCode("PMI");
-		request.setArrivalPointCode("AAZ");
+		request.setArrivalPointCode("ALI");
 		request.setLang("ES");
 		request.setUsername("Juacho");
 		request.setPassword("Juancho123");
-		request.setVehicletype((byte) 0);
-		request.setSectorType("SINGLE"); // SINGLE/RETURN
+		request.setVehicletype((byte) 1);
+		request.setSectorType("RETURN"); // SINGLE/RETURN
 		request.setLatitude("");
 		request.setLongitude("");
 		request.setGIATAID("");
@@ -152,12 +150,12 @@ public class AvailTest {
 		reserve.setRetDate("10/09/17");
 		reserve.setRetTime("10:00");
 		reserve.setDeparturePointCode("PMI");
-		reserve.setArrivalPointCode("AAZ");
+		reserve.setArrivalPointCode("ALI");
 		reserve.setLang("ES");
 		reserve.setUsername("Juacho");
 		reserve.setPassword("Juancho123");
 		reserve.setTransferCode(rs.getTransferOnly().getAvailability().getAvline().get(index).getTransferCode());
-		reserve.setSectorType("SINGLE");
+		reserve.setSectorType("RETURN");
 		reserve.setLatitude("");
 		reserve.setLongitude("");
 		reserveRq.getTransferOnly().getBooking().setReserve(reserve);
@@ -180,8 +178,8 @@ public class AvailTest {
 		bookingRq.getTransferOnly().setBooking(new BookingRq.TransferOnly.Booking());
 
 		bookingRq.getTransferOnly().getBooking().setConfirm(new BookingRq.TransferOnly.Booking.Confirm());
-		bookingRq.getTransferOnly().getBooking().getConfirm().setAccommodationAddress("Accomodation Address 1");
-		bookingRq.getTransferOnly().getBooking().getConfirm().setAccommodationAddress2("Acoomodation Address 2");
+		bookingRq.getTransferOnly().getBooking().getConfirm().setAccommodationAddress("Hotel Linda C\\Octavio Augusto, 2, 07610 Can Pastilla, Islas Baleares.");
+		bookingRq.getTransferOnly().getBooking().getConfirm().setAccommodationAddress2(" ");
 		bookingRq.getTransferOnly().getBooking().getConfirm().setAgentBref("EPL");
 		bookingRq.getTransferOnly().getBooking().getConfirm()
 				.setClient(new BookingRq.TransferOnly.Booking.Confirm.Client());
@@ -196,15 +194,14 @@ public class AvailTest {
 		bookingRq.getTransferOnly().getBooking().getConfirm().setDepPoint("Casa del cliente");
 		bookingRq.getTransferOnly().getBooking().getConfirm().setDepInfo("Information about departure");
 		bookingRq.getTransferOnly().getBooking().getConfirm().setPassword("Juancho123");
-		bookingRq.getTransferOnly().getBooking().getConfirm().setPropertyName("property name");
+		bookingRq.getTransferOnly().getBooking().getConfirm().setPropertyName("Hotel Linda");
 		bookingRq.getTransferOnly().getBooking().getConfirm().setRemark("remark");
-		bookingRq.getTransferOnly().getBooking().getConfirm().setRetExtraInfo("Ret extra info");
-		bookingRq.getTransferOnly().getBooking().getConfirm().setRetInfo("Return info");
+		bookingRq.getTransferOnly().getBooking().getConfirm().setRetExtraInfo("Ret extra info");		
 		bookingRq.getTransferOnly().getBooking().getConfirm().setRetPoint("Return point");
 		bookingRq.getTransferOnly().getBooking().getConfirm().setSendEmailToCustomer((byte) 0x0);
 		int transactionNo = this.bloqueo().getTransferOnly().getBooking().getReserve().getTransacNo();
 		bookingRq.getTransferOnly().getBooking().getConfirm().setDepInfo("VUE3032");
-		bookingRq.getTransferOnly().getBooking().getConfirm().setDepInfo("VUE5598");
+		bookingRq.getTransferOnly().getBooking().getConfirm().setRetInfo("VUE5598");
 		bookingRq.getTransferOnly().getBooking().getConfirm().setDepExtraInfo("Vueling");
 		bookingRq.getTransferOnly().getBooking().getConfirm().setRetExtraInfo("Vueling");
 		bookingRq.getTransferOnly().getBooking().getConfirm().setTransacNo(transactionNo);
@@ -217,11 +214,9 @@ public class AvailTest {
 			log.info(address.getNombreVia() + ", " + address.getPoblacion());
 			log.info(address.getTelefono());
 		});
-
 		Assert.notNull(bookingRs);
 		return bookingRs;
 	}
-
 	
 	@Test
 	public void cancel(){		
@@ -274,31 +269,31 @@ public class AvailTest {
 		return text;
 	}
 	
-	@Test
-	public void testBooking() throws IOException {
-		BookingRs bookingRs = booking();		
-		PrintRq printRq = new PrintRq();		
-		printRq.setAgency(AGEN);
-		printRq.setLocata("202348239");
-		printRq.setTransferOnly(bookingRs.getTransferOnly());
-		String xml = printRq.toString();				
-		xml = xml.replaceAll("<string>", "").replaceAll("</string>", "");
-		log.info("PrintRq:"+xml);
-		
-		String url = "http://" + host + ":" + port + "/a2btransfer/print";
-		List<HttpMessageConverter<?>> messageConverters = new ArrayList<HttpMessageConverter<?>>();	
-	    messageConverters.add(new StringHttpMessageConverter());	
-	    restTemplate.setMessageConverters(messageConverters);	    
-		HttpHeaders headers = new HttpHeaders();
-		MediaType mediaType = new MediaType("application", "xml", StandardCharsets.UTF_8);
-		headers.setContentType(mediaType);
-		//headers.setContentType(MediaType.APPLICATION_XML);
-		HttpEntity<String> entity = new HttpEntity<String>(xml,headers);		
-		ResponseEntity<byte[]> response = restTemplate.exchange(url,
-				HttpMethod.POST, entity, byte[].class, "1");		
-		if (response.getStatusCode() == HttpStatus.OK) {
-			Files.write(Paths.get("fichero2.pdf"), response.getBody());
-		}
-	}
+//	@Test
+//	public void testBooking() throws IOException {
+//		BookingRs bookingRs = booking();		
+//		PrintRq printRq = new PrintRq();		
+//		printRq.setAgency(AGEN);
+//		printRq.setLocata("202348239");
+//		printRq.setTransferOnly(bookingRs.getTransferOnly());
+//		String xml = printRq.toString();				
+//		xml = xml.replaceAll("<string>", "").replaceAll("</string>", "");
+//		log.info("PrintRq:"+xml);
+//		
+//		String url = "http://" + host + ":" + port + "/a2btransfer/print";
+//		List<HttpMessageConverter<?>> messageConverters = new ArrayList<HttpMessageConverter<?>>();	
+//	    messageConverters.add(new StringHttpMessageConverter());	
+//	    restTemplate.setMessageConverters(messageConverters);	    
+//		HttpHeaders headers = new HttpHeaders();
+//		MediaType mediaType = new MediaType("application", "xml", StandardCharsets.UTF_8);
+//		headers.setContentType(mediaType);
+//		//headers.setContentType(MediaType.APPLICATION_XML);
+//		HttpEntity<String> entity = new HttpEntity<String>(xml,headers);		
+//		ResponseEntity<byte[]> response = restTemplate.exchange(url,
+//				HttpMethod.POST, entity, byte[].class, "1");		
+//		if (response.getStatusCode() == HttpStatus.OK)			
+//			Files.write(Paths.get("fichero2.pdf"), response.getBody());
+//		
+//	}
 
 }

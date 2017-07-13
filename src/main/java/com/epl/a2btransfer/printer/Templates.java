@@ -7,6 +7,7 @@ import static net.sf.dynamicreports.report.builder.DynamicReports.tableOfContent
 import static net.sf.dynamicreports.report.builder.DynamicReports.template;
 
 import java.awt.Color;
+import java.net.URL;
 import java.util.Locale;
 
 import net.sf.dynamicreports.report.base.expression.AbstractValueFormatter;
@@ -41,6 +42,8 @@ public class Templates {
 	public static final ComponentBuilder<?, ?> dynamicReportsComponent;
 	public static final ComponentBuilder<?, ?> footerComponent;
 
+	
+	
 	static {
 		rootStyle           = stl.style().setPadding(2);
 		boldStyle           = stl.style(rootStyle).bold();
@@ -74,7 +77,7 @@ public class Templates {
 
 		TableOfContentsCustomizerBuilder tableOfContentsCustomizer = tableOfContentsCustomizer()
 			.setHeadingStyle(0, stl.style(rootStyle).bold());
-
+				
 		reportTemplate = template()
 		                   .setLocale(Locale.ENGLISH)
 		                   .setColumnStyle(columnStyle)
@@ -93,16 +96,25 @@ public class Templates {
 		currencyType = new CurrencyType();
 		StyleBuilder bold10CenteredStyle = stl.style(boldCenteredStyle).setFontSize(10);
 
-		HyperLinkBuilder link = hyperLink("http://www.europlayas-web.es");
+		HyperLinkBuilder link = hyperLink("http://www.europlayas-web.es");		
+        
+        URL url = ClassLoader.getSystemResource("com/epl/a2btransfer/printer/images/title.png");
+        System.out.println(url);
+//		ImageBuilder background1 = Components
+//            .image(Templates.class
+//                  .getResource("images/title.png"))
+//            .setImageScale(ImageScale.RETAIN_SHAPE).setFixedDimension(190, 140);
 		dynamicReportsComponent =		  		 
 		  	cmp.verticalList(
-		  			cmp.horizontalList(		  					
-		  					cmp.image(Templates.class.getResource("images/title.png")).setFixedDimension(170, 34),
-		  					cmp.horizontalGap(0),
+		  			
+		  			cmp.horizontalList(		  				
+		  					cmp.image(url).setFixedDimension(132, 34),
+		  					cmp.horizontalGap(10),
 		  					cmp.verticalList().add(
-		  					cmp.text("Juanjo Alejandro Cobos").setStyle(bold12CenteredStyle),
-		  					cmp.text("Copia para el establecimiento").setStyle(bold10CenteredStyle))
-		  			).setStyle(stl.style(boldCenteredStyle)),
+		  							cmp.text("Juanjo Alejandro Cobos").setStyle(bold12CenteredStyle),
+		  							cmp.text("Copia para el establecimiento").setStyle(bold10CenteredStyle))
+		  					).setStyle(stl.style(boldCenteredStyle)),
+		  		    			
 		  			cmp.text("http://www.europlayas-web.es").setStyle(italicStyle).setHyperLink(link)).setFixedWidth(350);
 					
 		footerComponent = cmp.pageXofY()

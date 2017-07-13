@@ -39,7 +39,7 @@ public class ComisionEPLRepositoryImpl implements NativeEPLComisionDao{
 		            "{ ? = call valoracion_pcm.valoracion_com_epl(?,?,?,?) }" )) {
 		        function.registerOutParameter( 1, Types.INTEGER );
 		        function.setLong( 2, cliente );
-		        function.setLong(3, sistema);
+		        function.setLong( 3, sistema);
 		        function.setDate(4, new java.sql.Date(fecha.getTime()));
 		        function.registerOutParameter(5, Types.VARCHAR);
 		        function.execute();

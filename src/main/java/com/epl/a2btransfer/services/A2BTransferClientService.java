@@ -136,10 +136,10 @@ public class A2BTransferClientService {
 					Date bookingDate = df.parse(reserveRq.getDate());
 					long agency = reserveRq.getAgency();
 					long system = reserveRq.getSystem();										
-					
+					float coste = reserveRs.getTransferOnly().getBooking().getReserve().getHolidayValue();
 					reserveRs = policyService.calculatePrice(reserveRs, agency, system, bookingDate);
 					float priceEPL = reserveRs.getTransferOnly().getBooking().getReserve().getHolidayValue();
-					reserveRs.setBreakdown(this.policyService.breakdown(priceEPL, agency, system, bookingDate));
+					reserveRs.setBreakdown(this.policyService.breakdown(coste,priceEPL, agency, system, bookingDate));
 				}catch(Exception ex){
 					log.error("Error en el parseo del bloqueo (rs)...", ex);
 					reserveRs.getTransferOnly().setBooking(null);
@@ -179,10 +179,10 @@ public class A2BTransferClientService {
 					long agencia = bookingRq.getAgency();
 					long sistema = bookingRq.getSystem();
 					// Comision de EPL
-					
+					float coste = bookingRs.getTransferOnly().getBooking().getConfirm().getVoucherInfo().getInvoiceValue();
 					bookingRs = policyService.calculatePrice(bookingRs,agencia, sistema, date);
 					float priceEPL = bookingRs.getTransferOnly().getBooking().getConfirm().getVoucherInfo().getInvoiceValue();					
-					bookingRs.setBreakdown(policyService.breakdown(priceEPL, agencia, sistema, date));
+					bookingRs.setBreakdown(policyService.breakdown(coste, priceEPL, agencia, sistema, date));
 					
 					return bookingRs;
 				} catch (NumberFormatException nfex){

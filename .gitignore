@@ -4,3 +4,7 @@ target/
 .project
 .classpath
 *.class
+*.pdf
+*.log
+/.settings/
+.settings/
