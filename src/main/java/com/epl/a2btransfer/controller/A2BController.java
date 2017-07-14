@@ -5,6 +5,7 @@ import java.lang.reflect.Field;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.InputStreamSource;
 import org.springframework.http.HttpHeaders;
@@ -35,6 +36,9 @@ public class A2BController {
 
 	private final Logger log = Logger.getLogger(A2BController.class);
 
+	@Value("print.report")
+	private String printReport="N";
+	
 	@Autowired
 	private com.epl.a2btransfer.services.A2BTransferClientService client;
 
@@ -178,14 +182,13 @@ public class A2BController {
 	@RequestMapping(value="/print", method=RequestMethod.POST, produces = "application/pdf", consumes = MediaType.APPLICATION_XML_VALUE)
 	@ResponseBody
 	public ResponseEntity<InputStreamSource> print(@RequestBody PrintRq printRq){
-		byte data[] = client.print(printRq, true);		
+		byte data[] = client.print(printRq, !printReport.equals("N"));		
 		String locata = printRq.getLocata();
 		HttpHeaders headers = new HttpHeaders();		
 		headers.add("Content-disposition", "attachment;filename=" + locata + ".pdf");
 		headers.add("Cache-Control", "no-cache, no-store, must-revalidate");
 		headers.add("Pragma", "no-cache");
-		headers.add("Expires", "0");
-		
+		headers.add("Expires", "0");		
 		return ResponseEntity.ok().headers(headers).contentLength(data.length)
 				.contentType(MediaType.parseMediaType("application/octet-stream"))
 				.body(new InputStreamResource(new ByteArrayInputStream(data)));
