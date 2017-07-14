@@ -265,13 +265,13 @@ public class A2BTransferClientService {
 	}
 
 	@Description("Impresión del bono")
-	public byte[] print(PrintRq printRq){
+	public byte[] print(PrintRq printRq, boolean saveFile){
 		TransferVoucher transferVoucher = new TransferVoucher();
 		String locata = printRq.getLocata();
 		long agencyId = printRq.getAgency();
 		Agency agency = agencyRepository.findOne(agencyId); 
 		try {
-			return transferVoucher.build(locata, agency, printRq.getTransferOnly());
+			return transferVoucher.build(locata, agency, printRq.getTransferOnly(), saveFile);
 		}catch(Exception exception){
 			log.error("No se ha impreso el bono", exception);
 			return null;

@@ -178,7 +178,7 @@ public class A2BController {
 	@RequestMapping(value="/print", method=RequestMethod.POST, produces = "application/pdf", consumes = MediaType.APPLICATION_XML_VALUE)
 	@ResponseBody
 	public ResponseEntity<InputStreamSource> print(@RequestBody PrintRq printRq){
-		byte data[] = client.print(printRq);		
+		byte data[] = client.print(printRq, true);		
 		String locata = printRq.getLocata();
 		HttpHeaders headers = new HttpHeaders();		
 		headers.add("Content-disposition", "attachment;filename=" + locata + ".pdf");

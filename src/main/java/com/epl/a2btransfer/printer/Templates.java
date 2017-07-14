@@ -39,12 +39,12 @@ public class Templates {
 
 	public static final ReportTemplateBuilder reportTemplate;
 	public static final CurrencyType currencyType;
-	public static final ComponentBuilder<?, ?> dynamicReportsComponent;
+	public static ComponentBuilder<?, ?> dynamicReportsComponent;
 	public static final ComponentBuilder<?, ?> footerComponent;
 
 	
 	
-	static {
+	static{
 		rootStyle           = stl.style().setPadding(2);
 		boldStyle           = stl.style(rootStyle).bold();
 		italicStyle         = stl.style(rootStyle).italic();
@@ -94,28 +94,24 @@ public class Templates {
 		                   .setTableOfContentsCustomizer(tableOfContentsCustomizer);
 
 		currencyType = new CurrencyType();
-		StyleBuilder bold10CenteredStyle = stl.style(boldCenteredStyle).setFontSize(10);
+
 
 		HyperLinkBuilder link = hyperLink("http://www.europlayas-web.es");		
         
         URL url = ClassLoader.getSystemResource("com/epl/a2btransfer/printer/images/title.png");
         System.out.println(url);
-//		ImageBuilder background1 = Components
-//            .image(Templates.class
-//                  .getResource("images/title.png"))
-//            .setImageScale(ImageScale.RETAIN_SHAPE).setFixedDimension(190, 140);
-		dynamicReportsComponent =		  		 
-		  	cmp.verticalList(
-		  			
-		  			cmp.horizontalList(		  				
-		  					cmp.image(url).setFixedDimension(132, 34),
-		  					cmp.horizontalGap(10),
-		  					cmp.verticalList().add(
-		  							cmp.text("Juanjo Alejandro Cobos").setStyle(bold12CenteredStyle),
-		  							cmp.text("Copia para el establecimiento").setStyle(bold10CenteredStyle))
-		  					).setStyle(stl.style(boldCenteredStyle)),
-		  		    			
-		  			cmp.text("http://www.europlayas-web.es").setStyle(italicStyle).setHyperLink(link)).setFixedWidth(350);
+//		dynamicReportsComponent =		  		 
+//		  	cmp.verticalList(
+//		  			
+//		  			cmp.horizontalList(		  				
+//		  					cmp.image(url).setFixedDimension(132, 34),
+//		  					cmp.horizontalGap(10),
+//		  					cmp.verticalList().add(
+//		  							cmp.text(customerName).setStyle(bold12CenteredStyle),
+//		  							cmp.text("Copia para el establecimiento").setStyle(bold10CenteredStyle))
+//		  					).setStyle(stl.style(boldCenteredStyle)),
+//		  		    			
+//		  			cmp.text("http://www.europlayas-web.es").setStyle(italicStyle).setHyperLink(link)).setFixedWidth(350);
 					
 		footerComponent = cmp.pageXofY()
 		                     .setStyle(
@@ -123,6 +119,25 @@ public class Templates {
 		                     	   .setTopBorder(stl.pen1Point()));
 	}
 
+	public static void generate(String customerName){
+			HyperLinkBuilder link = hyperLink("http://www.europlayas-web.es");					
+			URL url = ClassLoader.getSystemResource("com/epl/a2btransfer/printer/images/title.png");
+			StyleBuilder bold10CenteredStyle = stl.style(boldCenteredStyle).setFontSize(10);
+			dynamicReportsComponent =		  		 
+		  	cmp.verticalList(
+		  			
+		  			cmp.horizontalList(		  				
+		  					cmp.image(url).setFixedDimension(132, 34),
+		  					cmp.horizontalGap(10),
+		  					cmp.verticalList().add(
+		  							cmp.text(customerName).setStyle(bold12CenteredStyle),
+		  							cmp.text("Copia para el establecimiento").setStyle(bold10CenteredStyle))
+		  					).setStyle(stl.style(boldCenteredStyle)),
+		  		    			
+		  			cmp.text("http://www.europlayas-web.es").setStyle(italicStyle).setHyperLink(link)).setFixedWidth(350);
+					
+	}
+	
 	/**
 	 * Creates custom component which is possible to add to any report band component
 	 */
