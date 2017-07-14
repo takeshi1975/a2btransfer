@@ -39,9 +39,6 @@ import com.epl.a2btransfer.xto.AvailRq.TransferOnly.Availability.Request;
 import com.epl.a2btransfer.xto.AvailRs;
 import com.epl.a2btransfer.xto.BookingRq;
 import com.epl.a2btransfer.xto.BookingRs;
-import com.epl.a2btransfer.xto.CancelRq;
-import com.epl.a2btransfer.xto.CancelRq.TransferOnly.Booking.Cancel;
-import com.epl.a2btransfer.xto.CancelRs;
 import com.epl.a2btransfer.xto.Errors;
 import com.epl.a2btransfer.xto.PrintRq;
 import com.epl.a2btransfer.xto.ReserveRq;
@@ -60,14 +57,14 @@ public class AvailTest {
 	@Autowired
 	private AgencyRepository agencyRepository;
 	
-	private String port = "8080";
-	private String host = "localhost";
+//	private String port = "8080";
+//	private String host = "localhost";
 //	private String host = "34.251.215.240"; // PROD
 	// private String host="34.253.173.28"; // STG
 	
-//	 private String host="doraemon.com";
-//	 private String port="8080/a2btransfer-1.0";
-//	
+    private String host="doraemon.com";
+	private String port="8080/a2btransfer-1.0";
+	
 	private final static String NEWFORMAT = "NEWFORMAT";
 
 	@Autowired

@@ -10,6 +10,8 @@ import java.awt.Color;
 import java.net.URL;
 import java.util.Locale;
 
+import org.apache.log4j.Logger;
+
 import net.sf.dynamicreports.report.base.expression.AbstractValueFormatter;
 import net.sf.dynamicreports.report.builder.HyperLinkBuilder;
 import net.sf.dynamicreports.report.builder.ReportTemplateBuilder;
@@ -25,6 +27,8 @@ import net.sf.dynamicreports.report.definition.ReportParameters;
  * @author Ricardo Mariaca (r.mariaca@dynamicreports.org)
  */
 public class Templates {
+	
+	private static final Logger log = Logger.getLogger(Templates.class); 
 	public static final StyleBuilder rootStyle;
 	public static final StyleBuilder boldStyle;
 	public static final StyleBuilder italicStyle;
@@ -94,12 +98,7 @@ public class Templates {
 		                   .setTableOfContentsCustomizer(tableOfContentsCustomizer);
 
 		currencyType = new CurrencyType();
-
-
-		HyperLinkBuilder link = hyperLink("http://www.europlayas-web.es");		
         
-        URL url = ClassLoader.getSystemResource("com/epl/a2btransfer/printer/images/title.png");
-        System.out.println(url);
 //		dynamicReportsComponent =		  		 
 //		  	cmp.verticalList(
 //		  			
@@ -122,6 +121,10 @@ public class Templates {
 	public static void generate(String customerName){
 			HyperLinkBuilder link = hyperLink("http://www.europlayas-web.es");					
 			URL url = ClassLoader.getSystemResource("com/epl/a2btransfer/printer/images/title.png");
+			if (url!=null)
+				log.info("Se ha encontrado el recurso "+url);
+			else 
+				log.error("No se ha encontrado la dirección de la imagen de cabecera");
 			StyleBuilder bold10CenteredStyle = stl.style(boldCenteredStyle).setFontSize(10);
 			dynamicReportsComponent =		  		 
 		  	cmp.verticalList(
