@@ -57,13 +57,13 @@ public class AvailTest {
 	@Autowired
 	private AgencyRepository agencyRepository;
 	
-//	private String port = "8080";
-//	private String host = "localhost";
+	private String port = "8080";
+	private String host = "localhost";
 //	private String host = "34.251.215.240"; // PROD
 	// private String host="34.253.173.28"; // STG
 	
-    private String host="doraemon.com";
-	private String port="8080/a2btransfer-1.0";
+//    private String host="doraemon.com";
+//	private String port="8080/a2btransfer-1.0";
 	
 	private final static String NEWFORMAT = "NEWFORMAT";
 
