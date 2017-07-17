@@ -257,7 +257,7 @@ public class A2BTransferClientService {
 		cancelFeeRq.getTransferOnly().getBooking().getCancelFees().setBookingRef(BookingRef);
 		cancelFeeRq.getTransferOnly().getBooking().getCancelFees().setPassword(password);
 		cancelFeeRq.getTransferOnly().getBooking().getCancelFees().setUsername(username);
-		try{ Thread.sleep(5000); } catch(Exception ex){}
+		try{ Thread.sleep(1000); } catch(Exception ex){}
 		ResponseEntity<CancelFeeRs> response = restTemplate.postForEntity(url, cancelFeeRq, CancelFeeRs.class);
 		if (response.getStatusCode().is2xxSuccessful())
 			log.info("Se ha finalizado con el proceso de consulta de Fees");

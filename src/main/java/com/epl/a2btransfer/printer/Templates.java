@@ -44,9 +44,7 @@ public class Templates {
 	public static final ReportTemplateBuilder reportTemplate;
 	public static final CurrencyType currencyType;
 	public static ComponentBuilder<?, ?> dynamicReportsComponent;
-	public static final ComponentBuilder<?, ?> footerComponent;
-
-	
+	public static final ComponentBuilder<?, ?> footerComponent;	
 	
 	static{
 		rootStyle           = stl.style().setPadding(2);
@@ -120,7 +118,7 @@ public class Templates {
 
 	public static void generate(String customerName){
 			HyperLinkBuilder link = hyperLink("http://www.europlayas-web.es");					
-			URL url = ClassLoader.getSystemResource("com/epl/a2btransfer/printer/images/title.png");
+			URL url = Templates.class.getClassLoader().getResource("com/epl/a2btransfer/printer/images/title.png");
 			if (url!=null)
 				log.info("Se ha encontrado el recurso "+url);
 			else 
