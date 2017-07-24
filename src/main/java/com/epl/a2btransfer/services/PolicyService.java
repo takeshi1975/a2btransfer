@@ -120,7 +120,8 @@ public class PolicyService {
 			results.add("TAX#"+tax.getName()+ "#"+df.format(imptax));
 			results.add("COS#"+coste);
 		} else{			
-			results.add("PEPL#"+df.format(pvp));													
+			results.add("PEPL#"+df.format(pvp));
+			results.add("COS#"+coste);
 		}
 		log.info("____________________BREAKDOWN____________________________________");
 		results.forEach(t-> log.info(t));

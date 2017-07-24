@@ -3,8 +3,6 @@ package com.testepl.a2btransfer;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,9 +17,7 @@ import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -59,7 +55,7 @@ public class AvailTest {
 	@Autowired
 	private AgencyRepository agencyRepository;
 
-	private String port = "8080/a2btransfer-1.0";
+	private String port = "8085";
 	private String host = "localhost";
 //	private String host = "34.251.215.240"; // PROD
 	// private String host="34.253.173.28"; // STG
@@ -71,10 +67,11 @@ public class AvailTest {
 
 	@Autowired
 	private RestTemplate restTemplate;
-
+	
 	private static final Logger log = Logger.getLogger(AvailTest.class);
 
-	private AvailRs availWithDates() {
+	@Test
+	public void availWithGeoLoc(){
 		log.info("Se pide disponibilidad por fechas");
 		log.info("App Name-->" + appname);
 		String url = "http://" + host + ":" + port + "/a2btransfer/avail";
@@ -97,6 +94,47 @@ public class AvailTest {
 		request.setRetTime("10:00");
 		request.setDeparturePointCode("PMI");
 		request.setArrivalPointCode("ALI");
+		request.setLang("ES");
+		request.setUsername("Juacho");
+		request.setPassword("Juancho123");
+		request.setVehicletype((byte) 1);
+		request.setSectorType("RETURN"); // SINGLE/RETURN
+		request.setLatitude(""); // Para el destino?
+		request.setLongitude("");
+
+		request.setGIATAID("");
+		request.setTTICode("");
+		AvailRs availRs = restTemplate.postForObject(url, availRq, AvailRs.class);
+		Assert.notNull(availRs);
+		if (availRs.getTransferOnly().getErrors() != null)
+			availRs.getTransferOnly().getErrors().getError().forEach(error -> log.error(error.getText()));
+		else
+			log.info("OK No hay errores en la disponibilidad");		
+	}
+	
+	private AvailRs availWithDates() {
+		log.info("Se pide disponibilidad por fechas");
+		log.info("App Name-->" + appname);
+		String url = "http://" + host + ":" + port + "/a2btransfer/avail";
+		AvailRq availRq = new AvailRq();
+		availRq.setVersion("NEWFORMAT");
+		availRq.setAgency(AGEN);
+		availRq.setSystem(SYS);
+		TransferOnly transferOnly = new TransferOnly();
+		availRq.setTransferOnly(transferOnly);
+		Availability availability = new Availability();
+		transferOnly.setAvailability(availability);
+		Request request = new Request();
+		availability.setRequest(request);
+		request.setAdults((byte) 2);
+		request.setChildren((byte) 1);
+		request.setInfants((byte) 1);
+		request.setArrDate("24/07/17");
+		request.setArrTime("13:10");
+		request.setRetDate("01/08/17");
+		request.setRetTime("13:10");
+		request.setDeparturePointCode("TFN");
+		request.setArrivalPointCode("PDC");
 		request.setLang("ES");
 		request.setUsername("Juacho");
 		request.setPassword("Juancho123");
@@ -142,12 +180,12 @@ public class AvailTest {
 		reserve.setAdults((byte) 2);
 		reserve.setChildren((byte) 1);
 		reserve.setInfants((byte) 1);
-		reserve.setArrDate("01/09/17");
+		reserve.setArrDate("24/07/17");
 		reserve.setArrTime("10:00");
-		reserve.setRetDate("10/09/17");
-		reserve.setRetTime("10:00");
-		reserve.setDeparturePointCode("PMI");
-		reserve.setArrivalPointCode("ALI");
+		reserve.setRetDate("01/08/17");
+		reserve.setRetTime("13:10");
+		reserve.setDeparturePointCode("TFN");
+		reserve.setArrivalPointCode("PDC");
 		reserve.setLang("ES");
 		reserve.setUsername("Juacho");
 		reserve.setPassword("Juancho123");
@@ -217,7 +255,7 @@ public class AvailTest {
 	}
 
 	@Test
-	public void cancel() {
+	public void cancelBlock(){
 		String url = "http://" + host + ":" + port + "/a2btransfer/cancel";
 		CancelRq cancelRq = new CancelRq();
 		cancelRq.setTransferOnly(new CancelRq.TransferOnly());
@@ -226,36 +264,58 @@ public class AvailTest {
 
 		cancelRq.getTransferOnly().getBooking().getCancel().setUsername("Juacho");
 		cancelRq.getTransferOnly().getBooking().getCancel().setPassword("Juancho123");
-		cancelRq.setVersion(NEWFORMAT);
-
-		BookingRs bookingRs = booking();
-
-		PrintRq printRq = new PrintRq();
-		printRq.setAgency(AGEN);
-		printRq.setLocata("LOC2-FB2319");
-		printRq.setTransferOnly(bookingRs.getTransferOnly());
-		String xml = printRq.toString();
-		xml = xml.replaceAll("<string>", "").replaceAll("</string>", "");
-		log.info("PrintRq:" + xml);
-		/** Print **/
-		url = "http://" + host + ":" + port + "/a2btransfer/print";
-		List<HttpMessageConverter<?>> messageConverters = new ArrayList<HttpMessageConverter<?>>();
-		messageConverters.add(new StringHttpMessageConverter());
-		restTemplate.setMessageConverters(messageConverters);
-		HttpHeaders headers = new HttpHeaders();
-		MediaType mediaType = new MediaType("application", "xml", StandardCharsets.UTF_8);
-		headers.setContentType(mediaType);
-		headers.setContentType(MediaType.APPLICATION_XML);
-		HttpEntity<String> entity = new HttpEntity<String>(xml, headers);
-		restTemplate.exchange(url, HttpMethod.POST, entity, byte[].class, "1");
-
-
-		cancelRq.getTransferOnly().getBooking().getCancel()
-				.setBookingRef(bookingRs.getTransferOnly().getBooking().getConfirm().getVoucherInfo().getBookingRef());
-		CancelRs cancelRs = restTemplate.postForObject(url, cancelRq, CancelRs.class);
-		Assert.notNull(cancelRs); // Verificamos la respuesta de cancelación.
-
+		cancelRq.setVersion(NEWFORMAT);		
+		
+		
+		String reservas[] ={"R1610787","G1932212","G1932227","G1932254"};
+		for (int n=0; n<reservas.length; n++){
+			cancelRq.getTransferOnly().getBooking().getCancel().setBookingRef(reservas[n]);
+			CancelRs cancelRs = restTemplate.postForObject(url, cancelRq, CancelRs.class);
+			Assert.notNull(cancelRs);			
+		}
+		
 	}
+	
+//	@Test
+//	public void cancel() {
+//		String url = "http://" + host + ":" + port + "/a2btransfer/cancel";
+//		CancelRq cancelRq = new CancelRq();
+//		cancelRq.setTransferOnly(new CancelRq.TransferOnly());
+//		cancelRq.getTransferOnly().setBooking(new CancelRq.TransferOnly.Booking());
+//		cancelRq.getTransferOnly().getBooking().setCancel(new Cancel());
+//
+//		cancelRq.getTransferOnly().getBooking().getCancel().setUsername("Juacho");
+//		cancelRq.getTransferOnly().getBooking().getCancel().setPassword("Juancho123");
+//		cancelRq.setVersion(NEWFORMAT);
+//
+//		BookingRs bookingRs = booking();
+//
+//		PrintRq printRq = new PrintRq();
+//		printRq.setAgency(AGEN);
+//		printRq.setLocata("LOC2-FB2319");
+//		printRq.setTransferOnly(bookingRs.getTransferOnly());
+//		String xml = printRq.toString();
+//		xml = xml.replaceAll("<string>", "").replaceAll("</string>", "");
+//		log.info("PrintRq:" + xml);
+//		/** Print **/
+//		url = "http://" + host + ":" + port + "/a2btransfer/print";
+//		List<HttpMessageConverter<?>> messageConverters = new ArrayList<HttpMessageConverter<?>>();
+//		messageConverters.add(new StringHttpMessageConverter());
+//		restTemplate.setMessageConverters(messageConverters);
+//		HttpHeaders headers = new HttpHeaders();
+//		MediaType mediaType = new MediaType("application", "xml", StandardCharsets.UTF_8);
+//		headers.setContentType(mediaType);
+//		headers.setContentType(MediaType.APPLICATION_XML);
+//		HttpEntity<String> entity = new HttpEntity<String>(xml, headers);
+//		restTemplate.exchange(url, HttpMethod.POST, entity, byte[].class, "1");
+//
+//
+//		cancelRq.getTransferOnly().getBooking().getCancel()
+//				.setBookingRef(bookingRs.getTransferOnly().getBooking().getConfirm().getVoucherInfo().getBookingRef());
+//		CancelRs cancelRs = restTemplate.postForObject(url, cancelRq, CancelRs.class);
+//		Assert.notNull(cancelRs); // Verificamos la respuesta de cancelación.
+//
+//	}
 
 	public static List<String> conversion(List<String> buffer) throws IOException {
 		Logger log = Logger.getLogger(SecondPage.class);

@@ -96,20 +96,7 @@ public class Templates {
 		                   .setTableOfContentsCustomizer(tableOfContentsCustomizer);
 
 		currencyType = new CurrencyType();
-        
-//		dynamicReportsComponent =		  		 
-//		  	cmp.verticalList(
-//		  			
-//		  			cmp.horizontalList(		  				
-//		  					cmp.image(url).setFixedDimension(132, 34),
-//		  					cmp.horizontalGap(10),
-//		  					cmp.verticalList().add(
-//		  							cmp.text(customerName).setStyle(bold12CenteredStyle),
-//		  							cmp.text("Copia para el establecimiento").setStyle(bold10CenteredStyle))
-//		  					).setStyle(stl.style(boldCenteredStyle)),
-//		  		    			
-//		  			cmp.text("http://www.europlayas-web.es").setStyle(italicStyle).setHyperLink(link)).setFixedWidth(350);
-					
+        					
 		footerComponent = cmp.pageXofY()
 		                     .setStyle(
 		                     	stl.style(boldCenteredStyle)
@@ -117,8 +104,10 @@ public class Templates {
 	}
 
 	public static void generate(String customerName){
-			HyperLinkBuilder link = hyperLink("http://www.europlayas-web.es");					
-			URL url = Templates.class.getClassLoader().getResource("com/epl/a2btransfer/printer/images/title.png");
+			final String LINK = "http://www.europlayas-web.es";
+			final String IMG = "com/epl/a2btransfer/printer/images/title.png";
+			HyperLinkBuilder link = hyperLink(LINK);					
+			URL url = Templates.class.getClassLoader().getResource(IMG);
 			if (url!=null)
 				log.info("Se ha encontrado el recurso "+url);
 			else 
@@ -191,4 +180,5 @@ public class Templates {
 			return label + currencyType.valueToString(value, reportParameters.getLocale());
 		}
 	}
+	
 }
